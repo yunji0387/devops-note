@@ -295,17 +295,3 @@ Istio significantly simplifies the complexities of running a microservices archi
 </details>
 
 ---
-
-
-<a id="binary"></a>
-# 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
