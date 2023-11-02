@@ -131,19 +131,6 @@ This video introduces **API Gateway**, explaining its **purpose**, **benefits**,
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
-
-<a id="api_request"></a>
-# Making API Request using cURL and Postman
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
 # Creating REST APIs
 
 ## Overview
@@ -184,13 +171,115 @@ This video teaches how to **create a RESTful API in Python** and **host it using
 
 ---
 
+<a id="api_request"></a>
+# Making API Request using cURL and Postman
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Making API Requests using cURL and Postman
+
+## Overview
+This video demonstrates how to make HTTP requests using **cURL** and **Postman**.
+
+## cURL
+
+### Introduction
+- **cURL** (Client URL) is a command line tool for data transfer over various network protocols.
+- Developed in 1998, it is widely used for downloading files, endpoint testing, debugging, and error logging.
+- Supports protocols such as HTTP, HTTPS, FTP, and IMAP.
+
+### Usage
+- **Example Command**: `curl -X <HTTP_METHOD> <URL> -H <HEADERS>`
+- **Options**:
+  - `-x`: Specifies the HTTP method (e.g., GET).
+  - `-H`: Defines headers (e.g., specifying JSON data).
+- **Output**: A list of products returned in JSON format from the product’s microservice.
+
+## Postman
+
+### Introduction
+- **Postman** is an API platform with user-friendly tools for creating, testing, sharing, and documenting APIs.
+- Simplifies API lifecycle management and collaboration.
+- Supports HTTP requests like GET, POST, PUT, and PATCH, and can convert API calls to code in languages like JavaScript and Python.
+
+### Example
+- The **WhatsApp Business Platform Cloud API** uses Postman to create a streamlined, developer-friendly experience.
+- Onboarding time is reduced to minutes due to automation and pre-filled data.
+
+### Usage
+- Postman can be downloaded or used online.
+- **Example Request**:
+  1. Open a new tab in Postman.
+  2. Set request type to GET and specify the URL of the microservice.
+  3. Click on "Send" to analyze the output.
+  4. Save the request in the workspace for future use.
+
+## Conclusion
+- **cURL** is used for transferring data with URLs, either at the command line or in scripts.
+- **Postman** is a versatile platform for building and testing APIs, known for its simplicity and popularity.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
 <a id="swagger"></a>
 # Documenting and Testing REST API with Swagger
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Documenting and Testing REST APIs with Swagger
 
+## Overview
+This video explains how to use **Swagger** to document and test REST APIs.
+
+## API Documentation
+
+### Importance
+- API documentation acts as a reference manual for effective system integration.
+- Ensures consistent communication between different systems.
+
+### Swagger and OpenAPI
+- **Swagger** automates API documentation creation, ensuring adherence to OpenAPI specifications.
+- Describes the API structure, allowing automatic generation of interactive UI and API documentation.
+- The structure is defined in a JSON or YAML file adhering to OpenAPI specifications.
+- **OpenAPI Specification**: A standard, language-agnostic interface to RESTful APIs that is both human and machine-readable.
+
+## Implementing Swagger with Flask
+
+### Flask-Swagger-UI
+- **Flask Swagger UI** enhances Flask's capabilities to describe and visualize REST APIs.
+- Installation: `pip install flask-swagger-ui`
+
+### Setup and Configuration
+- Import `swagger_ui_blueprint` and define basic configuration, such as:
+  - Path where Swagger will be available (e.g., `products/docs`).
+  - Path where the swagger file is served.
+  - Name for the Swagger UI instance.
+- Register the blueprint with the Flask app.
+- Expose the `swagger.json` file, which holds the API definition, via a route.
+
+### API Definition with Swagger
+- Define the API (e.g., product microservice) with Swagger, specifying:
+  - Model and path for retrieving the product list.
+  - Properties of the Product object.
+
+## Testing with Swagger
+
+### Benefits
+- Swagger UI enables testing of the API directly from the documentation.
+- Provides detailed information on supported functions, requests, and responses.
+- Displays content such as terms of service, contact information, and license information.
+
+### Example
+- The video demonstrates testing a GET method to retrieve all products using Swagger UI.
+
+## Conclusion
+- **Swagger** aids in both documenting and testing APIs.
+- **OpenAPI Specification** provides a standardized representation of APIs.
+- Integration with Flask is facilitated through `flask-swagger-ui`.
 
 <!-- /MarkdownTOC -->
 </details>
