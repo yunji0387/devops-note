@@ -1,6 +1,7 @@
 # Table of Contents
 1. [Microservices Overview](./microservices_overview.md)
 2. [Web API Essentials: REST API and GraphQL](./API_overview.md)
+3. [Serverless Overview](./serverless_overview.md)
 
 ---
 
