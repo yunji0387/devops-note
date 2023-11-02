@@ -77,6 +77,46 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Overview of Project, Application, Build, and Jobs in IBM Cloud Code Engine
+
+## **Project**
+- **Definition**: A group in Code Engine that manages resources and entities (e.g., build, app, job, TLS certificates).
+- **Functions**:
+  - **Namespace**: Provides isolation for entities. Entity names must be unique within a namespace but can be duplicated across namespaces.
+  - **Access Control**: Manages resources and provides control over who can access what.
+  - **Monitoring**: Allows monitoring of resource allocation (CPU, memory) for the entire project.
+- **Example**: A project named `my-project` may have 11 applications and 2 jobs.
+
+## **Application**
+- **Definition**: Code that runs to serve HTTP requests or provide REST APIs.
+- **Features**:
+  - Supports **WebSockets** for long-running, session-based communication.
+  - **Auto-scaling**: Dynamically scales up or down based on workload and configuration settings.
+- **Example**: An application named `my-application` under the project `my-project`.
+
+## **Build**
+- **Definition**: Process of creating a container image from source code.
+- **Methods**:
+  - **Dockerfile**: A set of instructions to create a Docker container image.
+  - **Cloud Native Buildpack**: Automates tasks like inspecting code and creating a build plan to produce an image.
+- **Usage**: After building the container image, it can be deployed to Code Engine to create an application.
+
+## **Job**
+- **Definition**: A one-time execution of code.
+- **Characteristics**:
+  - Unlike applications, jobs are designed to run once and exit.
+  - Can specify workload configurations before running.
+- **Examples of Jobs**:
+  - **Data Processing**: Query and transform data in batches.
+  - **Machine Learning**: Model training jobs.
+  - **Reporting**: Generate reports based on a schedule.
+  - **Billing**: Create and send bills.
+
+## **Conclusion**
+- **Project**: Groups and manages Code Engine entities.
+- **Application**: Serves HTTP requests or WebSocket sessions.
+- **Build**: Creates a container image from source code.
+- **Job**: Executes code once or in multiple instances.
 
 <!-- /MarkdownTOC -->
 </details>
