@@ -70,7 +70,55 @@ This video explains **RESTful APIs**, their **key characteristics**, and **benef
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Introduction to API Gateway
 
+## Overview
+This video introduces **API Gateway**, explaining its **purpose**, **benefits**, **drawbacks**, and **available products**.
+
+## What is an API Gateway?
+
+### Definition
+- An **API Gateway** is a management tool sitting between a client and backend services.
+- It aggregates various services and returns the appropriate result.
+
+### Usage
+- Protects APIs from malicious usage or overuse with authentication and rate limiting.
+- Understands API usage through analytics and monitoring.
+- Can monetize APIs using a billing system.
+- Presents a single point of contact to various microservices.
+- Allows seamless addition or removal of APIs.
+
+## Benefits of Using an API Gateway
+
+- **Insulates Clients**: Hides application's partitioning into microservices.
+- **Optimal API**: Provides the best API for each client.
+- **Reduces Round Trips**: Allows retrieval of data from multiple services in a single request.
+- **Standard Protocol**: Provides a standard communication protocol with the external world.
+
+## Drawbacks of Using an API Gateway
+
+- **Maintenance**: An additional component that needs development and upkeep.
+- **Single Point of Failure**: If not designed carefully, it can become a bottleneck.
+- **Response Time**: Can increase due to the additional network step.
+
+## Available API Gateway Products
+
+### Managed Products
+- **IBM DataPower Gateway**: High-security application gateway.
+- **Google**: Offers Apigee or Cloud Endpoints.
+- **Microsoft Azure** and **Amazon AWS**: Provide gateways on their platforms.
+
+### Open Source Options
+- **Kong**: Top in popularity.
+- **Apache APISIX**
+- **Tyk**: Also has a managed version.
+- **Gloo**: Available as an enterprise version.
+
+## Conclusion
+- An **API Gateway** acts as the door to backend services.
+- It enables plugging additional services while providing unified access.
+- Hides backend complexity and eases scalability or replacement of services.
+- Multiple managed and open source API Gateway products are available to choose from.
 
 <!-- /MarkdownTOC -->
 </details>
