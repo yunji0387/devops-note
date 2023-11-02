@@ -184,6 +184,46 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Deploying and Running Applications
+
+## **Deployment Modes**
+- **Container Image Deployment**:
+  1. **Manual Image Push**:
+     - Build and push container image to a private/public container registry.
+     - Cloud Code Engine pulls and deploys using the unique image name.
+  2. **Automatic Image Build**:
+     - Specify a Dockerfile or buildpack with source code.
+     - Cloud Engine builds and deploys the application automatically.
+- **Difference**: Who is responsible for building and pushing the container image.
+
+## **IBM Cloud Console**
+- **Definition**: A web portal for managing IBM cloud services, including Code Engine.
+- **Steps to Create and Deploy Application**:
+  1. Specify application's name.
+  2. Choose deployment from Container image or Source code (default: Container image).
+  3. Provide image reference and optionally, registry access.
+  4. Additional advanced settings can be configured as required.
+
+## **IBM Cloud CLI**
+- **Alternative to Console**: For more precise deployment.
+- **Commands**:
+  1. **Create and Deploy**:
+     ```bash
+     ibmcloud ce app create --name <app-name> --image <image-reference> --registry-access <registry-access>
+     ```
+     - Example: Deploy `helloworldapp` from `us.icr.io` with registry access `myregistry`.
+  2. **Test Application**:
+     ```bash
+     ibmcloud ce app get --name <app-name> --output <output-format>
+     ```
+     - Example: Get the URL of the deployed `helloworldapp`.
+
+## **Endpoint URL**
+- Once deployed, the Code Engine provides an endpoint URL leading to the application's main page or microservice entry point.
+
+## **Conclusion**
+- Applications can be deployed on Cloud Engine from a container image or source code.
+- Deployment can be done using either IBM Cloud Console or IBM Cloud CLI.
 
 <!-- /MarkdownTOC -->
 </details>
