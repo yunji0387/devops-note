@@ -439,16 +439,3 @@ Service binding is a critical practice in secure, efficient, and scalable softwa
 </details>
 
 ---
-
-<a id="binary"></a>
-# 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
