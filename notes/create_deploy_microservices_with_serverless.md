@@ -129,6 +129,49 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Building Container Images for Microservices
+
+## **Container**
+- **Definition**: A standalone, executable unit of software that packages an application's source code, libraries, dependencies, and runtimes.
+- **Characteristics**:
+  - **Portable**: Can run on any device or in the cloud.
+  - **Efficient**: Does not require a guest OS, leveraging the host OS instead.
+  - **Ideal for Microservices**: Matches the lightweight and isolated nature of microservices.
+
+## **Docker**
+- **Definition**: A software platform for building and running applications as containers.
+- **Popularity**: Led to an explosive usage of containerization and fostered a large ecosystem.
+- **Usage in IBM Cloud Engine**: Docker is the main container technology used.
+
+## **Building a Docker Container Image**
+- **Steps**:
+  1. **Dockerfile Creation**:
+     - Acts as a blueprint outlining instructions to build the container.
+  2. **Building Container Image**:
+     - The image includes all application assets and is immutable.
+     - Consider an image like a class template in OOP.
+  3. **Running Container**:
+     - Instantiating an image creates a running container.
+
+- **Dockerfile Example**:
+  - `FROM`: Specifies base image (e.g., Python, uwsgi-nginx-flask).
+  - `COPY`: Copies files to `/app` folder in the image.
+  - `ENV`: Sets environment variables (e.g., `LISTEN_PORT` to 8080).
+  - `EXPOSE`: Indicates the port on which the container listens.
+  - `RUN`: Executes commands (e.g., `pip install` for dependencies).
+  - `CMD`: Provides a default executable for the container (only one `CMD` allowed).
+
+## **Container Registry**
+- **Definition**: A repository to manage container images.
+- **Examples**: Docker Hub, IBM Cloud Container Registry.
+- **Image Name**: Consists of hostname (e.g., `icr.io` for IBM), repository (group of related images), and tag (version info).
+- **Usage**: After building, an image can be pushed to a registry and then pulled using its unique name.
+
+## **Conclusion**
+- **Container**: A standalone, portable unit containing all software dependencies.
+- **Docker**: A platform to build and run containers.
+- **Dockerfile**: Used to instruct Docker to build a container image.
+- **Container Registry**: Manages container images and allows them to be pulled by name.
 
 <!-- /MarkdownTOC -->
 </details>
