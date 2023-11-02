@@ -144,7 +144,40 @@ This video introduces **API Gateway**, explaining its **purpose**, **benefits**,
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Creating REST APIs
 
+## Overview
+This video teaches how to **create a RESTful API in Python** and **host it using Flask**.
+
+## Python
+- **Python** is versatile, used for web development, scientific computing, AI, and machine learning.
+- Supports web development through frameworks like **Flask**.
+
+## Flask
+
+### Introduction
+- **Flask** is a micro web framework known for scalability and simplicity.
+- Flask applications are lightweight and non-opinionated about databases or template engines.
+- Suitable for creating RESTful APIs.
+
+### Installation
+- Ensure **Python 3** and **pip** (Python package manager) are installed.
+- Install Flask using `pip install` command.
+
+### Creating a Flask Application
+
+#### Hello World App
+- Create `hello.py` file and run the Flask server.
+- The "Hello World" response is visible at `127.0.0.1:5000`.
+
+#### Products Microservice
+- Create `products.py` file for the products microservice.
+- Define imports and create a default list of products (not persisted in a database).
+- Define the **GET** method to retrieve all products, which implicitly returns HTTP status `200` (OK).
+
+## Conclusion
+- **Flask** is ideal for hosting Python web applications as microservices.
+- A RESTful API can be easily created and hosted using Flask and Python.
 
 <!-- /MarkdownTOC -->
 </details>
