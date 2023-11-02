@@ -307,16 +307,3 @@ Kubernetes is a comprehensive container orchestration platform that automates th
 </details>
 
 ---
-
-<a id="binary"></a>
-## 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
