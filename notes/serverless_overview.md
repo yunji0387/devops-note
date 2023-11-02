@@ -134,7 +134,48 @@ The video provides an introduction to **Serverless Computing**, explaining its c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Introduction to the FaaS Model
 
+## **What is FaaS (Function-as-a-Service)?**
+- **Definition**: FaaS allows executing code in response to events without managing complex infrastructure.
+- **Characteristics**:
+  - Subset of serverless computing.
+  - Applications are created as multiple functions written in any programming language.
+  - Can be deployed on hybrid clouds and on-premises.
+  - Stateless but can maintain state using external caches.
+  - Functions execute in milliseconds, processing requests in parallel.
+  - Billed based on function run time, not server instance sizes.
+
+## **Benefits of FaaS**
+- **Cost-Effective**: Pay only when an action occurs, no idle costs.
+- **Scalability**: Functions scale automatically and independently.
+- **Focus on Code**: Developers can focus on application code, reducing time-to-market.
+- **High Availability**: Spread across regions and availability zones without incremental costs.
+
+## **Components of a Serverless Stack**
+1. **FaaS**: Functions-as-a-service.
+2. **BaaS**: Backend-as-a-service.
+3. **API Gateway**: Directs event requests to respective functions.
+
+## **How FaaS Works**
+- Event requests from various channels (HTTP, webhooks, scheduled jobs) go through the API Gateway.
+- Functions process these requests, possibly interacting with backend services for further processing or storage.
+- Response is sent back to the client via FaaS and API Gateway.
+
+## **Real-world Example**
+- Uploading a profile picture triggers a FaaS function that creates and stores a thumbnail image.
+
+## **Principles and Best Practices**
+- Functions should be designed for a single task.
+- Code should be limited, efficient, and lightweight.
+- Avoid overusing functions and third-party libraries to control costs and maintain scalability.
+
+## **Managed and Self-managed FaaS Providers**
+- **Managed Providers**: AWS Lambda, Google Cloud Functions, Azure Functions, IBM Cloud Functions, OpenShift Cloud Functions, Netlify, Oracle, Twilio, etc.
+- **Self-managed Choices**: Fission, Fn Project, Knative, OpenFaaS.
+
+## **Conclusion**
+- FaaS provides a simplified, cost-effective, and scalable approach to execute code in response to events, without dealing with infrastructure complexities.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -147,7 +188,35 @@ The video provides an introduction to **Serverless Computing**, explaining its c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# The Serverless Framework
 
+## **Overview of Serverless Framework**
+- **Definition**: A free and open-source web framework built using Node.js.
+- **Purpose**: Initially designed to quickly and safely provision AWS Lambda Functions, Events, and infrastructure Resources.
+- **Supported Providers**: AWS, Microsoft Azure, Google Cloud Platform, Apache OpenWhisk.
+- **Functionality**: Provides a CLI for structure, automation, and best practices for building serverless architectures.
+
+## **Components of Serverless Architecture**
+- **Function**: Independent unit of code, deployed in the cloud, performing a single task.
+- **Event**: Triggers the functions, e.g., an HTTP request on an API Gateway URL or a new file in an S3 bucket.
+- **Resource**: Infrastructure components used by functions, e.g., a database or an S3 bucket.
+- **Service**: The Framework's unit of organization, configured via a `serverless.yml` file.
+
+## **Creating a Basic Serverless Function**
+1. **Install Serverless CLI**: Install using npm globally.
+2. **Create a Service**: Use the `serverless` command to create an AWS HTTP API using Python.
+3. **Configuration**: Define functions, events, and resources in `serverless.yml` file.
+4. **Deploy**: Everything in the configuration file is deployed at once.
+
+## **Demo: Hello World Application**
+- **Steps**:
+  1. Setup AWS credentials.
+  2. Install the serverless CLI.
+  3. Create and deploy a Hello World function.
+  4. Test the function by accessing the provided URL.
+
+## **Conclusion**
+- The Serverless Framework simplifies the creation, deployment, and testing of serverless functions across various cloud providers.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -160,7 +229,37 @@ The video provides an introduction to **Serverless Computing**, explaining its c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Serverless Reference Architecture and Use Cases
 
+## **Web Application Reference Architecture**
+### **To Do App Example**
+- **Overview**: A simple To Do app allowing registered users to create, read, update, and delete items.
+- **Architecture**:
+  ### **Front-End**:
+    - **Components**: Static content generated using Create React App (HTML, CSS, JavaScript, images).
+    - **Hosting**: Hosted on AWS Amplify Console.
+    - **Operation**: Resources are downloaded to the user's browser and interact with the back end via REST API calls.
+  ### **Back-End**:
+    - **Components**: Business logic implemented using AWS Lambda and accessed via Amazon API Gateway.
+    - **Data Storage**: Amazon DynamoDB.
+    - **User Management**: Amazon Cognito for user registration and authentication.
+  ### **User Registration and Authentication**:
+    - **Components**: Uses Cognito User Pools for user registration and authentication.
+
+## **Serverless Framework Use Cases**
+### **1. Event Streaming**:
+  - **Description**: Applications can be written and deployed without upfront infrastructure setup and can trigger from topics or event logs.
+  - **Benefits**: Elastic, scalable event pipelines without maintenance overhead.
+### **2. Post-Processing**:
+  - **Examples**:
+    - **Image and Video Manipulation**: Dynamically resize images or change video transcoding for different target devices.
+    - **AI Applications**: Image recognition or detecting shadows in passport photos.
+### **3. Multi-Language Support**:
+  - **Description**: Serverless applications can support multiple languages, preventing language lock-in.
+
+## **Conclusion**
+- The Serverless Framework enables event-driven applications using various AWS services.
+- Use cases include event streaming, post-processing, and multi-language support.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -173,7 +272,50 @@ The video provides an introduction to **Serverless Computing**, explaining its c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Popular Serverless Platforms
 
+## **1. Amazon Web Services (AWS) Lambda**
+   - **Description**: Serverless, event-driven computing service.
+   - **Key Features**:
+     - **Auto-scaling**: Responds to execution requests at any scale.
+     - **Pay-as-you-go**: Charged only for running a function and data transfer.
+     - **Use Cases**: File processing, web applications, IoT, mobile back-ends.
+
+## **2. Google Cloud Functions**
+   - **Description**: Focuses on simplicity and an intuitive developer experience.
+   - **Key Features**:
+     - **Auto-scaling**: Scales up and down to zero based on traffic.
+     - **Firebase Integration**: Alerts developers on data updates.
+     - **Use Cases**: Asynchronous workloads, lightweight ETL functions.
+
+## **3. Microsoft Azure Functions**
+   - **Description**: Serverless solution focusing on less code and infrastructure.
+   - **Key Features**:
+     - **Language Support**: C#, Java, JavaScript, PowerShell, Python, etc.
+     - **DevOps**: Easy setup for continuous integration and delivery.
+     - **Use Cases**: File processing in blob storage, IoT data collection, timed code execution.
+
+## **4. IBM Cloud Functions**
+   - **Description**: Integrates easily with other services and is cost-effective.
+   - **Key Features**:
+     - **High Availability**: Available in multiple regions with auto-synchronization.
+     - **IBM Watson Integration**: Cognitive services for image or video analysis.
+     - **Monitoring and Logging**: Provides Log Analysis with LogDNA and Cloud Monitoring.
+     - **Use Cases**: Object detection in images, event-driven computing.
+
+## **5. Knative**
+   - **Description**: Open-source platform based on containers running via Kubernetes.
+   - **Key Features**:
+     - **Vendor Agnostic**: Avoids vendor lock-in and is platform-agnostic.
+     - **Rollout Strategy**: Allows gradual traffic shifting to new serverless components.
+     - **Use Cases**: Deployable on any cloud supporting Kubernetes.
+
+## **Conclusion**
+- **AWS Lambda**: Provides event-driven and pay-as-you-go serverless platform.
+- **Google Cloud Functions**: Offers simplified developer experience and real-time data sync with Firebase.
+- **Microsoft Azure**: Promotes cloud and edge computing with DevOps capabilities.
+- **IBM Cloud Functions**: Ensures high availability and cost-effective computing with powerful integrations.
+- **Knative**: Container-based platform avoiding vendor lock-in and offering flexibility in deployment.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -186,6 +328,61 @@ The video provides an introduction to **Serverless Computing**, explaining its c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# AWS Lambda Serverless Application
+
+## Overview
+Build a serverless application using AWS Lambda to capitalize and reverse text input from an HTML front-end.
+
+## Components
+- **AWS CodeCommit**: Fully managed source control that hosts private Git repositories.
+- **AWS Amplify**: Solution for building, shipping, and hosting full-stack apps.
+- **AWS Lambda**: Event-driven compute service without the need for server management.
+- **AWS Step Function**: Visual workflow for building distributed apps, orchestrating microservices, and more.
+- **AWS API Gateway**: Managed service for creating, publishing, and maintaining APIs.
+
+## Process
+1. **Initialize CodeCommit Repository**:
+    - Create and clone a blank repository.
+    - Develop a simple HTML page.
+    - Commit and push changes to AWS CodeCommit.
+
+2. **Set Up AWS Amplify**:
+    - Host static HTML content.
+    - Link master branch with Amplify for continuous delivery.
+
+3. **Lambda Function Development**:
+    - **Capitalize Function**:
+        ```python
+        import json
+        def lambda_handler(event, context):
+            input_text = str(event['inputText'])
+            capitalised_input_text = input_text.upper()
+            return {"inputText": capitalised_input_text}
+        ```
+
+    - **Reverse Function**:
+        ```python
+        import json
+        def lambda_handler(event, context):
+            input_text = str(event['inputText'])
+            reversed_input_text = input_text [::-1]
+            return {"inputText": reversed_input_text}
+        ```
+
+4. **Chain Functions with StepFunctions**:
+    - Design a workflow using StepFunctions for the Lambda functions.
+
+5. **Integrate with API Gateway**:
+    - Define the stage and generate the SDK.
+    - Deploy the API and integrate with the web app.
+
+6. **Finalize Web App**:
+    - Commit and push changes to the CodeCommit repository.
+    - Wait for deployment via Amplify.
+    - Test the app using the provided URL.
+
+## Conclusion
+AWS services, particularly Lambda, enable the creation of sophisticated apps with integrated front-end and back-end components in a serverless architecture.
 
 
 <!-- /MarkdownTOC -->
