@@ -6,6 +6,7 @@
 3. [Creating REST APIs](#creating_rest_api)
 4. [Making API Request using cURL and Postman](#api_request)
 5. [Documenting and Testing REST API with Swagger](#swagger)
+6. [Basics of GraphQL](#graph_ql)
 
 ---
 
@@ -280,6 +281,46 @@ This video explains how to use **Swagger** to document and test REST APIs.
 - **Swagger** aids in both documenting and testing APIs.
 - **OpenAPI Specification** provides a standardized representation of APIs.
 - Integration with Flask is facilitated through `flask-swagger-ui`.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="graph_ql"></a>
+# Basics of GraphQL
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Basics of GraphQL
+
+## Overview
+- **GraphQL** is a language-agnostic query language for APIs.
+- Provides a standard way for clients to request specific data they need.
+- Operates with a single endpoint for all data retrieval.
+
+## Key Characteristics
+- **Exact Data Retrieval:** Fetch only the data you request, eliminating over or under-fetching.
+- **Single Endpoint:** Contrary to multiple endpoints in REST for different data, GraphQL uses a singular endpoint.
+
+## GraphQL vs REST
+- In **REST**, APIs are resources providing endpoints for specific operations with HTTP methods.
+- **GraphQL** defines types in schemas which act as nodes.
+- While REST sends whatever the server processes, GraphQL only sends what is requested.
+
+## Extendibility
+- No need for new versions when extending a GraphQL API. New fields can be added without breaking existing clients.
+
+## Real-world Use Case: Netflix
+- Netflix developed a Graph API, **“Studio API”**, to abstract data and relationships from their microservices.
+- It provides a unified view of data.
+- Netflix evolved it further with a federated architecture, allowing teams to own their domains.
+
+## Key Takeaways
+- **GraphQL** is agnostic to programming language.
+- It delivers precise data, neither more nor less.
+- It consolidates data requests into one endpoint.
 
 <!-- /MarkdownTOC -->
 </details>
