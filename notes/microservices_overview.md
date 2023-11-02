@@ -330,16 +330,3 @@ Understanding **anti-patterns** in microservices is crucial to avoid pitfalls du
 </details>
 
 ---
-
-<a id="binary"></a>
-# 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
