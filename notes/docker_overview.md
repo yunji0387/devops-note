@@ -294,16 +294,3 @@ The Docker architecture streamlines application deployment through its client-se
 </details>
 
 ---
-
-<a id="binary"></a>
-## 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
