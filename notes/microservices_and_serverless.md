@@ -5,16 +5,3 @@
 4. [Create and Deploy Microservices using Serverless](./create_deploy_microservices_with_serverless.md)
 
 ---
-
-<a id="binary"></a>
-## 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
