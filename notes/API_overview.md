@@ -285,16 +285,3 @@ This video explains how to use **Swagger** to document and test REST APIs.
 </details>
 
 ---
-
-<a id="binary"></a>
-# 
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
