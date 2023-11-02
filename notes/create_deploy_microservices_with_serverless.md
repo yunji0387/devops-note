@@ -236,6 +236,54 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Updating Deployed Applications
+
+## **Common Scenarios for Updating Applications**
+1. **Update Environment Variables**: Modify database location, secret keys, etc.
+2. **Update Application Visibility**: Change URL visibility from public to private or project-only.
+3. **Update Image Reference or GitHub Repo**: Switch to a new container image or source code repository.
+4. **Update Runtime Resources**: Adjust computational resources (CPU, memory) allocated to the application.
+
+## **IBM Cloud Console**
+- **Easy Updates**: Suitable for simpler updates like adding environment variables.
+- **Update Steps**:
+  - **Environment Variables**: Add/update via "Add environment variable" button.
+  - **Visibility**: Update via the "Domain mappings" tab (options: cluster-local, private, public).
+  - **Image Reference**: Update via the "Code" tab.
+  - **Runtime Resources**: Adjust CPU, memory, and ephemeral storage via the "Runtime" tab.
+
+## **IBM Cloud CLI**
+- **Precise Updates**: Suitable for more complex application updates.
+- **Commands**:
+  - **Update Environment Variable**:
+    ```bash
+    ibmcloud ce app update --name <app-name> --env <var-name=var-value>
+    ```
+  - **Update Visibility**:
+    ```bash
+    ibmcloud ce app update --name <app-name> --visibility <visibility-option>
+    ```
+  - **Update Image Reference**:
+    ```bash
+    ibmcloud ce app update --name <app-name> --image <image-reference> --registry-secret <registry-secret>
+    ```
+  - **Update Runtime Resources**:
+    ```bash
+    ibmcloud ce app update --name <app-name> --cpu <cpu-amount> --memory <memory-amount>
+    ```
+
+## **Revision Management**
+- Code engine manages application revisions, allowing updates without needing to deploy a new application.
+
+## **Examples**
+- Migrating data from SQL DB to NoSQL DB and updating the Pets DB service.
+- Changing `pet_db_service` environment variable `DB_HOST` to `localhost`.
+- Updating `pet_db_service` visibility to `private`.
+- Updating `pet_db_service` image reference to `us.icr.io/petshop/no_sql_pet_db_service`.
+- Increasing `pet_db_service` runtime resources to 2 CPUs and 16 GB memory.
+
+## **Conclusion**
+- Applications can be updated either through IBM Cloud Console UI or IBM Cloud CLI as per preference.
 
 <!-- /MarkdownTOC -->
 </details>
