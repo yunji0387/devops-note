@@ -338,6 +338,89 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Test-Driven Development (TDD) Workflow
+
+## TDD Workflow Overview
+- **TDD involves three main steps:**
+  1. Write test cases for the desired code.
+  2. Write the minimum code required to pass the test cases.
+  3. Refactor the code for robustness and maintainability, with test cases ensuring behavior remains unchanged.
+
+- **The TDD cycle is known as "Red, Green, Refactor":**
+  - Start with test cases (Red).
+  - Write code to pass tests (Green).
+  - Refactor for improvement (keeping tests Green).
+
+## Practical TDD Example
+- **Developing a RESTful web service for counters:**
+  - API endpoint: `/counters`
+  - POST requests create a counter, specified in the path.
+  - Duplicate names must return `429 Conflict`.
+
+- **Creating Test Cases Based on Requirements:**
+  - POST to `/counters/name` should return `201 Created` and a counter starting at zero.
+  - A second POST with the same name should return `429 Conflict`.
+
+## Benefits of TDD
+- Test cases drive development by verifying application behavior against requirements.
+- Writing test cases first clarifies how code should behave, making coding more straightforward.
+- TDD leads to higher code quality and ensures functionality is preserved through changes.
+
+## Conclusion
+- TDD is a disciplined approach to development, demanding test cases before coding.
+- This workflow fosters a clear focus on functionality and leads to better, more reliable code.
+
+---
+
+# Video Summary: Practicing Test-Driven Development (TDD)
+
+## TDD Workflow Demonstration
+- **Goal:** Demonstrate the Test-Driven Development process.
+- **Starting Point:** A folder called `practice TDD` with requirements installed, a `status.py` module, and a `counters.py` file with requirements documented but no code.
+
+## TDD Steps
+1. **Write a Test:** Create a test case for the desired feature based on the requirements.
+2. **Run the Test:** Execute the test to see it fail (Red phase).
+3. **Write the Code:** Develop the minimum amount of code to pass the test.
+4. **Run Tests Again:** Confirm the new code passes the test (Green phase).
+5. **Refactor:** Improve the code while keeping the tests passing.
+
+## Example: Creating a RESTful Counter Service
+- **Requirements:**
+  - The service should track multiple counters.
+  - RESTful API with an endpoint called `/counters`.
+  - Creating a counter is done by specifying the name in the path (`/counters/<name>`).
+  - Duplicate counter names should return a `409 Conflict` error.
+
+## Implementation Steps
+1. **Setup for Tests:**
+   - Import the `TestCase` class from `unittest`.
+   - Create a `Countertest` class with a docstring for the tests.
+   - Import the Flask `app` from a module called `counter`.
+   - Use Flask's `app.test_client` to create a test client for API calls.
+
+2. **Writing Test Cases:**
+   - Write tests for creating a counter and handling duplicates.
+   - Use `assertEqual` to check the HTTP status codes returned by API calls.
+
+3. **Creating the Counter Module (`counter.py`):**
+   - Define a Flask route `/counters/<name>` accepting only POST requests.
+   - Use a global dictionary to store counters.
+   - Check if the counter already exists before creating a new one.
+
+4. **Running Tests:**
+   - Execute the tests using `nosetests`.
+   - Ensure tests initially fail (Red phase), indicating missing functionality.
+   - Implement the functionality to pass the tests (Green phase).
+
+5. **Refactoring Tests:**
+   - Refactor the test setup by creating a `setup` method to avoid repetition.
+   - Modify tests to use the new setup method.
+
+## Results
+- Successfully demonstrated the TDD workflow.
+- Created a basic RESTful API for counters.
+- Tests written drive the development of the API functionality.
 
 <!-- /MarkdownTOC -->
 </details>
