@@ -114,6 +114,8 @@
 - `Nose` offers detailed, color-coded reports with descriptive test names.
 - It also reports on code coverage and helps identify untested code lines.
 
+---
+
 # Video Summary: Running Tests with `unittest` and `Nose`
 
 ## Using `unittest`
@@ -185,7 +187,49 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Video Summary: Assertions and Path Testing in PyUnit
 
+## Purpose of Assertions
+- **Function:** Assertions evaluate to True or False to determine if a test passes or fails.
+- **Behavior:** They raise an exception if they evaluate to False, marking the test as failed.
+
+## Common PyUnit Assertions
+- **Basic Assertion:** `assert()` function call.
+- **PyUnit Assertions:** `TestCase` provides additional assertions for cleaner syntax.
+  - `assertEqual(a, b)`: Asserts that `a` is equal to `b`.
+  - `assertNotEqual(a, b)`: Asserts that `a` is not equal to `b`.
+  - `assertIn(a, b)`, `assertNotIn(a, b)`: Check for membership in a collection.
+  - `assertTrue()`, `assertFalse()`: Check if a value is True or False.
+  - `assertIsInstance(a, TYPE)`: Asserts `a` is of `TYPE`.
+  - `assertRaises()`: Checks if a specific exception is raised.
+
+## Role of Happy Paths and Sad Paths in Testing
+- **Happy Paths:** Test scenarios where everything goes as planned, confirming expected positive outcomes.
+- **Sad Paths:** Scenarios where something is expected to go wrong, verifying that the function handles exceptions properly.
+  - Use `assertRaises()` to check for proper handling of invalid inputs or conditions.
+
+---
+
+# Video Summary: Assertions and Path Testing in PyUnit
+
+## Purpose of Assertions
+- **Function:** Assertions evaluate to True or False to determine if a test passes or fails.
+- **Behavior:** They raise an exception if they evaluate to False, marking the test as failed.
+
+## Common PyUnit Assertions
+- **Basic Assertion:** `assert()` function call.
+- **PyUnit Assertions:** `TestCase` provides additional assertions for cleaner syntax.
+  - `assertEqual(a, b)`: Asserts that `a` is equal to `b`.
+  - `assertNotEqual(a, b)`: Asserts that `a` is not equal to `b`.
+  - `assertIn(a, b)`, `assertNotIn(a, b)`: Check for membership in a collection.
+  - `assertTrue()`, `assertFalse()`: Check if a value is True or False.
+  - `assertIsInstance(a, TYPE)`: Asserts `a` is of `TYPE`.
+  - `assertRaises()`: Checks if a specific exception is raised.
+
+## Role of Happy Paths and Sad Paths in Testing
+- **Happy Paths:** Test scenarios where everything goes as planned, confirming expected positive outcomes.
+- **Sad Paths:** Scenarios where something is expected to go wrong, verifying that the function handles exceptions properly.
+  - Use `assertRaises()` to check for proper handling of invalid inputs or conditions.
 
 <!-- /MarkdownTOC -->
 </details>
