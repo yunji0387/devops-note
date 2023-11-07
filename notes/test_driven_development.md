@@ -94,7 +94,51 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Running Unit Tests with `unittest` and `Nose`
 
+## Running Tests with `unittest`
+- Invoke Python with the `unittest` module to discover and run tests.
+- Tests are indicated by dots for success or "F" for failure.
+- The report shows the total number of tests run and the time taken.
+
+## Running Tests with `Nose`
+- `Nose` is used for "sniffing" out bugs with more informative output.
+- Use the `nosetests` command with additional parameters for color output.
+- `Pinocchio` plugin adds color to the test output.
+- Verbose output with descriptions from test case docstrings.
+- Integrates with coverage tools to report code coverage statistics.
+- Lists specific lines of code that are missing test cases.
+
+## Comparison of Reports
+- `unittest` provides a basic report with minimal information.
+- `Nose` offers detailed, color-coded reports with descriptive test names.
+- It also reports on code coverage and helps identify untested code lines.
+
+# Video Summary: Running Tests with `unittest` and `Nose`
+
+## Using `unittest`
+- Run tests from the command line with Python's `unittest` module.
+- Results are indicated by dots for each test, with "E" for errors.
+- Verbose mode (`-v`) can be enabled for more output.
+
+## Using `Nose`
+- Install `Nose` to run tests with `nosetests` command.
+- By default, `Nose` behaves like `unittest`.
+- Verbose output with `nosetests -v` shows docstring descriptions.
+
+## Enhancing `Nose` with Pinocchio Plugin
+- Install `Pinocchio` for specification-style output (`--with-spec`) and colorized test results (`--spec-color`).
+- Test failures will be highlighted in red.
+
+## Integrating Coverage Tool with `Nose`
+- Install `coverage` to report on code coverage.
+- Use `--with-coverage` for coverage reports and `--cover-erase` to avoid cumulative misleading coverage data.
+- Use `coverage report -m` to show missing lines not executed by tests.
+
+## Automating Configuration with `setup.cfg`
+- Create a `setup.cfg` file to specify `Nose` and coverage options without command-line flags.
+- Include verbosity, specification, color, and coverage configurations.
+- Running `nosetests` will now use these configurations, providing detailed and colorized output, as well as coverage reports with missing lines.
 
 <!-- /MarkdownTOC -->
 </details>
