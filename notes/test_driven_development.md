@@ -187,7 +187,7 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-# Video Summary: Assertions and Path Testing in PyUnit
+# Assertions and Path Testing in PyUnit
 
 ## Purpose of Assertions
 - **Function:** Assertions evaluate to True or False to determine if a test passes or fails.
@@ -242,7 +242,7 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-# Video Summary: The Purpose and Use of Test Fixtures in Testing
+# The Purpose and Use of Test Fixtures in Testing
 
 ## Purpose of Using Test Fixtures
 - **Initial State:** Test fixtures set up a known state before running tests.
@@ -285,7 +285,37 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# The Purpose and Use of Test Fixtures in Testing
 
+## Purpose of Using Test Fixtures
+- **Initial State:** Test fixtures set up a known state before running tests.
+- **Isolation:** They ensure tests run in isolation and system is reset after each test.
+- **Repeatability:** Consistent starting state guarantees repeatable results.
+
+## Situations Where Test Fixtures Are Useful
+- **Data Preparation:** For setting up databases or loading specific data sets.
+- **Environment Configuration:** Creating necessary files, directories, or mock objects.
+- **State Consistency:** Ensuring tests start with the same environment each time.
+
+## Using Test Fixtures for Initial State
+- **PyUnit Fixtures:**
+  - `setUpModule()`: Runs once before the entire module.
+  - `tearDownModule()`: Runs once after all tests in the module.
+  - `setUpClass()`: Runs once before all tests in a class.
+  - `tearDownClass()`: Runs once after all tests in a class.
+  - `setUp()`: Runs before each individual test.
+  - `tearDown()`: Runs after each individual test.
+
+## Example of Test Fixtures in PyUnit
+- **Database Connection:** `setUpClass()` to connect and `tearDownClass()` to disconnect.
+- **Table Management:** `setUp()` to recreate tables and `tearDown()` to clear them after each test.
+- **Data Loading:**
+  - Global or class-level dictionaries to hold test data.
+  - Load data from JSON or other files into the test environment using `setUpClass()`.
+
+## Test Fixtures for Account Testing
+- **Folder Structure:** A `fixtures` folder contains data files like `account_data.json`.
+- **Data Usage:** A global dictionary holds the data, loaded in `setUpClass()`, and used to create accounts in tests.
 
 <!-- /MarkdownTOC -->
 </details>
