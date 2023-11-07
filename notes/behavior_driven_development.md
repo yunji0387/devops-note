@@ -32,6 +32,35 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Behavior-Driven Development (BDD)
+
+## Overview of BDD
+- BDD focuses on the system’s external behavior, not internal workings.
+- Suitable for integration testing, verifying components work together.
+- It emphasizes an "outside-in" approach, prioritizing behaviors impacting business outcomes.
+- BDD uses a single syntax for clarity and communication among team members.
+
+## Difference Between BDD and TDD
+- **TDD (Test-Driven Development):** Tests the internal functions of a system. Concerned with return codes, data formats, etc. Used for unit testing.
+- **BDD (Behavior-Driven Development):** Higher-level testing from the user's perspective. Tests the system's behavior without concern for the internal API calls. It's applicable to integration, system, and acceptance testing levels.
+
+## Example of BDD in Practice
+- Virtual shopping cart behavior: Adding or removing items and ensuring the cart reflects these changes.
+
+## Levels of Software Testing
+1. **Unit Testing:** Testing individual components for correct functionality.
+2. **Integration Testing:** Testing combined units to expose faults in interactions.
+3. **System Testing:** End-to-end testing of the complete system against high-level requirements.
+4. **User Acceptance Testing:** Users test the system for acceptability.
+
+## BDD in the Software Testing Process
+- Typically performed during integration, system, and acceptance testing stages.
+- Allows for testing the behavior of a more complete running system.
+
+## Key Takeaways
+- BDD is ideal for ensuring the system behaves as users expect.
+- BDD fits into higher-level testing phases where behavior observation is possible.
+
 <!-- /MarkdownTOC -->
 </details>
 
