@@ -152,6 +152,23 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# The Purpose of Test Cases and the Dangers of Untested Code
+
+## The Purpose of Test Cases
+- **Definition:** A test case is a code piece that validates the expected output for a given input.
+- **Usage:** Ensures code works correctly by testing with different data types.
+- **Importance:** Identifies bugs, such as incorrect handling of negative numbers, Booleans, or strings.
+- **Example:** Demonstrated with a Python function `area_of_a_triangle` where test cases expose multiple bugs.
+
+## Defensive Programming
+- **Robust Code:** Requires type hinting, docstrings, and explicit checks for correct data types and value ranges.
+- **Exceptions:** Raises `TypeError` and `ValueError` to handle incorrect input types and non-positive numbers, respectively.
+- **Production-Ready:** The final code includes validation checks before the calculation, making it robust for production use.
+
+## Untested Code Is Untrustworthy
+- **Uncertainty:** Untested code may appear to work but can fail with unexpected inputs.
+- **Best Practices:** Always write test cases for potential failures and handle them gracefully.
+- **Trustworthiness:** Code is only reliable if it has been thoroughly tested and proven to work with test cases.
 
 <!-- /MarkdownTOC -->
 </details>
