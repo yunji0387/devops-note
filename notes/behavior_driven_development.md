@@ -112,6 +112,37 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# BDD Specifications, Features, and Scenarios
+
+## BDD Specification Components
+- **Features**: Represent user stories. Can be multiple in a specification. Typically placed in individual specification files.
+- **Scenarios**: Concrete examples describing single behaviors of a feature, written in Given, When, Then syntax to formulate complete test cases.
+
+## Building a BDD Specification
+- Start with a **Feature** keyword, followed by a title that clearly expresses the feature scope.
+- Write a user story using agile user-story syntax: “As a [role], I want [functionality], so that [benefit].”
+- Include multiple **Scenarios** within each feature to describe various behaviors.
+- Scenarios are detailed with Gherkin syntax steps:
+  - **Given**: Preconditions or initial state setup.
+  - **When**: Event or action taken by the user.
+  - **Then**: Expected outcome or behavior observed.
+
+## Example BDD Specification
+- **Feature**: "Returns go to stock" — handling item returns to stock.
+- **Scenario 1**: "Refunded items should be returned to stock."
+  - Given a customer previously bought a black sweater.
+  - And I have three black sweaters in stock.
+  - When they return the black sweater for a refund.
+  - Then I should have four black sweaters in stock.
+
+- **Scenario 2**: "Exchanged items should be returned to stock."
+  - Given a customer previously bought a blue shirt.
+  - And I have two blue shirts in stock.
+  - And I have three black shirts in stock.
+  - When they return a blue shirt for a replacement in black.
+  - Then I should have three blue shirts in stock.
+  - And I should have two black shirts in stock.
+
 <!-- /MarkdownTOC -->
 </details>
 
@@ -122,6 +153,39 @@
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
+
+# Features of BDD Tools
+
+BDD tools offer support for a variety of programming languages and have different features. When selecting a BDD tool, consider the programming language of your project and the specification syntax the tool supports.
+
+## Common BDD Tools
+
+### Cucumber
+- One of the oldest BDD tools.
+- Available in free open-source and paid versions.
+- Supports Ruby, Java, .NET, and web applications in any language.
+- Utilizes Gherkin syntax for specifications.
+- Specifications written in plain text format for version control.
+
+### Behave
+- The tool used for Python projects.
+- Recommended by Cucumber for Python BDD.
+- Supports plain text feature files and Python-written steps.
+- Offers environment setup and test fixtures for control over the test environment.
+
+### JBehave
+- The Java version of Behave, catering to Java framework projects.
+
+### Concordion
+- An open-source tool for Java.
+- Specifications are written using natural language paragraphs.
+- Ported to other languages like C#, Python, and Ruby.
+- Does not use Gherkin syntax.
+
+## Selection Criteria for a BDD Tool
+- **Programming Language Compatibility**: Choose a tool that supports the language of your project.
+- **Specification Syntax**: Prefer tools that support Gherkin for its ease of use and understandability by both stakeholders and developers.
+- **Features**: Look for tools with powerful features that suit your project needs.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -134,6 +198,49 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Running Behave with BDD
+
+This section provides an overview of how the Behave tool operates, including the required file structure and execution of step functions.
+
+## Required File Structure for Behave
+
+- **Features Folder**: Behave requires a top-level folder named `features`.
+  - Inside this folder, `.feature` files contain the scenarios and are processed by Behave.
+  - Any naming convention works for these files.
+
+- **Steps Subfolder**: 
+  - Within the `features` folder, there's a subfolder called `steps` that contains Python files.
+  - These Python files hold the steps that match the Gherkin statements in the `.feature` files.
+  - The naming of these Python files is flexible, but using `_steps` in the name is common.
+
+- **Generic Steps File**: 
+  - A file named `web_steps.py` is recommended for generic steps that manipulate the web interface.
+  - Additional Python files for steps can be stored in the steps folder.
+
+- **No Direct Correlation**: 
+  - The number of feature files does not need to match the number of steps files.
+  - The Python steps should collectively cover all statements in the feature files.
+
+## Running Behave
+
+- Run the Behave tool from within the parent directory of the `features` folder.
+- Behave reads each `.feature` file, finds matching Python steps in the `steps` files, and executes the functions.
+
+## Sample Steps Files and Matching
+
+- **Feature File**: Contains scenarios developed with stakeholders.
+- **Steps File**: Contains Python statements that Behave matches to the feature file.
+- **Function Names**: Behave ignores the names of the functions in the steps file, focusing instead on the decorators.
+- **Process Flow**:
+  - Behave scans the feature file for scenarios.
+  - Matches each step's keyword and text string with a corresponding pair in the Python steps file.
+  - Executes the matching function.
+- The steps in the steps file do not need to be in any particular order.
+
+```markdown
+In this video, you learned that setting up the correct folder structure is crucial for Behave to function properly, and how Behave uses the code in `.feature` and steps files to execute tests.
+```
+
 <!-- /MarkdownTOC -->
 </details>
 
@@ -145,6 +252,37 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Test Fixtures in Behave
+
+The section provides a detailed explanation of the test fixtures available in Behave and the process for setting up a testing environment using these fixtures.
+
+## Behave Test Fixtures
+
+Behave offers a range of test fixtures for setting up and tearing down the testing environment at various stages of test execution:
+
+- `before_all` and `after_all`: Execute once before and after all features, ideal for setting up drivers like Selenium and establishing context for all steps.
+- `before_feature` and `after_feature`: Run before and after each feature, useful for setting up a clean environment for every feature.
+- `before_scenario` and `after_scenario`: Execute before and after each scenario, allowing granular control over the execution environment of each scenario.
+- `before_step` and `after_step`: Run before and after every step, offering control at a very detailed level.
+- `before_tag` and `after_tag`: Execute before and after a tagged section of the feature file, providing environment control based on tags.
+
+## Setting Up the Behave Environment
+
+- Behave requires an `environment.py` file where you declare your test fixtures.
+- Global variables from the environment can be declared and used in test fixtures.
+- The `context` object is passed to every step in the test suite, making it the carrier for shared data across steps.
+
+### Example of `environment.py`
+
+- Import necessary modules such as `getenv` from `os` and `WebDriver` from `selenium`.
+- Declare global variables to be accessed by the test steps, like `wait_seconds` and `Base_URL`.
+- Define `before_all` to set up the initial environment for running the BDD tests, which may include initializing the WebDriver and setting wait times.
+- Define `after_all` to close down the web browser after all tests, ensuring resources are released properly.
+
+```markdown
+In summary, Behave's test fixtures are powerful tools for managing the testing environment throughout the BDD process. The `environment.py` file is the central place to declare and define these fixtures, ensuring a controlled environment for automated tests.
+```
+
 <!-- /MarkdownTOC -->
 </details>
 
@@ -155,6 +293,42 @@
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
+
+# Essential Tips for Writing Feature Files
+
+The section covers practical tips for writing feature files in Gherkin syntax and explains how to use the Background keyword and data tables effectively.
+
+## Writing Feature Files Tips
+
+- **Strive for Consistency**: Avoid creating multiple Python steps for similar actions. Use consistent language like “I see” throughout the feature file.
+  
+- **Consider User Experience**: Use labels and terms in the feature files that users see on the interface, like “Customer ID” instead of `customer_id`.
+  
+- **Build In System Response Cues**: Include cues that signal system responses, such as status messages, to aid testing tools in detecting when an action has completed.
+
+## Background Keyword
+
+- Use `Background` to set a common initial testing state for all scenarios in a feature file.
+- Typically used with `Given` statements but can accommodate any keyword.
+- Background is run before each scenario, ensuring the same start state for each.
+
+## Tables in Gherkin
+
+- Indent tables to associate them with the corresponding Gherkin statement.
+- Delimit columns with vertical bars (`|`) and use the first row for column names.
+- The data in tables set in Background will reset before each scenario runs.
+
+## Example Feature File
+
+- Start with the `Feature` keyword and a title that captures the feature's essence.
+- Include a user story following the "As a [role], I want [functionality], so that [benefit]" format.
+- Use the `Background` keyword for common initial state setup followed by a data table.
+- Write scenarios that describe the behavior with `Given`, `When`, `Then` steps.
+- Include `And` for additional conditions or actions and `But` for negations.
+
+```markdown
+Overall, the section emphasizes the importance of clear, consistent language and the use of cues for successful feature file writing in BDD. The `Background` keyword and tables are powerful tools for setting up test conditions and expected data states.
+```
 
 <!-- /MarkdownTOC -->
 </details>
