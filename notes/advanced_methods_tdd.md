@@ -264,6 +264,68 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Understanding Mock Objects in Python
+
+## What are Mock Objects?
+- Mock objects simulate the behavior of real objects, allowing control over their actions and returns.
+- Useful when the function return value is an object with multiple values and methods.
+- In Python’s unittest package, the two main mock objects are `Mock` and `MagicMock`.
+  - `MagicMock` includes all magic methods, useful for mimicking containers or objects that implement Python protocols.
+  - `Mock` is suitable when magic methods are not needed.
+
+## Implementing Mock and MagicMock
+- Create an instance of `Mock` or `MagicMock` as needed.
+- Mock objects can have methods called on them without error, even if they aren't defined, making them flexible for tests.
+- Attributes can be added during or after the creation of a mock object.
+- To mimic a specific class, use the `spec` parameter when creating a mock.
+  - For example, you can mock the `Response` class from the `requests` package, setting expected attributes like `status_code`.
+
+## Using Patches and Mock Objects Together
+- Use `patch` to replace a function call with a mock object.
+- Import `patch` and `MagicMock` from `unittest.mock`.
+- Rewrite the function to be robust, implementing actual logic and external calls.
+- Patch the external call, like `requests.get()`, with a mock object.
+- Set up the mock to behave like the expected object, with correct status codes and methods.
+- Call the patched function with the mock in place, and it behaves as if the real object was called, allowing complete control over the test conditions.
+
+## Benefits of Using Mocks
+- Achieve complete control over test scenarios, simulating both positive and negative conditions.
+- Create specific conditions for testing that might be hard or impossible to reproduce in real systems.
+- Ensure that testing focuses on your code and not on external systems or dependencies.
+
+## Caution with Mocks
+- Use mocks judiciously to ensure the code is being tested, not the mocks themselves.
+- Mocks should be used to create necessary conditions for testing but shouldn't replace the need to test with real objects and scenarios when possible.
+
+---
+
+# Video Summary: Mocking with Mock Objects in Python
+
+## Introduction
+- The lab demonstrates how to mock calls to the IMDb database using the `unittest.mock` library in Python.
+- The process begins with running nose tests to assess the initial state, which shows low test coverage due to the absence of tests.
+
+## Understanding the Model
+- The `IMDb.py` file contains a class that makes calls to the IMDb database with methods like `search_titles`, `get_movie_reviews`, and `get_movie_ratings`.
+- The class uses the `requests.get` method to call the IMDb service, checking for a `200` status code and returning JSON data.
+
+## Setting Up Mock Objects
+- The `test_IMDb.py` file is prepared with the necessary imports (`patch`, `mock`, `Response`, `IMDb`) and a global variable `IMDb_data` loaded with JSON responses from the IMDb database.
+- The JSON responses include various scenarios like good searches, invalid API keys, and so on, which will be used to mock the IMDb calls.
+
+## Writing Test Cases
+- The lab instructions guide through creating test cases by mocking different responses using `@patch`.
+- The `@patch` decorator is used to replace the behavior of the `search_titles` method within the `IMDb` class.
+- It's crucial to patch the correct namespace to mock the method calls accurately.
+
+## Patching with Mock Objects
+- A mock object is configured to simulate the behavior of the IMDb service, with the capability to return both good and bad data.
+- The mock object can be specified to mimic the `Response` class from the `requests` package, complete with status codes and methods like `json()`.
+- The video demonstrates how to patch a function call and set up mock objects to return predefined data or behaviors, such as a `200` status code for successful calls or a `404` error for not found scenarios.
+
+## Challenges and Next Steps
+- The video concludes by encouraging viewers to apply the techniques to their projects, mocking calls to external systems to ensure test cases are robust and always working as intended.
+- The goal is to gain control over test cases by being able to simulate both successful and error responses, and to check error handlers and other system behaviors.
 
 <!-- /MarkdownTOC -->
 </details>
