@@ -15,7 +15,7 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-# Summary of Video on the Importance of Testing in Software Development
+# Importance of Testing in Software Development
 
 ## Importance of Testing
 - **Quote by Scott Ambler:** "If it's worth building, it's worth testing. If it's not worth testing, why are you wasting your time working on it?"
@@ -57,7 +57,7 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-# Video Summary: The Importance of Testing in Software Development
+# The Importance of Testing in Software Development
 
 ## Key Problems When Developers Don't Test Code
 - **Assumption of Functionality:** Developers often assume the code works without testing, leading to future complications.
@@ -89,6 +89,27 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Levels of Software Testing and Release Cycle Phases
+
+## Levels of Software Testing
+- **Unit Testing:** Tests individual components for correct behavior ("happy" and "sad" paths).
+- **Integration Testing:** Tests combined units to expose flaws in their interactions.
+- **System Testing:** Tests the complete, integrated system against specific requirements.
+- **User Acceptance Testing (UAT):** Validates the system against business requirements and for end-user acceptability.
+
+## Phases of the Traditional Release Cycle
+- **Development Environment:** Where unit testing occurs and code is stored in SCM like Git.
+- **Build Environment:** For compiling code artifacts and additional unit testing.
+- **Package Repository:** Storage for build artifacts such as Java jars, Python wheels, or Docker images.
+
+### Testing Environments
+- **Test Environment:** For integration testing and performance/compliance testing.
+- **Staging/Pre-Production Environment:** A replica of production for system testing.
+- **Production Environment:** Where acceptance testing is finalized before delivery.
+
+## Conclusion
+- Testing is a structured process with different levels, each with a specific focus.
+- The release cycle moves from development to production, with testing's complexity increasing as it progresses.
 
 <!-- /MarkdownTOC -->
 </details>
