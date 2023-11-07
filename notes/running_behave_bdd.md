@@ -215,6 +215,42 @@ By leveraging the context variable, you can create more complex and stateful tes
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Variable Substitution in Behave
+
+Variable substitution in Behave enhances the reusability and generality of Python steps by allowing you to use placeholders in your Gherkin statements, reducing the need for writing multiple Python steps for similar actions.
+
+## Understanding Variable Substitution
+
+- **Purpose:** Makes Python steps more generic, minimizing the number of steps by handling sentences that only differ by a name or value.
+- **Advantage:** Increases reuse and consistency across feature files.
+- **Implementation:** Words in the feature file sentence that can change are replaced with variables in the Python steps.
+
+## Implementing Variable Substitution
+
+- **Use Quotes in Feature Files:** Place quotes around words in the feature file sentences that will be substituted with variables to aid Behave in string matching.
+  ```gherkin
+  When I set the "Name" field to "Maxwell"
+  ```
+
+- **Define Variables in Python Steps**: In the decorator's string, create variable names enclosed in curly braces.
+  ```python
+  @when('I set the "{element_name}" field to "{text_string}"')
+  ```
+- **Function Parameters**: Add parameters to the step implementation with the same names as the variables in the decorator's string.
+  ```python
+  def step_impl(context, element_name, text_string):
+    element_id = element_name.lower().replace(" ", "_")
+    element = context.driver.find_element_by_id(element_id)
+    element.clear()
+    element.send_keys(text_string)
+  ```
+  
+## Best Practices
+- **Consistent Naming**: Choose variable names that are descriptive and consistent with the context of their usage.
+- **Quotation Marks**: Use quotation marks in the feature file to delineate variable data, which provides clarity for parsing.
+- **Generic Steps File**: Store generic web steps, like the ones using variable substitution, in a `web_steps.py` file for reuse across different applications.
+By employing variable substitution, you can create versatile steps that adapt to various scenarios, streamlining your BDD process and fostering code reuse.
+
 <!-- /MarkdownTOC -->
 </details>
 
