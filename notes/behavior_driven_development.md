@@ -21,17 +21,6 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-<!-- /MarkdownTOC -->
-</details>
-
----
-
-<a id="bdd_benefits"></a>
-# Benefits of BDD
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
 # Behavior-Driven Development (BDD)
 
 ## Overview of BDD
@@ -66,11 +55,51 @@
 
 ---
 
+<a id="bdd_benefits"></a>
+# Benefits of BDD
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Benefits of Behavior-Driven Development for Automated Testing
+
+## Key Benefits of BDD
+- **Unified Language:** BDD allows for describing behaviors in a single, accessible syntax that domain experts, testers, developers, and stakeholders can understand.
+- **Improved Communication:** It facilitates clearer communication among all parties involved in the development process.
+- **Natural Syntax:** BDD uses a natural language syntax, particularly given-when-then, which is easier to learn and approach than traditional TDD tools.
+- **Gherkin Syntax:** The most common BDD syntax is Gherkin, named after the BDD tool Cucumber, enhancing readability and stakeholder engagement.
+
+## Advantages of BDD Specifications
+- **Behavior Description:** Specifies how a system should behave in different scenarios, providing clarity on expected functionality.
+- **Documentation Generation:** BDD tools can automatically generate technical and user documentation from specifications, ensuring documentation is always up-to-date.
+- **Test Generation:** Allows for automatic creation of tests from specifications, proving that the delivered behavior matches what stakeholders require.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
 <a id="bdd_workflow_and_gherkin_syntax"></a>
 # BDD Workflow and Gherkin Syntax
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
+
+# Behavior-Driven Development Workflow and Gherkin Syntax
+
+## BDD Workflow
+- Collaboratively explore the problem domain and create scenarios in Gherkin syntax.
+- Use a BDD test runner like Behave to automate these scenarios as test cases.
+- Behave will identify missing test steps needed to prove system behavior.
+- Develop and refine these steps, receiving constant feedback on implementation.
+- Maintain a living document that acts as both specification and tests, checked into source control and used in every test run.
+
+## Gherkin Syntax Keywords
+- **Given:** Defines preconditions to set up the system state before testing (e.g., "Given I have two items in my shopping cart").
+- **When:** Describes an event or action taken (e.g., "When I remove an item from my cart").
+- **Then:** Specifies the expected outcome to be verified (e.g., "Then I should only have one item in my shopping cart").
+- **And:** Continues a series of similar steps for readability, taking the meaning of the previous Given, When, or Then (e.g., "Given this, And that").
+- **But:** Introduces a contrasting step to what should not occur for readability (e.g., "But that is not observed").
 
 <!-- /MarkdownTOC -->
 </details>
