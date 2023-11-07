@@ -151,6 +151,59 @@ This process is straightforward and iterative, ensuring that all steps are accur
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Using the Context Variable in Behave
+
+The `context` variable is a powerful feature in Behave that allows for the sharing of information between steps. It acts as a shared container accessible to all steps throughout the execution of a feature file.
+
+## Overview of Context
+
+- The `context` variable is passed into every Python step definition.
+- Serves as a persistent storage mechanism across steps within a feature file.
+- Useful for passing data and ensuring state consistency from one step to another.
+
+## Examples of Using Context
+
+### Example 1: Flask Test Client
+```python
+@given('the server is started')
+def step_impl(context):
+    context.client = app.test_client()
+
+@when('I retrieve the root URL')
+def step_impl(context):
+    context.response = context.client.get('/')
+
+@then('I should see "{message}" in the response')
+def step_impl(context, message):
+    assert message in context.response.data
+```
+- **Usage**: Stores the Flask test client and response objects in `context` for use in subsequent steps.
+
+## Example 2: Simulated Clipboard
+```python
+@given('I copy the "{element_name}" field')
+def step_impl(context, element_name):
+    element_id = f"{element_name}_id"
+    element = context.driver.find_element_by_id(element_id)
+    context.clipboard = element.get_attribute('value')
+
+@when('I paste the "{element_name}" field')
+def step_impl(context, element_name):
+    element_id = f"{element_name}_id"
+    element = context.driver.find_element_by_id(element_id)
+    element.clear()
+    element.send_keys(context.clipboard)
+```
+- **Usage**: Implements a simulated clipboard to store and retrieve values for copy-and-paste actions.
+
+## Key Takeaways
+- **Flexibility**: The context variable allows for flexible and dynamic step implementations.
+- **Consistency**: Ensures consistency in test data and state across different steps.
+- **Accessibility**: All steps within a feature file can access and manipulate data stored in the context.
+- **Best Practices**: It is recommended to use meaningful names for context attributes to maintain code readability and intent.
+
+By leveraging the context variable, you can create more complex and stateful tests that mimic real-world user interactions and data flows.
+
 <!-- /MarkdownTOC -->
 </details>
 
