@@ -122,6 +122,24 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# TDD vs BDD
+
+## Test Driven Development (TDD)
+- **Internal Focus:** TDD is concerned with the internal functioning of the system.
+- **Test-First Approach:** Tests are written before the code is developed.
+- **Design-Driven Tests:** Tests describe the desired behavior of code, driving its design and development.
+- **Unit Testing:** TDD is primarily used for unit testing at a lower level.
+
+## Behavior Driven Development (BDD)
+- **External Focus:** BDD focuses on the system's behavior from an external viewpoint.
+- **Business-Outcome Oriented:** Implements behaviors that directly contribute to business outcomes.
+- **Common Syntax:** Uses a syntax understandable by all stakeholders, improving communication.
+- **Integration and Acceptance Testing:** BDD is used for higher-level testing to ensure components work together correctly.
+
+## Complementary Nature of TDD and BDD
+- **Cyclic Development:** Developers cycle between TDD and BDD to cover all aspects of testing.
+- **Building the Right Thing:** BDD ensures the system has the right set of capabilities and behaviors.
+- **Building the Thing Right:** TDD confirms that each feature performs its intended task.
 
 <!-- /MarkdownTOC -->
 </details>
