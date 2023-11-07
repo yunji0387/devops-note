@@ -279,9 +279,7 @@ Behave offers a range of test fixtures for setting up and tearing down the testi
 - Define `before_all` to set up the initial environment for running the BDD tests, which may include initializing the WebDriver and setting wait times.
 - Define `after_all` to close down the web browser after all tests, ensuring resources are released properly.
 
-```markdown
-In summary, Behave's test fixtures are powerful tools for managing the testing environment throughout the BDD process. The `environment.py` file is the central place to declare and define these fixtures, ensuring a controlled environment for automated tests.
-```
+### In summary, Behave's test fixtures are powerful tools for managing the testing environment throughout the BDD process. The `environment.py` file is the central place to declare and define these fixtures, ensuring a controlled environment for automated tests.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -326,9 +324,7 @@ The section covers practical tips for writing feature files in Gherkin syntax an
 - Write scenarios that describe the behavior with `Given`, `When`, `Then` steps.
 - Include `And` for additional conditions or actions and `But` for negations.
 
-```markdown
-Overall, the section emphasizes the importance of clear, consistent language and the use of cues for successful feature file writing in BDD. The `Background` keyword and tables are powerful tools for setting up test conditions and expected data states.
-```
+### Overall, the section emphasizes the importance of clear, consistent language and the use of cues for successful feature file writing in BDD. The `Background` keyword and tables are powerful tools for setting up test conditions and expected data states.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -341,6 +337,50 @@ Overall, the section emphasizes the importance of clear, consistent language and
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Selenium for BDD Testing
+
+This video explains the role of Selenium in Behavior Driven Development (BDD) testing and provides a guide on how to initialize and use Selenium for automating web browser actions.
+
+## What is Selenium?
+
+Selenium is a suite of tools designed for automating web browser activity. It's essentially a WebDriver, which allows instructions to be executed across different browsers such as Chrome, Firefox, Safari, and Edge.
+
+## Benefits of Selenium
+
+- Perfect for integration testing of UIs in microservices architectures.
+- Automates user actions like entering data, clicking links, and more.
+- Saves time compared to manual testing.
+
+## Initializing Selenium
+
+1. Install the web browser you intend to test with on your system.
+2. Instantiate the WebDriver corresponding to your browser.
+   - For Chrome, set options such as headless mode and security features off for testing.
+   - Create a Chrome driver with these options.
+
+## Finding and Manipulating HTML Elements
+
+- Selenium can find HTML elements by various selectors: class name, CSS selector, id, name, XPath, link text, partial link text, and tag name.
+- The Python version of Selenium provides functions for each selector type.
+- `find_element_by_id()` is a common and precise method used to interact with elements.
+
+## Example of Using Selenium
+
+```python
+# Function to interact with an element by its ID
+def find_and_assert_element_by_id(context, text_string):
+    element = context.driver.find_element_by_id("customer_id")
+    assert text_string in element.get_attribute('value')
+```
+- In the HTML, Selenium would find an element with the id="customer_id" to interact with.
+- Once an element is found, it can be manipulated, such as clearing its content or typing into it using `send_keys()`.
+
+## Handling Latency with WebDriverWait
+- Web UI testing can involve latency, and WebDriverWait is used to handle such scenarios.
+- It's a function that waits for an element to appear before proceeding with the test.
+
+### Overall, Selenium is a powerful tool for automating and testing web UIs, offering real-user simulation for more effective BDD integration tests.
+
 <!-- /MarkdownTOC -->
 </details>
 
@@ -352,6 +392,62 @@ Overall, the section emphasizes the importance of clear, consistent language and
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Writing Step Files for Behave
+
+This video provides an overview of how to create step files for Behave and outlines the workflow for writing steps that correspond to Gherkin statements in a feature file.
+
+## What are Step Files?
+
+Step files are Python files that contain functions matching the Gherkin statements from the feature file. Behave uses decorators to match the `Given`, `When`, and `Then` statements and executes corresponding Python functions.
+
+## Workflow for Writing Steps
+
+1. **Import Decorators**: Import the necessary decorators (`@given`, `@when`, `@then`) from Behave based on the Gherkin keywords used in your feature file.
+
+2. **Match Gherkin Statements**: For each Gherkin statement in the feature file, use a decorator with a matching string to denote a corresponding step in the step file.
+
+3. **Implement Step Functions**: Define a function called `step_impl` under each decorator, which Behave will execute when it finds a matching statement. Behave ignores the function names and solely relies on the text string in the decorators for matching.
+
+4. **Use the Context Variable**: Utilize the `context` variable passed into each step to access shared data like web drivers or URLs.
+
+5. **Perform Actions or Assertions**: Implement the necessary actions or assertions within each step function based on the behavior described by the Gherkin statement.
+
+### Example:
+
+- **Feature**: "The pet store catalog service"
+- **Scenario**: "The website is up"
+
+```gherkin
+When I visit the 'Home Page'
+Then I should see 'Welcome to the Pet Shop'
+And I should not see '404 Not Found'
+```
+- Step File:
+```python
+from behave import when, then
+
+@when('I visit the "Home Page"')
+def step_impl(context):
+    context.driver.get(context.base_url)
+
+@then('I should see "Welcome to the Pet Shop"')
+def step_impl(context):
+    assert "Welcome to the Pet Shop" in context.driver.title
+
+@then('I should not see "404 Not Found"')
+def step_impl(context):
+    element = context.driver.find_element_by_tag_name('body')
+    assert "404 Not Found" not in element.text
+```
+
+## Summary
+- Step files link the behavior described in Gherkin syntax with test code.
+- Each Gherkin statement has a corresponding Python function annotated with a matching decorator.
+- The context variable is essential for passing shared data through the steps.
+- Steps include actions to set up test conditions and assertions to verify outcomes.
+
+### Follow this workflow to ensure that each behavior outlined in your feature file is properly tested with corresponding Python code in Behave.
+
 <!-- /MarkdownTOC -->
 </details>
 
@@ -362,6 +458,63 @@ Overall, the section emphasizes the importance of clear, consistent language and
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
+
+# Loading Test Data in Behave
+
+In Behave, test data can be specified in your feature file using the `Background` section, which is a powerful way to establish the initial state and data for testing. However, this data doesn't automatically populate itself—you must manually load it.
+
+## How to Load Test Data
+
+Behave stores the data in a variable within the `context` called `table`. This allows you to iterate over `context.table` to extract and load the necessary data for your tests.
+
+### Example Feature: Search for Pets by Category
+
+The feature file might include a `Background` section with a table format to list pets and their attributes:
+
+```gherkin
+Given the following pets
+  | name | category | available |
+  | Fido | dog      | true      |
+  | ...  | ...      | ...       |
+```
+Each row in this table will be represented as a Python dictionary within context.table, making it accessible by the column names provided.
+
+## Steps File Code to Load Data
+1. **Start with a Decorator**: Use the `@given` decorator with the string "the following pets" to match the statement in the feature file.
+```python
+@given('the following pets')
+```
+2. **Define a Function**: Implement the step function, passing in the `context`.
+```python
+def step_impl(context):
+    # Implementation details
+```
+3. **Iterate Over the Table**: Use a for loop to iterate over `context.table`, which gives you each row as a dictionary.
+```python
+for row in context.table:
+    payload = {
+        'name': row['name'],
+        'category': row['category'],
+        'available': row['available'].lower() in ['true', '1']
+    }
+```
+4. **Create Payload**: Construct a payload dictionary with the data from the current row, converting strings to the appropriate data types (e.g., boolean).
+5. **Make an HTTP Request**: Use the payload to make a POST request to the server’s REST API to create a pet.
+```python
+response = context.driver.post(context.base_url + '/pets', json=payload)
+```
+6. **Save Response and Assert**: Store the response in the context for other steps and assert the expected status code for creation.
+```python
+assert response.status_code == 201
+```
+
+## Summary
+- The `Background` allows specifying test data in a tabular format.
+- Behave assigns this data to `context.table`.
+- Extract and load data by iterating over `context.table` with a for loop.
+- Use the extracted data to create payloads and make HTTP requests to populate your test environment.
+
+This process ensures that each scenario starts with a consistent and controlled dataset, allowing for reliable and repeatable test results.
 
 <!-- /MarkdownTOC -->
 </details>
