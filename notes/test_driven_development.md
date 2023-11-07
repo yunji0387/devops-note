@@ -151,7 +151,28 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Test Fixtures, Frameworks, and Writing Test Cases
 
+## Role of Test Fixtures in Testing
+- **Definition:** Test fixtures set up an initial state before tests run and clean up after they are finished.
+- **Implementation:** Use `setUp()` to initialize and `tearDown()` to reset or clean up after a test case.
+- **Example:** In stack tests, `setUp()` creates a new stack instance and `tearDown()` sets it to `None`.
+
+## How Test Frameworks Help Build Assertions
+- **Purpose:** Test frameworks, like Python's `unittest`, provide a set of methods to assert conditions in code.
+- **Assertions:** These methods allow developers to check for expected outcomes, such as `assertEqual()` or `assertTrue()`.
+- **Inheritance:** Test case classes inherit from `TestCase` to use these assertion methods.
+
+## Constructing Test Cases
+- **Structure:** Define a class that is a subclass of `TestCase` and includes test methods starting with `test`.
+- **Example Test Cases:** 
+  - `test_push()` to verify pushing an item onto the stack.
+  - `test_pop()` to confirm popping the top item off the stack and ensuring the stack is empty afterward.
+
+## Summary of Learning Points
+- Test fixtures prepare and clean up the test environment for each test case.
+- Testing frameworks provide assertion tools to confirm code behavior.
+- Test cases are methods within a subclass of `TestCase` that check the functionality of the code under test.
 
 <!-- /MarkdownTOC -->
 </details>
