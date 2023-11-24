@@ -2,6 +2,7 @@
 
 # Table of Contents
 1. [What is CI/CD?](#what_is_cicd)
+2. [Platform and Tools](#platform_and_tools)
 
 ---
 
@@ -50,6 +51,39 @@
 - CD prepares and deploys integrated code to various environments.
 - Continuous Deployment focuses on production deployment.
 - CI/CD offers significant benefits in software development processes.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="platform_and_tools"></a>
+# Platform and Tools
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# ‘Platform and Tools’ Summary
+
+## Objectives
+- Recognize the viability of using diverse CI/CD tools.
+- Identify common CI/CD tools.
+
+## Key Insights
+- **Tool Diversity**: Different teams within the same organization often use various tools for their CI/CD pipelines.
+- **Tool Examples**: Jenkins, Travis CI, Circle CI, GitHub Actions, etc.
+- **Flexibility**: The specific tool used is less important than the automation of processes.
+
+## Common CI/CD Tools
+- **Jenkins**: An older and complex CI/CD software installed on a server for central builds.
+- **Circle CI**: Implements DevOps practices, performs Continuous Delivery, uses `circle.yaml` for workflows.
+- **Travis CI**: A hosted CI service for GitHub and Bitbucket projects, supports open-source projects, uses `.travis.yaml` for workflows.
+- **GitHub Actions**: Automates build, test, and deploy workflows, exclusively for GitHub.
+
+## Conclusion
+- Different tools for CI/CD are acceptable and often seen in diverse business lines.
+- The focus should be on automation rather than manual processes.
+- There is a wide array of CI/CD tools available, allowing teams to choose the one that best fits their needs.
 
 <!-- /MarkdownTOC -->
 </details>
