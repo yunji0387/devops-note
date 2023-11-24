@@ -3,6 +3,7 @@
 # Table of Contents
 1. [What is CI/CD?](#what_is_cicd)
 2. [Platform and Tools](#platform_and_tools)
+3. [Infrastructure as Code (IaC)](#iac)
 
 ---
 
@@ -84,6 +85,59 @@
 - Different tools for CI/CD are acceptable and often seen in diverse business lines.
 - The focus should be on automation rather than manual processes.
 - There is a wide array of CI/CD tools available, allowing teams to choose the one that best fits their needs.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="iac"></a>
+# Infrastructure as Code (IaC)
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Infrastructure as Code (IaC) Summary
+
+## Overview
+- **Infrastructure as Code (IaC)**: Method to manage and provision infrastructure through machine-readable definition files.
+- **Key Concept**: Infrastructure setup and management using code, not manual processes.
+
+## Benefits of IaC
+- **Consistency and Repeatable Setups**: Ensures identical environments are created every time.
+- **Error Reduction**: Minimizes manual errors in system configurations.
+- **Rapid Provisioning**: Quick and efficient setup of development, test, and production environments.
+- **Knowledge Preservation**: Codifies infrastructure setup, reducing dependency on individual expertise.
+- **Cloud Computing Optimization**: Maximizes cloud benefits, such as scalability and cost-efficiency.
+
+## Types of IaC Tools
+- **Declarative (Specify 'What')**: Terraform, Puppet, SaltStack, CloudFormation, Ansible (partially).
+- **Imperative (Specify 'How')**: Chef, Ansible (partially).
+
+## Common IaC Tools
+- **Terraform**: Open source, declarative, pre-execution checks.
+- **Ansible**: Open source, simple setup, uses YAML, ideal for memory-constrained environments.
+- **Chef**: Imperative, uses Ruby for "Cookbooks."
+- **Puppet**: Declarative, platform-independent.
+- **SaltStack**: Focuses on parallel execution and direct command issuance.
+
+## Conclusion
+- IaC has evolved from Configuration Management Systems (CMSs).
+- Offers speed, efficiency, and reliability in infrastructure provisioning.
+- Various tools available, each with unique features and approaches.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="--"></a>
+# --
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
 
 <!-- /MarkdownTOC -->
 </details>
