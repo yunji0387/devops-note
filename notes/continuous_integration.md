@@ -5,6 +5,7 @@
 2. [Benefits of Continuous Integration(CI)](#benefits_of_ci)
 3. [Social Coding](#social_coding)
 4. [Git Feature Branch Workflow: Working in Branches](#ci_git_working_in_branch)
+5. [Git Feature Branch Workflow: Making a Pull Request](#ci_git_making_pull_request)
 
 ---
 
@@ -121,15 +122,42 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Git Feature Branch Workflow Summary
 
+## Introduction to Git
+- **What is Git**: A distributed source code management tool, widely used for version control.
+- **Importance in DevOps**: Facilitates collaborative development and handles projects of all sizes.
+
+## Git Workflow
+- **Local Changes**: Use `git add` to stage changes and `git commit` to commit them locally.
+- **Remote Changes**: `git push` to send changes to the remote repository.
+- **Fetching Changes**: `git fetch` for metadata and `git pull` for actual code changes.
+- **Branch Management**: `git checkout` to switch between branches.
+- **Undoing Changes**: `git reset --soft` for undoing commits while keeping changes in staging.
+
+## Git Feature Branch Workflow
+- **Creating Branches**: Each new feature should have its own branch.
+- **Committing Changes**: Regular commits to save progress.
+- **Pushing to Remote Branch**: Frequent updates to a remote branch for backup and collaboration.
+- **Pull Requests**: For code review and discussions.
+- **Merging to Main Branch**: After successful review and testing, merge code into the main branch.
+
+## Best Practices
+- **Start with Latest Code**: Always pull the latest changes from the main branch.
+- **Descriptive Commit Messages**: Ensure clarity on changes made.
+- **Use `.gitignore`**: To avoid unwanted files in the repository.
+- **Remote Tracking**: Set up remote branch tracking for easy collaboration.
+
+## Conclusion
+- Git and its feature branch workflow are integral to modern software development, enhancing code quality and facilitating efficient collaboration.
 
 <!-- /MarkdownTOC -->
 </details>
 
 ---
 
-<a id="--"></a>
-# --
+<a id="ci_git_making_pull_request"></a>
+# Git Feature Branch Workflow: Making a Pull Request
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
