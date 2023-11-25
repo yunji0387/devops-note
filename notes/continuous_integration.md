@@ -4,7 +4,9 @@
 1. [What is Continuous Integration(CI)?](#what_is_ci)
 2. [Benefits of Continuous Integration(CI)](#benefits_of_ci)
 3. [Social Coding](#social_coding)
+4. [Git Feature Branch Workflow: Working in Branches](#ci_git_working_in_branch)
 
+---
 
 <a id="what_is_ci"></a>
 # What is Continuous Integration(CI)?
@@ -78,6 +80,56 @@
 
 <a id="social_coding"></a>
 # Social Coding
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Social Coding Summary
+
+## Source Code Management (SCM)
+- **Definition**: Tracking versions of source code during development.
+- **Tools**: SCM tools or Version Control Systems (VCSs) are used to manage source code.
+- **Types**: Centralized (code in a central repository) and Distributed (local clones of code repository).
+
+## Social Coding
+- **Concept**: "Open source for inner source," adopting open-source practices within enterprises.
+- **Traditional vs. Social Coding**: Previously, private repositories with limited access were common. Social coding makes repositories public for collaboration.
+- **Benefits**: Promotes code reuse, prevents redundant development, fosters collaboration.
+
+## Social Coding in Practice
+1. **Issue Creation and Assignment**: Open an issue and assign it to yourself to signal you are working on it.
+2. **Discussion and Agreement**: Collaborate with the repository owner on the feature development.
+3. **Forking and Development**: Fork the repository, create a branch, and make changes.
+4. **Pull Request and Review**: Issue a pull request for review. Repository owners have full control over the contributions.
+
+## Key Takeaways
+- **Controlled Collaboration**: Repository owners maintain control, yet collaboration is encouraged.
+- **Win-Win Situation**: Leveraging existing code saves resources and adds features.
+- **Enterprise Adoption**: Applying open-source methodologies internally leads to efficient and collaborative development.
+
+## Conclusion
+- Social coding enhances code quality, increases collaboration, and streamlines the development process.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="ci_git_working_in_branch"></a>
+# Git Feature Branch Workflow: Working in Branches
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="--"></a>
+# --
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
