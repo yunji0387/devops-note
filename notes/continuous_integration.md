@@ -409,29 +409,3 @@ This video provides a comprehensive understanding of GitHub Actions, including i
 </details>
 
 ---
-
-<a id="--"></a>
-# --
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
-
-<a id="--"></a>
-# --
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
-
-
-<!-- /MarkdownTOC -->
-</details>
-
----
