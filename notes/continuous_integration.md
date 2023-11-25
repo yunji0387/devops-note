@@ -162,7 +162,32 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Git Feature Branch Workflow: Making Pull Requests Summary
 
+## Overview of Pull Requests in Git Feature Branch Workflow
+- **Workflow Steps**: The final steps involve issuing a pull request and merging the code.
+- **Start with Main Branch**: Begin by updating your local main branch with the latest changes.
+- **Merge Main into Feature Branch**: Ensure your feature branch includes the latest main branch changes.
+- **Resolve Conflicts**: Handle any merge conflicts that arise during this process.
+
+## Preparing for Pull Request
+- **Update Main Branch Locally**: Switch to the main branch and run `git pull`.
+- **Merge Updated Main into Feature Branch**: Apply the latest changes from the main to your feature branch.
+- **Push Updated Branch**: After resolving conflicts and updating, push the branch to the remote repository.
+
+## Post-Merge Actions
+- **Switch to Main Branch**: After merging the pull request, switch back to the main branch.
+- **Pull Latest Changes**: Update the main branch with the newly merged changes.
+- **Delete Old Feature Branch**: Remove the feature branch used, as it's now merged with the main branch.
+- **Create New Feature Branch**: For new development work, start with a fresh feature branch.
+
+## Key Practices
+- **Regular Updates**: Keep both the main and feature branches updated with the latest changes.
+- **Clean Workflow**: Maintain a streamlined process by deleting old branches and starting new ones for each feature.
+- **Pull Request Review**: Ensure pull requests are thoroughly reviewed before merging.
+
+## Conclusion
+- The Git Feature Branch workflow with pull requests is essential for organized and efficient code integration, ensuring up-to-date and conflict-free merging into the main branch.
 
 <!-- /MarkdownTOC -->
 </details>
