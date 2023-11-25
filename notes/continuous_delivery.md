@@ -121,7 +121,57 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-Welcome to ‘Continuous Delivery Practices.’ After watching this video, you will be able to describe Continuous Delivery best practices, explain the requirements of a CI/CD pipeline, and describe the differences between Continuous Deployment and Continuous Delivery. There are many best practices to follow when implementing Continuous Delivery. It’s important to make every change releasable. This means you should always include user documentation, operations runbooks, and information about what your change does. This ensures that every change will work and be documented well enough to be delivered to customers as well as serve any audit that may occur. You also need to keep in mind that Continuous Delivery is built upon Continuous Integration. As a best practice, you should avoid delaying any integration caused by long-lived branches. You want to use short-lived feature branches that are continuously integrated into the main codebase. This is also called trunk-based development because you always come back to the trunk, otherwise known as the master or main branch. Every change is built, tested, and deployed together for the fastest feedback. A well-constructed, automated delivery pipeline is integral to a successful Continuous Delivery implementation. This ensures that all code releases move into the test and production environments in a consistent, predictable way. Automate as many processes as possible. In Continuous Delivery, you must automate as many processes as possible in your software development lifecycle to create a good, reliable delivery pipeline. This pipeline is not only for code builds and deployments, but for the creation of new development environments as well. You want to aim for no downtime. To ensure application availability while you make frequent Continuous Delivery updates, when you push a new function to production, you must first validate it before deploying it to public-running application instances. You also want to release at the granularity of test. If two parts of the system must be tested together, they should be released together so that you know that the parts of your system are compatible. Release automation tools are good at coordinating this kind of delivery. Alternatively, you can fully decouple. A CI/CD pipeline requires several elements to be in place: You need a code repository to host and manage all source code. Your source code management system is the single version of the truth. Everything you need to build and release your code must be checked into version control. That code needs a build server to manage the building of the application. You want that environment to perform clean builds, starting from the same state every time. You need an integration server or orchestrator that handles the build automation and runs tests against your code. There should be no manual steps. Everything should be automated. And finally, you need a repository to store all the binaries and artifacts of the application so that once built and tested, they can be deployed easily. So, what’s the difference between Continuous Deployment and Continuous Delivery? Continuous Deployment can be part of a Continuous Delivery pipeline. Specifically, Continuous Delivery is the automated movement of code through the development lifecycle (or delivery lifecycle) once it passes the required automation tests. Continuous Deployment is taking that delivered code and deploying it to production. Whether and how Continuous Delivery is implemented all depends on your business needs. If your business needs the delivery team to release new or updated software to production repeatedly, reliably, and quickly, then Continuous Deployment will be of great benefit. In this video, you learned that there are several best practices to follow when implementing Continuous Delivery, a CI/CD pipeline requires a code repository, build server, integration server, and a storage repository, Continuous Delivery is the practice of automating the movement of code through the development lifecycle, and Continuous Deployment is the practice of taking the delivered code and deploying it into the production environment.
+# Continuous Delivery Practices
+
+## Overview
+- **Objective**: Learn Continuous Delivery best practices, CI/CD pipeline requirements, and distinguish between Continuous Deployment and Continuous Delivery.
+
+## Best Practices for Continuous Delivery
+
+### 1. Make Every Change Releasable
+- **Includes**: User documentation, operations runbooks.
+- **Purpose**: Ensures each change is functional and well-documented.
+
+### 2. Build on Continuous Integration
+- **Approach**: Use short-lived feature branches, avoid long-lived branches.
+- **Method**: Trunk-based development, where changes are continuously integrated into the main codebase.
+
+### 3. Construct Automated Delivery Pipelines
+- **Goal**: Consistent and predictable code releases.
+- **Focus**: Automate processes across the software development lifecycle.
+
+### 4. Aim for No Downtime
+- **Strategy**: Validate new functions before deploying to public instances.
+
+### 5. Release at the Granularity of Test
+- **Rule**: If parts are tested together, they should be released together.
+- **Tools**: Use release automation tools for coordinated delivery.
+
+## CI/CD Pipeline Requirements
+
+1. **Code Repository**: Hosts and manages all source code.
+2. **Build Server**: Manages application building, ensures clean builds.
+3. **Integration Server**: Handles build automation and testing.
+4. **Artifact Repository**: Stores binaries and artifacts for deployment.
+
+## Continuous Deployment vs Continuous Delivery
+
+- **Continuous Delivery**:
+  - Automated movement of code through the development lifecycle.
+  - Depends on passing automation tests.
+
+- **Continuous Deployment**:
+  - Part of Continuous Delivery.
+  - Involves deploying delivered code to production.
+
+## Business Implementation
+- **Determination**: Based on business needs.
+- **Benefit of Continuous Deployment**: Facilitates repeated, reliable, and quick software releases to production.
+
+## Conclusion
+- Continuous Delivery involves several best practices focusing on automation, testing, and deployment.
+- A CI/CD pipeline encompasses various servers and repositories for streamlined development.
+- Understanding the distinction between Continuous Deployment and Continuous Delivery is crucial for aligning with business objectives.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -134,7 +184,69 @@ Welcome to ‘Continuous Delivery Practices.’ After watching this video, you w
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Tools of Continuous Delivery
 
+## Overview
+- **Objective**: Understand and describe various Continuous Delivery (CD) tools and key considerations when choosing a CD tool.
+
+## Key Continuous Delivery Tools
+
+### Jenkins
+- **Type**: Older CI/CD tool.
+- **Pros**: Large community, many plugins.
+- **Cons**: Lacks visibility in pipeline, requires extensive setup and maintenance.
+
+### Spinnaker
+- **Origin**: Developed by Netflix.
+- **Features**: Cloud-agnostic, manages CD pipelines, simplifies release rollbacks, supports load balancers and scaling clusters.
+
+### Concourse CI
+- **Focus**: Built with containers, scalable, flexible with Docker image builds.
+
+### GitLab
+- **Capabilities**: Implements both CI and CD, integrates with source code management, supports major cloud platforms.
+
+### Travis CI
+- **Characteristics**: CI tool with CD capabilities, minimal maintenance, less feature-rich.
+
+### Tekton
+- **Strengths**: Open source, vendor-neutral for Kubernetes, modular, supports multiple environments.
+
+### Go CD
+- **Advantages**: Easy pipeline setup, native Docker/Kubernetes support, Value Stream Map tool, YAML/JSON pipeline configuration.
+
+### Argo CD
+- **Development**: By Intuit, for GitOps workflow.
+- **Utility**: Easy to use UI, integrates with various CI tools, focuses on Kubernetes controller for application state management.
+
+## Choosing a CD Tool: Key Considerations
+
+1. **Features**: Look for audit trails, integrated secrets, and role-based access control.
+2. **Compatibility**: Ensure compatibility with existing CI pipelines.
+3. **Ease of Use**: Consider setup and maintenance requirements.
+4. **Scanning and Deployment**: Tools should handle application security scanning and automate deployments.
+
+## Pipeline Tasks
+
+1. **Security Scanning**: Includes vulnerability and secret scanning, SAST, and DAST.
+2. **Code Deployment**: Emphasize automation for consistency across environments.
+
+## Spotlight on Argo CD and Tekton
+
+- **Argo CD**: 
+  - Focuses on GitOps pattern.
+  - Automates and audits CD processes.
+  - Monitors and ensures parity between current and desired application states.
+
+- **Tekton**: 
+  - Offers standardized CI/CD tooling.
+  - Compatible with tools like Jenkins, Skaffold, Knative.
+  - Provides fully portable pipelines for reuse.
+
+## Conclusion
+- A variety of CD tools are available, each with unique features and strengths.
+- Argo CD and Tekton stand out for their specific functionalities in Kubernetes and pipeline portability.
+- When selecting a CD tool, consider features, compatibility, ease of use, and the ability to handle key pipeline tasks.
 
 <!-- /MarkdownTOC -->
 </details>
