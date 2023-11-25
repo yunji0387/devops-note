@@ -15,8 +15,8 @@
 
 ---
 
-<a id="--"></a>
-# --
+<a id="what_is_cd"></a>
+# What is Continuous Delivery (CD)
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -28,8 +28,125 @@
 
 ---
 
-<a id="--"></a>
-# --
+<a id="cd_principles"></a>
+# Continuous Delivery Key Principles
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="cd_practices"></a>
+# Continuous Delivery Practices
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="tools_of_cd"></a>
+# Tools of Continuous delivery (CD)
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="intro_to_tekton_and_pipelines"></a>
+# Introduction to Tekton and Pipelines
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="building_tekton_pipelines"></a>
+# Building a Tekton Pipeline
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="creating_tekton_triggers"></a>
+# Creating Tekton Triggers
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="leveraging_tekton_catalog"></a>
+# Leveraging the Tekton Catalog
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="creating_tasks_for_quality_checks_and_testings"></a>
+# Creating Tasks for Quality Checks and Testing
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="building_image"></a>
+# Building an Image
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="deploy_to_kubernetes"></a>
+# Deploy to Kubernetes
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
