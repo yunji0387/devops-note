@@ -7,6 +7,9 @@
 4. [Git Feature Branch Workflow: Working in Branches](#ci_git_working_in_branch)
 5. [Git Feature Branch Workflow: Making a Pull Request](#ci_git_making_pull_request)
 6. [Tools of Continuous Integration (CI)](#tools_of_ci)
+7. [Introduction to GitHub Actions](#intro_to_github_actions)
+8. [Deeper Dive into GitHub Actions: Part 1](#github_action_p1)
+9. [Deeper Dive into GitHub Actions: Part 2](#github_action_p2)
 
 ---
 
@@ -248,13 +251,159 @@
 
 ---
 
-<a id="--"></a>
-# --
+# Table of Contents
+1. [Introduction to GitHub Actions](#intro_to_github_actions)
+
+<a id="intro_to_github_actions"></a>
+# Introduction to GitHub Actions
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Introduction to GitHub Actions
 
+## Overview: Basic Understanding of GitHub Actions
+
+- **GitHub Actions**: A CI/CD tool integrated into every GitHub repository.
+- **Availability**: Accessible as a built-in service in GitHub, requiring no extra sign-up or add-ons.
+- **Pipeline as Code**: Treats CI pipeline as code using `.yaml` files.
+</details>
+
+## GitHub Actions Features
+- **Workflow Definition**: Defined in `.yaml` files stored in `.github/workflows` folder.
+- **Event-Driven Execution**: Workflows are triggered based on specified events.
+- **Marketplace Integration**: Offers a variety of pre-built actions for numerous languages and tasks.
+- **Simplicity and Reproducibility**: No external website or manual setup required, ensuring reproducible workflows.
+- **Starter Code**: Functional workflow templates available for customization.
+
+## Workflow Components
+- **Workflow**: Automated procedures composed of jobs and steps.
+- **Events**: Triggers for workflows, like push, pull request, or release creation.
+- **Runners**: Execute jobs, either built-in or self-hosted.
+- **Jobs**: Group specific tasks, e.g., build, publish, or deploy.
+- **Steps**: Constituent of jobs, performing tasks like code checkout, compilation, linting, and testing.
+- **Actions**: Basic units within steps, executing single tasks like code checkout or dependency installation.
+
+## Key Takeaways
+- **CI/CD Integration**: Available in every GitHub repository.
+- **Rich Marketplace**: Extensive collection of actions for diverse needs.
+- **Ease of Setup**: Starter code and template-based approach for quick setup.
+- **Workflow Structure**: Organized into jobs, steps, and actions for efficient process management.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="github_action_p1"></a>
+# Deeper Dive into GitHub Actions: Part 1
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Deeper Dive into GitHub Actions – Part One
+
+## Introduction
+This video provides a comprehensive understanding of GitHub Actions, including its setup, components, and functionality.
+
+## Setting Up GitHub Actions
+- **Create a Folder Structure**: Begin by creating a `.github/workflows` folder in your project's root directory.
+- **YAML Workflow Files**: Place one or more .yaml files in the `workflows` folder. These files contain workflow statements.
+
+## Workflow Execution
+- **Triggering Workflows**: Workflows are executed based on specified events (e.g., pushing to master branch, pull request).
+- **Isolated Environment**: Jobs within a workflow run in an isolated environment, either on a virtual machine or in a Docker container.
+
+## Configuring GitHub Actions
+1. **Create `.github` Folder**: If not existing, create this folder at the root of your project.
+2. **Add `workflows` Folder**: Under `.github`, create a `workflows` folder.
+3. **Place .yaml Files**: Add your workflow .yaml files to the `workflows` folder.
+
+## Components of a Workflow
+- **Events**: Triggers for workflow execution (e.g., code commits, pull requests).
+- **Jobs**: Comprise steps performed on the same runner, executed in parallel by default but can be set to run serially.
+- **Runners**: Servers that perform jobs on specific platforms or operating systems.
+- **Steps**: Individual tasks within a job, such as checking out code or building a Docker container.
+- **Actions**: Predefined procedures executed within a step, available through GitHub Actions Marketplace.
+
+## Detailed Components
+- **Events**: Various events (35 types) can trigger workflows, like issue modifications or code pushes.
+  - **Examples**: Pull request on master branch, push to main branch, release publishing.
+- **Jobs**: A set of steps using the same runner.
+  - **Dependencies**: Use `needs` keyword to create job dependencies.
+  - **Components**: Include a runner, optional services, and steps.
+
+## Key Takeaways
+- **Configuration**: GitHub Actions is configured through .yaml files in a `.github/workflows` folder.
+- **Workflow Components**: Include events, jobs, runners, steps, and actions.
+- **Events and Jobs**:
+  - An event triggers a workflow.
+  - A job is a series of steps using the same runner.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="github_action_p2"></a>
+# Deeper Dive into GitHub Actions: Part 2
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Deeper Dive into GitHub Actions – Part Two
+
+## Key Concepts
+
+### 1. Components of a Job in GitHub Actions Workflow
+- **Runners**: Servers that perform jobs on specific platforms or operating systems.
+  - Supported OS: Various flavors of Ubuntu, macOS, and Windows Server.
+  - Runner definition uses `runs-on:` keyword.
+  - Examples: 
+    - `build` job runs on the latest Ubuntu version.
+    - Specified Ubuntu 22.04 for consistent environment.
+    - Python 3.9-slim Docker container on Ubuntu for container-based development.
+
+### 2. Services in a Workflow
+- Defined as Docker containers.
+- Can be any public Docker image, including custom ones.
+- Used to create databases, message queues, etc.
+- Example: Postgres database service for unit tests, accessible via DNS name `postgres`.
+
+### 3. Steps in a Workflow
+- The core of GitHub Actions where the work is executed.
+- Comprises shell commands or actions.
+- Optional features:
+  - `name:` for descriptive identification in reports.
+  - `id:` for referencing in other steps.
+- Defined using `uses:` for actions or `run:` for shell commands.
+- Supports multiple commands and environment variables (`env:`).
+
+### 4. Actions
+- Executable procedures within steps.
+- Defined with `uses:` followed by the action name.
+- Configurable with arguments (`with:`) or `args:`.
+- GitHub Actions Marketplace: A resource for finding and utilizing prebuilt actions.
+
+## Example Workflow
+- **Workflow Name**: `CI Build`
+- **Trigger**: Pull request to the master branch.
+- **Job**: `build` running on Python 3.9 container and Ubuntu.
+- **Service**: Redis database from Redis 6-Alpine Docker image.
+- **Steps**:
+  - Checkout code using a GitHub action.
+  - Upgrade pip and wheel, install packages from `requirements.txt`.
+  - Run unit tests with `nosetests`.
+  - Set `DATABASE_URI` environment variable for Redis service.
+  - Upload code coverage data to Codecov using a specific version of codecov uploader.
+
+## Summary
+- Jobs in a GitHub Actions workflow consist of runners, services, steps, and actions.
+- Runners perform jobs on designated operating systems.
+- Services are Docker containers that support the workflow.
+- Steps are tasks comprising shell commands or actions.
+- Actions are executable procedures within steps.
+- The GitHub Actions Marketplace is a key resource for finding prebuilt actions.
 
 <!-- /MarkdownTOC -->
 </details>
