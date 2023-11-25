@@ -6,6 +6,7 @@
 3. [Social Coding](#social_coding)
 4. [Git Feature Branch Workflow: Working in Branches](#ci_git_working_in_branch)
 5. [Git Feature Branch Workflow: Making a Pull Request](#ci_git_making_pull_request)
+6. [Tools of Continuous Integration (CI)](#tools_of_ci)
 
 ---
 
@@ -194,13 +195,53 @@
 
 ---
 
-<a id="--"></a>
-# --
+<a id="tools_of_ci"></a>
+# Tools of Continuous Integration (CI)
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Tools of Continuous Integration Summary
 
+## Jenkins
+- **Type**: Both Continuous Integration and Continuous Delivery.
+- **Features**: 
+  - Open-source with a large ecosystem of plugins.
+  - Utilizes ‘Groovy’ language in a Jenkinsfile for CI/CD pipelines.
+- **Workflow**: Set up project on Jenkins server, create Jenkinsfile in the project repository, specify CI instructions.
+- **Build Environment**: Supports builds in VM or Docker container.
+- **Downsides**: Requires managing plugins and manual configuration on Jenkins website.
+
+## CircleCI
+- **Type**: CI/CD service, not open-source.
+- **Features**: 
+  - Uses YAML file for CI process.
+  - Natively supports various languages and databases.
+  - Docker compatible.
+- **Workflow**: Set up project on CircleCI website, create config file in the repository, specify CI instructions.
+- **Build Environment**: Supports builds in VM or Docker container.
+- **Downside**: Manual setup on CircleCI website.
+
+## Travis CI
+- **Type**: CI/CD hosted service.
+- **Features**: 
+  - Supports numerous languages, databases, and Docker.
+  - Utilizes YAML file (.travis.yml) for CI processes.
+  - Available as a service or enterprise license.
+- **Workflow**: Set up project on Travis CI website, create .travis.yml in the repository, specify CI instructions.
+- **Build Environment**: Builds in VM or Docker container.
+- **Downside**: Requires manual setup on Travis CI admin UI.
+
+## Common Characteristics
+- **Pipeline as Code**: All tools support CI pipeline definitions as code, enhancing automation and repeatability.
+- **Build Environments**: Support both native and Docker builds.
+- **Service Model**: CircleCI and Travis CI are offered as services, reducing management overhead.
+
+## GitHub Actions (Mentioned)
+- Integrated into GitHub, allows CI/CD pipelines to be managed as YAML files.
+
+## Conclusion
+- These CI tools each have unique attributes but share common goals of enabling efficient and automated Continuous Integration.
 
 <!-- /MarkdownTOC -->
 </details>
