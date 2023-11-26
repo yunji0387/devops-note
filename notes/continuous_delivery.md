@@ -525,7 +525,33 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Building an Image in Tekton
 
+## Overview
+- **Objective**: This video demonstrates how to use the Tekton CLI for searching tasks, finding a task to build and deploy an image, and adding a deploy task to a pipeline following parallel tasks.
+
+## Searching for Tasks Using Tekton CLI
+1. **Command**: Use `tkn hub search` with the "build" keyword and the `--kinds` flag to search specifically for tasks.
+2. **Results**: A variety of build tasks like Docker-build, buildah, Buildpacks, and Source-2-Image (s2i).
+
+## Selecting a Build Task
+1. **Choice**: The buildah task is selected for building and deploying an image.
+2. **Cluster Tasks**: Check for pre-installed cluster tasks using `tkn clustertask ls`.
+3. **Installation**: If not installed at the cluster level, use `tkn hub install task buildah`.
+
+## Integrating Buildah Task into the Pipeline
+1. **Documentation Review**: Identify the required parameters and workspaces from the buildah documentation on Tekton Hub.
+2. **Adding to Pipeline**:
+   - Add a pipeline parameter named 'build-image'.
+   - Create a new task named 'build', referencing the buildah task.
+   - Define the 'source' workspace using the pipeline's PVC.
+   - Use the 'kind' keyword for ClusterTasks.
+   - Pass 'IMAGE' parameter from pipeline to buildah task.
+   - Specify 'runAfter' to ensure the task runs after both 'tests' and 'lint' tasks.
+
+## Conclusion
+- **Learnings**: Utilization of Tekton Hub and CLI for task discovery, integration of buildah task into a pipeline, and managing task dependencies.
+- **Key Takeaway**: Efficient pipeline construction by leveraging existing tasks and properly sequencing task execution.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -538,7 +564,53 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Deploying to Kubernetes with Tekton
 
+## Overview
+- **Objective**: This video guides on deploying applications to Kubernetes using the Tekton CLI and Kubernetes manifests.
+- **Key Stages**: Addresses the final stage in a CD pipeline, focusing on deploying an application to Kubernetes.
+
+## Deploying with Command Line Interfaces
+1. **Methods**:
+   - `kubectl` for Kubernetes clusters.
+   - `oc` (OpenShift Cluster CLI) for OpenShift clusters and compatible with Kubernetes.
+2. **Deployment Approaches**:
+   - Raw CLI commands.
+   - Kubernetes manifests in YAML format.
+   - `kustomize` for customizing deployments with minimal manifest changes.
+
+## Searching for CLI Tasks with Tekton CLI
+1. **Command**: Use `tkn hub search cli` to find tasks with the 'cli' tag.
+2. **Example**: The `openshift-client` task is identified for deployment.
+
+## Getting Task Information and Installation
+1. **Task Info**: Obtain detailed task descriptions with `tkn hub info task`.
+2. **Installation**:
+   - Check for pre-installed cluster tasks with `tkn clustertask ls`.
+   - Install tasks at the local level with `tkn hub install task`.
+
+## Adding Deploy Task to the Pipeline
+1. **OpenShift Client Task Requirements**:
+   - Mandatory parameter: 'SCRIPT'.
+   - Optional parameter: 'manifest-dir'.
+2. **Implementation**:
+   - Add pipeline parameters like 'app-name'.
+   - Create a deploy task referencing `openshift-client`.
+   - Specify 'SCRIPT' parameter with deployment commands.
+   - Set 'runAfter' to ensure deployment post-build.
+
+## Alternate Deployment with Kubernetes Manifests
+1. **No Additional Pipeline Parameters Needed**.
+2. **Task Setup**:
+   - Define a 'deploy' task with a workspace 'manifest-dir'.
+   - Reference `openshift-client` task.
+   - Create 'SCRIPT' parameter with 'oc apply' commands for manifest folder.
+   - Use multiple lines in the script for additional commands, like waiting for deployment and listing pods.
+   - Set to run after the build task.
+
+## Conclusion
+- **Capabilities Learned**: Using Tekton CLI for task discovery, deploying applications using CLI commands, and applying Kubernetes manifests for deployment.
+- **Deployment Flexibility**: Showcases two methods of deploying applications to Kubernetes, offering versatility in pipeline construction.
 
 <!-- /MarkdownTOC -->
 </details>
