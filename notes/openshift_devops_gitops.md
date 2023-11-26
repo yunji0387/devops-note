@@ -128,6 +128,37 @@ Explore DevOps Pipeline
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Introduction to GitOps
+
+## Overview
+- **Objective**: Understanding GitOps, its principles, benefits, and workflow.
+- **Definition**: GitOps is an operational framework that applies DevOps best practices to infrastructure automation.
+
+## Principles of GitOps
+1. **System Definition as Code**: Configuration as code stored in Git, serving as the single source of truth.
+2. **Versioning & Desired System Configuration**: Easy management and tracking of changes via Git.
+3. **Git Changes Enablement**: Management of changes through pull requests and CI tests.
+4. **Controller for No Configuration Drifts**: Software ensures current system state matches desired state, self-heals, or notifies of drifts.
+
+## Benefits of GitOps
+1. **Continuous Deployment**: Automates deployment, leading to quick, reliable system updates.
+2. **Version Control & Traceability**: Complete history and rollback capabilities using Git.
+3. **Consistency & Reproducibility**: Version-controlled configurations ensure consistent deployments.
+4. **Collaboration & Review**: Enhances team collaboration using Git's features.
+5. **Auditability & Compliance**: Centralized record for modifications aids in regulatory compliance.
+6. **Infrastructure as Code**: Manages infrastructure configuration through code.
+
+## GitOps Workflow
+1. **Developers**: Make and submit code changes via pull requests.
+2. **CI Pipeline**: Detects changes, initiates build process, and stores artifacts.
+3. **SREs**: Manage environment configuration in a Config Repo.
+4. **GitOps Agent**: Synchronizes changes from the Config Repo to the environment.
+5. **Deployment**: The GitOps solution pulls build artifacts and applies state changes.
+6. **Reversibility**: Easily revert changes by modifying the Git repository.
+
+## Conclusion
+- **GitOps Approach**: Eliminates manual intervention while maintaining system security and integrity.
+- **Key Aspect**: Git as the single source of truth for infrastructure and application configurations, enhancing efficiency, stability, and collaboration.
 
 <!-- /MarkdownTOC -->
 </details>
