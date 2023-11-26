@@ -70,7 +70,52 @@ Explore DevOps Pipeline
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# CI/CD with OpenShift Pipelines
 
+## Overview
+- **Objective**: Understanding OpenShift Pipelines and how they enhance CI/CD practices using Tekton.
+- **Definition**: OpenShift Pipelines is a cloud-native CI/CD solution built on Kubernetes, using Tekton as its foundation.
+
+## Understanding OpenShift Pipelines
+1. **Functionality**: Automates building, testing, and deploying applications in Kubernetes.
+2. **Integration**: Works seamlessly with Kubernetes, leveraging its scalability and flexibility.
+
+## Benefits of OpenShift Pipelines
+- **Kubernetes Tool Integration**: Integrates tools like Kubecontrol, Helm, and operators.
+- **Scalability & Reusability**: Handles larger workloads and allows reusing pipeline templates.
+- **Platform Compatibility**: Supports deployment across various platforms (on-premise, cloud, hybrid).
+
+## Core Concepts Shared with Tekton
+- **Events, Triggers, Pipelines, Tasks, Steps**: Fundamental building blocks for CI/CD workflows.
+
+## OpenShift-Specific Features
+1. **Resources**: Handles inputs/outputs like repositories, images, and configurations.
+2. **Conditions**: Sets criteria for task execution within pipelines.
+3. **Pipeline Run & Task Run**: Represents execution instances of pipelines and tasks.
+4. **Additional Components**:
+   - **Web Console**: Simplifies pipeline management and monitoring.
+   - **Event-Based Triggers**: Automates pipeline triggering.
+   - **Security**: Leverages OpenShift's authentication and authorization.
+   - **Built-In Services**: Integrates services like image registries and storage.
+   - **Pipeline Templates**: Facilitates reusability of pipeline patterns.
+
+## Using OpenShift Pipelines
+1. **Verification**: Confirm installation via the OpenShift Web Console.
+2. **Pipeline Builder**: Graphical tool for creating and managing pipelines.
+3. **Task Catalog**: Repository of predefined and community-contributed tasks.
+4. **Pipeline Creation & Execution**:
+   - Create and name a new pipeline.
+   - Add tasks from the task catalog.
+   - Configure task parameters.
+   - Visually connect tasks and define execution order.
+   - Save and execute the pipeline.
+5. **Monitoring**: View pipeline execution and task logs for insights.
+
+## Conclusion
+- **Key Learnings**:
+   - OpenShift Pipelines builds upon Tekton, adding an abstraction layer for ease of use.
+   - Integrates deeply with Kubernetes and OpenShift ecosystem.
+   - Enhances the CI/CD workflow with a user-friendly interface and robust features.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -82,7 +127,6 @@ Explore DevOps Pipeline
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
-
 
 
 <!-- /MarkdownTOC -->
