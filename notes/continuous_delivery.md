@@ -363,7 +363,55 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Creating Tekton Triggers
 
+## Overview
+- **Objective**: This video teaches how to create Tekton events, triggers, and use them to start a Tekton pipeline.
+- **Key Elements**: Focus on understanding the roles and creation of EventListeners, TriggerBindings, and TriggerTemplates in Tekton.
+
+## Understanding Events and Triggers in Tekton
+1. **Tekton Triggers**: Allow pipelines to respond to external events using specific Custom Resource Definitions (CRDs).
+2. **Key CRDs**:
+   - **EventListener**: Listens for external events.
+   - **TriggerBinding**: Binds event data to pipeline properties.
+   - **TriggerTemplate**: Creates a PipelineRun with bound data.
+
+## Building a Simple Event Listener for a CD Pipeline
+1. **Definition**:
+   - **API Version**: `triggers.tekton.dev/v1beta1`.
+   - **Resource Type**: `EventListener`.
+   - **Name**: "cd-listener".
+2. **Specifications**:
+   - **ServiceAccountName**: Specify the ServiceAccount for pipeline execution (e.g., "pipeline" in OpenShift).
+   - **Triggers**: Define a binding ("cd-binding") and a template ("cd-template").
+
+## Creating a TriggerBinding
+1. **Setup**:
+   - **API Version**: Same as EventListener.
+   - **Resource Type**: `TriggerBinding`.
+   - **Name**: "cd-binding".
+2. **Specifications**:
+   - Define parameters like "repository" (`body.repository.url`) and "branch" (`body.ref`).
+
+## Specifying a TriggerTemplate
+1. **Definition**:
+   - **API Version**: Same as above.
+   - **Resource Type**: `TriggerTemplate`.
+   - **Name**: "cd-template".
+2. **Specifications**:
+   - Define parameters like "repository" (with a description and default) and "branch" (defaulting to "master").
+   - **ResourceTemplates**: Include a PipelineRun resource with specified `serviceAccountName`, `pipelineRef`, and parameters mapping.
+
+## Testing and Execution
+1. **Testing Locally**:
+   - Use the Kubernetes `port-forward` command to expose the EventListener.
+   - Test with the `curl` command, posting JSON data to the exposed port.
+2. **Confirmation**:
+   - Verify the execution by checking pipeline run logs and observing the checkout task execution.
+
+## Conclusion
+- **Capabilities Learned**: How to set up and use Tekton EventListeners, TriggerBindings, and TriggerTemplates.
+- **Practical Application**: Demonstrated how to test and confirm the trigger functionality using local tools.
 
 <!-- /MarkdownTOC -->
 </details>
