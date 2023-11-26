@@ -424,7 +424,48 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Leveraging the Tekton Catalog
 
+## Overview
+- **Objective**: This video explains how to utilize the Tekton catalog, create workspaces for tasks, and incorporate tasks from the Tekton catalog into a Tekton pipeline.
+- **Key Concept**: The Tekton catalog (or Tekton Hub) is a repository of community-contributed Tekton tasks for building CI/CD pipelines.
+
+## Understanding the Tekton Catalog
+- **Location**: Found at hub.tekton.dev.
+- **Purpose**: Provides a collection of reusable tasks for CI/CD pipeline construction.
+- **Benefits**: Saves time in creating and maintaining tasks.
+- **Categories**: Includes various task categories like build tools, code quality, Kubernetes tasks, and more.
+
+## Installing Tasks from the Tekton Catalog
+- **Method 1**: Apply Kubernetes manifests (YAML) with the `kubectl` command.
+- **Method 2**: Install tasks directly using the Tekton CLI (`tkn hub install task <task name>`).
+- **Task Details**: Each task details its required parameters, workspaces, results, service account requirements, supported platforms, and usage examples.
+
+## Example: Utilizing the "Git Clone" Task
+1. **Search**: Type "git" in the Tekton Hub search box to find relevant tasks.
+2. **Selection**: Choose the "git clone" task for its relevance.
+3. **Implementation**:
+   - Requires two inputs: the repository URL and a workspace named "output".
+
+## Creating and Using Workspaces
+1. **Definition**: Workspaces are shared volumes for data transfer between isolated task pods.
+2. **Use Case**: Essential for sharing build artifacts between tasks.
+3. **Implementation**:
+   - Create a PersistentVolumeClaim (PVC) for storage.
+   - Declare the workspace in the PipelineRun, mapping it to the PVC.
+
+## Writing a Pipeline Using Tekton Catalog Tasks
+1. **Pipeline Specification**:
+   - Declare a required workspace (e.g., "pipeline-workspace").
+   - Define necessary parameters (e.g., "repo-url").
+2. **Task Implementation**:
+   - Create a task named "clone" and set `taskRef` to the "git-clone" task.
+   - Map the pipeline's workspace to the task's required workspace ("output").
+   - Map the pipeline's "repo-url" parameter to the task's "url" parameter.
+
+## Conclusion
+- **Capabilities Learned**: Using the Tekton catalog for task discovery and integration, creating workspaces, and mapping parameters from pipelines to tasks.
+- **Application**: Demonstrated with the implementation of the "git-clone" task in a pipeline.
 
 <!-- /MarkdownTOC -->
 </details>
