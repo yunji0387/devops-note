@@ -478,7 +478,41 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Creating Tasks for Quality Checks and Testing in Tekton
 
+## Overview
+- **Objective**: This video focuses on creating custom tasks for quality checks and testing in Tekton pipelines, including setting environment properties and specifying parallel task execution.
+
+## Building the Pipeline
+1. **Pipeline Stages**: Conceptualized as a linear progression of tasks - checkout, lint, test, build, deploy.
+2. **Parallel Execution**: Quality checks and tests can run independently, allowing parallel processing for efficiency.
+
+## Creating Custom Testing Tasks
+1. **Necessity**: If the Tekton catalog lacks a specific testing tool, create a custom task.
+2. **Process**:
+   - Use existing scripts (e.g., Python tests with `nosetests`).
+   - Define the task with the Tekton API, name it (e.g., "nose"), and specify the workspace ("source").
+   - Implement the script directly in the task using the `script` parameter.
+
+## Incorporating Environment Variables
+1. **Context**: Cloud native applications use environment variables for configuration (12-factor guidelines).
+2. **Example**: Define an environment variable (e.g., DATABASE_URI) from a Kubernetes secret (e.g., "redis-creds").
+3. **Implementation**:
+   - Add the environment variable definition in the task step, specifying the secret's name and key.
+
+## Creating Custom Linting Tasks
+1. **Process**: Similar to testing tasks but for linting purposes (e.g., using `flake8` for Python code quality checks).
+2. **Flexibility**: Option to make the task more generic by allowing arguments as parameters.
+
+## Adding Tasks to the Pipeline
+1. **Example Tasks**: "tests" and "lint", referencing the created "nose" and "flake8" tasks.
+2. **Execution Order**:
+   - Define tasks to run after the "clone" task.
+   - Run "tests" and "lint" tasks in parallel, as both are independent and follow the "clone" stage.
+
+## Conclusion
+- **Capabilities Learned**: Writing custom tasks for testing and quality checks, setting environment variables in tasks, and specifying parallel task execution in Tekton pipelines.
+- **Application**: Demonstrated with the creation and integration of "nose" and "flake8" tasks in a pipeline.
 
 <!-- /MarkdownTOC -->
 </details>
