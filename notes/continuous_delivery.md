@@ -308,7 +308,49 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Building a Tekton Pipeline
 
+## Overview
+- **Objective**: This video demonstrates how to create Tekton tasks, pass parameters to them, and organize these tasks into a Tekton pipeline.
+- **Focus**: The process starts from defining steps and tasks, moving towards building a complete pipeline.
+
+## Creating Tekton Tasks
+1. **Starting Point**: Define the necessary steps for a Continuous Delivery pipeline, such as code checkout, quality checks, unit tests, artifact building, and deployment.
+2. **Task Definition**: Tasks in Tekton, which represent these steps, are defined in YAML files (Kubernetes manifests).
+3. **Example - Checkout Task**:
+   - **API Version**: Define the API version, e.g., `tekton.dev/v1beta1`.
+   - **Resource Type**: Specify the resource type as `task`.
+   - **Task Name**: Set a name in the metadata section, e.g., `checkout`.
+   - **Steps**: Define steps within the task, including the image used (e.g., `bitnami/git:latest`) and the command to execute (e.g., `git clone`).
+
+## Passing Parameters to Tasks
+1. **Defining Parameters**: Parameters are defined using the `params` keyword.
+2. **Example Parameter**: Name a parameter `repo-url` with a description and type (string).
+3. **Referencing Parameters**: Use `$(params.repo-url)` to reference the parameter in the task's arguments.
+
+## Organizing Tasks into a Pipeline
+1. **Pipeline Definition**: Similar to tasks, pipelines are defined in a Kubernetes manifest.
+2. **Setting Up**:
+   - **API Version**: Specify the API version for the pipeline.
+   - **Resource Type**: Declare the resource type as `pipeline`.
+   - **Pipeline Name**: Name the pipeline in the metadata section, e.g., `pipeline`.
+3. **Adding Tasks**: Add tasks to the pipeline, referencing previously defined tasks and passing necessary parameters.
+4. **Pipeline Example**:
+   - Define a parameter `repo-url` for the pipeline.
+   - Add the `checkout` task, referencing it with `taskRef` and passing the `repo-url` parameter.
+
+## Executing the Pipeline
+1. **Applying Definitions**:
+   - Use `kubectl` to apply the task and pipeline definitions (`tasks.yaml` and `pipeline.yaml`).
+   - Verify creation with `kubectl get pipelines`.
+2. **Running the Pipeline**:
+   - Utilize the Tekton CLI (`tkn`) to start the pipeline with `tkn pipeline start`.
+   - Pass necessary parameters using the `-p` flag.
+   - Observe the execution and logs, ensuring the successful run of the pipeline.
+
+## Conclusion
+- **Learnings**: Understanding of how to write Tekton tasks, pass parameters, and build a pipeline.
+- **Next Steps**: Continue expanding the pipeline by creating more tasks and integrating them into the pipeline definition.
 
 <!-- /MarkdownTOC -->
 </details>
