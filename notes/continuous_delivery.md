@@ -259,7 +259,43 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+# Introduction to Tekton and Pipelines
 
+## Overview
+- **Purpose**: This video introduces Tekton, explaining its functionality and workings in the context of CI/CD pipelines.
+- **Key Point**: Tekton is an open-source framework for creating flexible CI/CD pipelines.
+
+## What is Tekton?
+- **Definition**: Tekton is an open-source framework used for building CI/CD pipelines.
+- **Flexibility**: Offers a range of building blocks for creating simple to complex pipelines.
+- **Applications**: Automates the processes of building, testing, and deploying applications.
+- **Execution Control**: Enables running steps either in series or parallel.
+- **Compatibility**: Functions across cloud providers and on-premises systems.
+
+## Benefits of Using Tekton
+1. **Standardization**: Being vendor-neutral, Tekton standardizes CI/CD tooling across various environments.
+2. **Built-In Best Practices**: Offers a logical layout for creating scalable, serverless, and cloud-native CI/CD systems.
+3. **Flexibility and Customization**: Provides options to design and customize pipelines based on team requirements.
+4. **Cloud Native**: Runs natively on Kubernetes clusters, removing the need for separate CI/CD solutions.
+
+## Tekton's Conceptual Building Blocks
+1. **Events**: External triggers like pull requests or Git pushes.
+2. **Triggers**: Initiates pipeline runs based on events.
+3. **Pipelines**: Collections of tasks executed in response to triggers.
+4. **Tasks**: Units of work comprising one or more steps.
+5. **Steps**: Actual command executions within tasks.
+
+## Tekton's Physical Building Blocks (Kubernetes CRDs)
+1. **EventListener**: Listens for external events like Git activities.
+2. **TriggerBinding**: Captures parameters from events for pipeline runs.
+3. **TriggerTemplate**: Associates parameters with PipelineRuns.
+4. **PipelineRun**: Instantiates a pipeline, managing task executions.
+5. **TaskRun**: Creates a Kubernetes pod for each task.
+6. **PersistentVolumeClaim**: Facilitates sharing of artifacts across tasks.
+
+## Conclusion
+- **Tekton's Role**: A comprehensive framework for CI/CD pipeline creation and management within Kubernetes environments.
+- **Learnings**: Understanding of Tekton's flexibility, benefits, conceptual and physical components.
 
 <!-- /MarkdownTOC -->
 </details>
