@@ -4,7 +4,7 @@
 1. [Introduction to Security for Application Development](#intro)
 2. [Security by Design](#security_by_design)
 3. [What is DevSecOps?](#intro_to_devsecops)
-4. [The OSI Model]()
+4. [The OSI Model](#osi_model)
 5. [Securing Layers for Application Development]()
 6. [Security Patterns]()
 7. [TLS/SSL]()
@@ -160,6 +160,60 @@ After this session, you will be able to:
 - DevSecOps encourages continuous improvement and adaptability in security practices, making it an essential strategy for modern software development.
 
 In this video, you learned how DevSecOps automates security integration throughout the SDLC, providing multiple benefits such as improved software quality, increased security, faster vulnerability patching, modern automation, and adaptability in security practices.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="osi_model"></a>
+# The OSI Model
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to "The OSI Model." This video tutorial provides an in-depth explanation of the Open Systems Interconnection (OSI) Model, detailing its seven layers and highlighting the layers of primary importance to developers.
+
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Describe the OSI Model**: Understand the framework that facilitates global communication across varied networking systems.
+- **List and Describe the Seven OSI Layers**: Gain knowledge of each layer's function within the model.
+- **Identify Essential OSI Layers for Developers**: Recognize the top layers that are crucial for development and security practices.
+
+## The Seven OSI Layers Explained
+
+1. **Physical Layer (Layer 1)**: Handles the transmission of raw bitstreams over a physical medium. It lays the foundation for data transfer by defining the electrical, mechanical, procedural, and functional specifications.
+   
+2. **Data Link Layer (Layer 2)**: Ensures error-free data transmission over a physical link. It structures raw bits into data frames and manages acknowledgments from the receiver.
+   
+3. **Network Layer (Layer 3)**: Manages data transmission across different networks. This layer involves routing and forwarding packets to their destination via the most efficient paths.
+   
+4. **Transport Layer (Layer 4)**: Provides reliable, transparent transfer of data between end systems. It's responsible for error recovery, flow control, and ensuring complete data transfer.
+   
+5. **Session Layer (Layer 5)**: Manages sessions between applications on different machines, handling setup, coordination, and termination of conversations, or sessions.
+   
+6. **Presentation Layer (Layer 6)**: Translates data between the application layer and the network. It's responsible for data encryption, decryption, and compression, ensuring the data is in the proper format.
+   
+7. **Application Layer (Layer 7)**: Serves as the interface for the user and application processes to access network services. This layer encompasses protocols like HTTP, FTP, SMTP, and DNS.
+
+## Key Layers for Developers
+
+Developers should particularly focus on the top three layers:
+
+- **Session Layer (Layer 5)**: Establishes and maintains application connections and sessions.
+- **Presentation Layer (Layer 6)**: Manages data formatting, encryption, and decryption for secure data transmission.
+- **Application Layer (Layer 7)**: The main interface for applications to interact with the network, crucial for web development and network-based applications.
+
+## Implementing Security
+
+- Secure socket layer encryption can be applied at the Presentation Layer to protect data from man-in-the-middle attacks.
+- Using port 443 and HTTPS at the Application Layer enhances security, promoting trust among application users.
+
+## Conclusion
+
+The OSI Model is a fundamental concept in networking that provides a universal language for discussing and solving network communication challenges. Understanding the OSI Model, especially the top three layers, is essential for developers to build secure, efficient applications that operate over the internet or other networks.
 
 <!-- /MarkdownTOC -->
 </details>
