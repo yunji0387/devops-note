@@ -5,7 +5,7 @@
 2. [Security by Design](#security_by_design)
 3. [What is DevSecOps?](#intro_to_devsecops)
 4. [The OSI Model](#osi_model)
-5. [Securing Layers for Application Development]()
+5. [Securing Layers for Application Development](#security_layers)
 6. [Security Patterns]()
 7. [TLS/SSL]()
 8. [What is OpenSSL?]()
@@ -214,6 +214,61 @@ Developers should particularly focus on the top three layers:
 ## Conclusion
 
 The OSI Model is a fundamental concept in networking that provides a universal language for discussing and solving network communication challenges. Understanding the OSI Model, especially the top three layers, is essential for developers to build secure, efficient applications that operate over the internet or other networks.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="security_layers"></a>
+# Securing Layers for Application Development
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to "Securing Layers for Application Development." This tutorial will dive into the critical layers of security that every application developer must prioritize to safeguard their applications effectively.
+
+## Learning Objectives
+
+After this session, you will be able to:
+
+- **Describe the Importance of Securing Each Layer**: Understand why each layer needs protection in the development process.
+- **Identify the Four Security Layers of Application Development**: Recognize the distinct layers that require security measures.
+- **Describe Logging, Analyzing, and Detection Methods**: Learn methods for securing layers and monitoring for security breaches.
+
+## The Four Security Layers of Application Development
+
+### 1. **Web Application Layer**
+   - **Components**: Consists of a front-end layer (JavaScript, CSS, HTML), a middle layer (APIs developed in Python, Java, Ruby), and a backend layer (databases).
+   - **Security Measures**: Run vulnerability scanners, conduct tests, and perform audits before deployment.
+
+### 2. **Cloud Infrastructure**
+   - **Concerns**: Protecting cloud-based databases and user information.
+   - **Measures**: Avoid including administrator credentials, create security groups, implement two-factor authentication, and use strong authentication methods.
+
+### 3. **Communications Layer**
+   - **Technologies**: Secure Shell (SSH), HTTPS, Secure Sockets Layer (SSL), and Transport Layer Security (TLS).
+   - **Purpose**: To secure connections and communications, preventing man-in-the-middle attacks.
+
+### 4. **Security Code Delivery Pipeline**
+   - **Practices**: Secure code repositories with permissions, conduct periodic audits, implement two-factor authentication, and use IAM roles for cloud assets.
+   - **Tools**: Secret storage services like HashiCorp Vault for managing passwords, certificates, and encryption keys.
+
+## Additional Security Measures
+
+### Logging and Analysis
+- **Purpose**: Collecting log messages to identify anomalies and unexpected events, such as unauthorized login attempts.
+- **Access Control**: Restrict access to log messages to trusted individuals for review and analysis.
+
+### Intrusion Detection
+- **Methods**:
+  - **Endpoint Security**: Protecting systems, servers, and devices connected to a network.
+  - **Network Security**: Monitoring networks using tools like Nmap and Snort.
+  - **System Call Auditing**: Retrieving and reviewing system call information from kernels, such as the Linux kernel.
+
+## Conclusion
+
+Securing each layer of application development is crucial for preventing cyberattacks and ensuring the integrity and confidentiality of data. By focusing on the web application layer, cloud infrastructure, communications layer, and security code delivery pipeline, developers can create a robust security posture. Additionally, implementing logging, analyzing, and detection methods enhances the ability to monitor and react to security threats effectively. This tutorial equips you with the knowledge to secure the critical layers of your applications and protect against potential security breaches.
 
 <!-- /MarkdownTOC -->
 </details>
