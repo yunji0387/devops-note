@@ -16,7 +16,7 @@
 ---
 
 <a id="intro"></a>
-# Application Security for Developers and DevOps Professionals
+# Introduction to Security for Application Development
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -74,7 +74,7 @@ Join this course to learn how to make your applications secure by design and to 
 ---
 
 <a id="security_by_design"></a>
-# Security by Design and Secure SDLC Integration
+# Security by Design
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
@@ -124,7 +124,7 @@ In summary, integrating security into the SDLC and DevOps processes not only enh
 ---
 
 <a id="intro_to_devsecops"></a>
-# Introduction to DevSecOps
+# What is DevSecOps?
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
