@@ -2,7 +2,7 @@
 
 ## Table of Content
 1. [Introduction to Security for Application Development](#intro)
-2. [Security by Design]()
+2. [Security by Design](#security_by_design)
 3. [What is DevSecOps?]()
 4. [The OSI Model]()
 5. [Securing Layers for Application Development]()
@@ -73,6 +73,55 @@ Join this course to learn how to make your applications secure by design and to 
 
 ---
 
+<a id="security_by_design"></a>
+# Security by Design and Secure SDLC Integration
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to "Security by Design"! This course segment will enhance your understanding of implementing security throughout the software development lifecycle (SDLC) and integrating it with DevOps practices.
+
+## Learning Objectives
+
+After this session, you will be able to:
+
+- **Describe Security by Design**: Understanding the importance of incorporating security from the start of the development process.
+- **Explain the Secure Software Development Lifecycle (SDLC)**: Detailing the steps involved and how security measures are integrated at each stage.
+- **Map DevOps into a Secure SDLC**: Aligning DevOps practices with security requirements throughout the development phases.
+
+## Secure SDLC Overview
+
+### Importance of Early Security Integration
+
+- Security should be considered from the outset, not as an afterthought.
+- Collaborate closely and regularly with security teams to ensure code is developed securely.
+
+### SDLC Stages and Security Integration
+
+1. **Requirements**: Identify security needs and standards. Perform risk assessments and attack profiling.
+2. **Design**: Focus on secure design principles. Conduct threat modeling to identify potential vulnerabilities.
+3. **Development**: Use static analysis tools to check for security vulnerabilities. Implement a secure scrum framework.
+4. **Testing**: Include vulnerability scans and security testing. Use parallel testing to reduce time and improve efficiency.
+5. **Deployment**: Ensure secure deployment practices. Utilize automated scripts and perform rollback if necessary. Conduct production security tests to simulate real-world hacking attempts.
+
+### Secure DevOps Practices
+
+- Instruct development teams on common threats and help create targeted unit tests.
+- Validate automated data for accuracy and relevance.
+- Employ continuous integration/continuous delivery (CI/CD) pipelines to detect vulnerabilities.
+
+## Key Takeaways
+
+- Security by Design and Secure SDLC are critical for developing high-quality, secure software.
+- Effective collaboration with security teams is essential for smooth feature implementation and secure operations.
+- By mapping security considerations into the SDLC, you can preemptively address potential threats and ensure robust application security.
+
+In summary, integrating security into the SDLC and DevOps processes not only enhances the security of the applications but also ensures a smoother implementation and operation of new features.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
 
 <a id=""></a>
 # 
