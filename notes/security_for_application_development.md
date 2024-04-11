@@ -16,12 +16,10 @@
 ---
 
 <a id="intro"></a>
-# 
+# Application Security for Developers and DevOps Professionals
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
-
-# Application Security for Developers and DevOps Professionals
 
 Welcome to the course on application security, tailored specifically for developers and DevOps professionals. This course aims to educate software engineers on embracing the DevOps mantra of "If you build it, you run it," with a strong focus on security practices.
 
