@@ -3,7 +3,7 @@
 ## Table of Content
 1. [Introduction to Security for Application Development](#intro)
 2. [Security by Design](#security_by_design)
-3. [What is DevSecOps?]()
+3. [What is DevSecOps?](#intro_to_devsecops)
 4. [The OSI Model]()
 5. [Securing Layers for Application Development]()
 6. [Security Patterns]()
@@ -117,6 +117,49 @@ After this session, you will be able to:
 - By mapping security considerations into the SDLC, you can preemptively address potential threats and ensure robust application security.
 
 In summary, integrating security into the SDLC and DevOps processes not only enhances the security of the applications but also ensures a smoother implementation and operation of new features.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="intro_to_devsecops"></a>
+# Introduction to DevSecOps
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to "What is DevSecOps?" This course segment will guide you through the core concepts and benefits of DevSecOps, helping you understand how it enhances the traditional DevOps approach by integrating security practices.
+
+## Learning Objectives
+
+After this session, you will be able to:
+
+- **Define DevSecOps**: Understand the framework that incorporates security into the DevOps process.
+- **Describe the Benefits of DevSecOps**: Recognize the advantages of integrating security throughout the development lifecycle.
+- **Differentiate DevSecOps from DevOps**: Identify the key differences and additional benefits brought by including security in DevOps.
+
+## DevSecOps Defined
+
+- **Integration of Security**: Automates security across all stages of the SDLC—from design to integration, testing, deployment, and delivery.
+- **Focus on Security**: Emphasizes security from the outset to minimize risks and align security closely with IT and business objectives.
+- **Components**: Combines development (software updates), security (accessibility, integrity, confidentiality), and operations (reliable performance scaling).
+
+## Benefits of DevSecOps
+
+1. **High-Quality Software Delivery**: Delivers software quickly and affordably by minimizing the need for repeated processes and reducing security vulnerability resolution times.
+2. **Increased Security**: Proactively integrates cybersecurity practices from the start, ensuring early detection and remediation of security issues.
+3. **Accelerated Vulnerability Patching**: Speeds up the identification and patching of new security flaws, integrating these processes into the release cycle to prevent exploitation.
+4. **Modern Automation Approaches**: Incorporates cybersecurity testing in CI/CD pipelines, enhancing security automation and ensuring up-to-date software dependencies and secure code before production.
+5. **Adaptability and Recurrence**: Supports scalable and adaptive security processes that evolve with the enterprise, ensuring consistent security across changing environments.
+
+## Key Takeaways
+
+- DevSecOps seamlessly integrates security controls into development, deployment, and operations, promoting a proactive security posture.
+- The approach not only speeds up the development process but also significantly enhances security measures, leading to more robust and reliable software solutions.
+- DevSecOps encourages continuous improvement and adaptability in security practices, making it an essential strategy for modern software development.
+
+In this video, you learned how DevSecOps automates security integration throughout the SDLC, providing multiple benefits such as improved software quality, increased security, faster vulnerability patching, modern automation, and adaptability in security practices.
 
 <!-- /MarkdownTOC -->
 </details>
