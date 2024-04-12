@@ -576,12 +576,56 @@ Threat monitoring is a vital component of maintaining security throughout the SD
 ---
 
 <a id="sec_concepts_term"></a>
-# 
+# Security Concepts and Terminology
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+Welcome to "Security Concepts and Terminology!" This video will clarify key security terms and core concepts, ensuring you have a solid understanding of the fundamentals, especially if you are a software engineer new to security.
 
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Define Key Security Terms**: Understand crucial terms like authentication, authorization, encryption, and integrity.
+- **Explain Core Security Concepts**: Gain insight into how these concepts are applied within software development and security practices.
+
+## Key Security Terms Explained
+
+### Authentication vs. Authorization
+
+- **Authentication**: This is the process of verifying a user's identity to confirm they are who they claim to be. It is the first step in the security process.
+- **Authorization**: Once a user's identity is confirmed, authorization is the process that determines what actions the user is permitted to perform. It ensures users can only access resources they are allowed to.
+
+### Encryption: Symmetric vs. Asymmetric
+
+- **Encryption**: The process of encoding information so only authorized parties can access it. It's a critical aspect of protecting sensitive data.
+  - **Symmetric Encryption**: Uses the same key for both encrypting and decrypting information. It's faster but requires secure key management.
+  - **Asymmetric Encryption**: Utilizes a pair of keys (public and private) for encrypting and decrypting data. This method is more secure for distributed environments.
+
+### Integrity
+
+- **Integrity**: Ensures that data is real, accurate, and safeguarded against unauthorized changes. Techniques like secure hash algorithms (SHA) help verify that data has not been altered, maintaining its trustworthiness.
+
+## Core Security Concepts in the SDLC
+
+### CI/CD and Security
+
+- **CI/CD**: Stands for Continuous Integration and Continuous Deployment/Delivery. It's a method used to frequently integrate and deploy code changes through automation, improving development speed and efficiency.
+  - **Continuous Integration (CI)**: Regular integration of code changes that are automatically tested and merged.
+  - **Continuous Delivery and Deployment (CD)**:
+    - **Continuous Delivery**: Automatically releases validated changes to a repository or testing environment.
+    - **Continuous Deployment**: Extends continuous delivery by automatically deploying changes to production.
+
+### Integrating Security in CI/CD
+
+- **Early Scanning**: Implement source code scanning early in the CI stage to detect vulnerabilities before they progress further in the SDLC.
+- **Security Testing**: Integrate security testing within the CI/CD pipeline to ensure that security is considered alongside other types of testing.
+- **Runtime Security**: Continuously monitor and detect threats even after deployment, safeguarding applications in production environments.
+
+## Conclusion
+
+Understanding and correctly applying these security concepts and terms are fundamental for building secure applications. This tutorial has equipped you with the knowledge to differentiate between authentication and authorization, understand the types of encryption, and integrate essential security practices within the CI/CD pipeline. By mastering these concepts, you will enhance your ability to develop secure software and contribute to the overall security posture of your projects.
 
 <!-- /MarkdownTOC -->
 </details>
