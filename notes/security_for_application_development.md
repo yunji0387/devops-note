@@ -12,6 +12,7 @@
 9. [Vulnerability Scanning and Threat Modeling ](#vul_scan_threat_model)
 10. [Threat Monitoring ](#threat_monitor)
 11. [Security Concepts and Terminology](#sec_concepts_term)
+12. [Getting Started with Network and Port Scanning with Nmap](#nmap)
 
 ---
 
@@ -626,6 +627,119 @@ By the end of this video, you will be able to:
 ## Conclusion
 
 Understanding and correctly applying these security concepts and terms are fundamental for building secure applications. This tutorial has equipped you with the knowledge to differentiate between authentication and authorization, understand the types of encryption, and integrate essential security practices within the CI/CD pipeline. By mastering these concepts, you will enhance your ability to develop secure software and contribute to the overall security posture of your projects.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+
+<a id="nmap"></a>
+# Getting Started with Network and Port Scanning with Nmap
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to the introductory guide on Nmap (Network Mapper), a pivotal tool in network scanning and security auditing.
+
+## Objectives
+
+After completing this reading, you will be able to:
+
+- **Describe the significance of Nmap (Network Mapper)**.
+- **Explain the various applications of Nmap**.
+- **Recognize the historical background of Nmap**.
+- **Identify the diverse user base of Nmap**.
+
+## Introduction to Nmap
+
+Nmap, short for Network Mapper, is an open-source tool designed for network discovery and security auditing. First released in September 1997 by Gordon Lyon (pseudonym 'Fyodor'), Nmap is renowned for its efficiency in identifying what devices are running on a network, discovering open ports, pinpointing operating systems, and identifying security vulnerabilities.
+
+## Who Uses Nmap?
+
+Nmap's versatility makes it essential for:
+
+- **Network Administrators**: For mapping network assets and security maintenance.
+- **Security Professionals**: For vulnerability assessments and penetration testing.
+- **System Administrators**: For diagnosing network issues.
+- **IT Managers**: For strategic oversight on network security.
+- **Penetration Testers and Security Consultants**: For identifying exploits and weak points.
+- **Compliance and Audit Professionals**: For ensuring network compliance with security standards.
+- **Researchers and Educators**: For academic purposes, especially in cybersecurity education.
+- **Open-Source Enthusiasts**: For community-driven improvements and personal skill development.
+
+## Purpose of Nmap
+
+Nmap's primary function is to facilitate network discovery and conduct security audits effectively. It helps in:
+
+- Identifying active hosts and network devices.
+- Discovering open ports and associated services.
+- Determining the operating systems and hardware of networked devices.
+- Conducting security vulnerability assessments.
+
+## Types of Nmap Scans with Examples
+
+- **TCP Connect Scan** (`-sT`): The default scanning technique that completes a TCP connection to determine openness.
+- **TCP Connect Scan (Default Scan)**:
+   - Basic scan that opens a full TCP connection to each target port.
+   - Example: nmap -sT target
+
+- **SYN Stealth Scan**:
+   - Also known as a half-open scan, it sends SYN packets and analyzes responses.
+   - Example: nmap -sS target
+
+- **UDP Scan**:
+   - Sends UDP packets to target ports to identify open UDP services.
+   - Example: nmap -sU target
+
+- **ACK Scan**:
+   - Sends TCP ACK packets to determine firewall configurations.
+   - Example: nmap -sA target
+
+- **Version Detection (-sV)**:
+   - Identifies service versions running on open ports.
+   - Example: nmap -sV target
+
+- **OS Detection (-O)**:
+   - Attempts to identify the target's operating system.
+   - Example: nmap -O target
+
+- **Script Scanning (-sC)**:
+   - Executes predefined scripts to gather additional information.
+   - Example: nmap -sC target
+
+- **Ping Scans**:
+   - Various ping techniques to check target's availability.
+   - Example: nmap -PE target (ICMP Echo Request)
+
+- **Traceroute (–traceroute)**:
+   - Performs traceroute to determine the path packets take.
+   - Example: nmap --traceroute target
+
+- **TCP Null Scan**:
+   - Sends packets with no TCP flags set to observe responses.
+   - Example: nmap -sN target
+
+- **TCP FIN Scan**:
+   - Sends packets with FIN flag set to observe responses.
+   - Example: nmap -sF target
+
+- **TCP Xmas Scan**:
+   - Sends packets with various TCP flags set to observe responses.
+   - Example: nmap -sX target
+
+Each scan type serves a specific purpose in gathering information about the target network. The choice of scan depends on what kind of information you're looking for and the level of visibility you require.
+- Note: Always use Nmap responsibly and ensure you have the necessary permissions to scan the target network.
+
+## Evolution and History
+
+Developed by Fyodor, Nmap has evolved from a simple network scanning tool to a robust, feature-rich tool used worldwide. Contributions from the community have added functionalities like the Nmap Scripting Engine (NSE), OS detection, and performance optimizations.
+
+## Similar Products in the Market
+
+While Nmap remains a leader, other tools like Zmap, Masscan, OpenVAS, Zenmap, and Wireshark also offer network scanning capabilities, each with unique features catering to different user needs.
+
+In conclusion, Nmap is a critical tool for anyone involved in network management, security testing, or cybersecurity research. Its comprehensive capabilities make it a go-to resource in the IT and cybersecurity fields.
 
 <!-- /MarkdownTOC -->
 </details>
