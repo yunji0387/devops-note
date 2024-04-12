@@ -10,8 +10,8 @@
 7. [TLS/SSL](#tls_ssl)
 8. [What is OpenSSL?](#openssl)
 9. [Vulnerability Scanning and Threat Modeling ](#vul_scan_threat_model)
-10. [Threat Monitoring ]()
-11. [Security Concepts and Terminology]()
+10. [Threat Monitoring ](#threat_monitor)
+11. [Security Concepts and Terminology](#sec_concepts_term)
 
 ---
 
@@ -514,20 +514,68 @@ Vulnerability scanning and threat modeling are essential practices that help sec
 
 ---
 
-<a id=""></a>
-# 
+<a id="threat_monitor"></a>
+# Threat Monitoring
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+Welcome to "Threat Monitoring!" This video will explain the process of threat monitoring within the software development lifecycle (SDLC), focusing on repository scanning and container scanning as crucial components.
 
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Describe Threat Monitoring**: Understand the concept of monitoring code repositories and containers for security threats.
+- **Explain Repository Scanning**: Learn how scanning code repositories helps identify security vulnerabilities.
+- **Explain Container Scanning**: Understand the importance of scanning container images to detect security issues.
+
+## What is Threat Monitoring?
+
+Threat monitoring involves the continuous scanning of code repositories and container environments to identify and address security issues such as password mishandling, protocol insecurities, and incorrect permissions.
+
+### Integration in the SDLC
+
+Threat monitoring is integrated at three critical stages of the SDLC:
+
+1. **Develop Stage**: Implementing code scanning tools within Integrated Development Environments (IDEs) and Source Control Management (SCM) tools.
+2. **Test Stage**: Continuously scanning code as it evolves and before it goes into production.
+3. **Deploy Stage**: Ensuring all deployed code is secure and monitored for vulnerabilities.
+
+## Repository Scanning
+
+Repository scanning is essential due to the collaborative and open-source nature of many code bases, which increases the risk of security threats.
+
+### Process and Tools
+
+- **Code Scanners**: Tools that scan the source code within repositories for security issues, referencing databases like the OWASP Top 10 for known vulnerabilities.
+- **Integration with SCM Tools**: Incorporating threat monitoring within SCM tools like GitHub to scan and test every pull request and commit for security vulnerabilities.
+- **Automated Fixes**: Leveraging tools that generate automatic fix pull requests to quickly address identified issues.
+
+## Container Scanning
+
+Container scanning focuses on the security of container images, which package application code along with its dependencies.
+
+### Importance and Methodology
+
+- **Vulnerability Exposure**: Containers often inherit vulnerabilities from base images or dependencies, making thorough scanning critical.
+- **Comprehensive Scans**: Must include not just the base container image but all layered images to effectively mitigate risks.
+
+### Best Practices
+
+- **Continuous Monitoring**: Regularly updating and scanning container images to detect new vulnerabilities as they emerge.
+- **Integration in CI/CD Pipelines**: Automating container scans during continuous integration and deployment processes to ensure security before deployment.
+
+## Conclusion
+
+Threat monitoring is a vital component of maintaining security throughout the SDLC. By implementing rigorous repository and container scanning practices, organizations can significantly reduce the risk of security breaches. This video has equipped you with the knowledge to understand and apply threat monitoring techniques, enhancing the security of your software development projects.
 
 <!-- /MarkdownTOC -->
 </details>
 
 ---
 
-<a id=""></a>
+<a id="sec_concepts_term"></a>
 # 
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
