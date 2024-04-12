@@ -9,7 +9,7 @@
 6. [Security Patterns](#security_patterns)
 7. [TLS/SSL](#tls_ssl)
 8. [What is OpenSSL?](#openssl)
-9. [Vulnerability Scanning and Threat Modeling ]()
+9. [Vulnerability Scanning and Threat Modeling ](#vul_scan_threat_model)
 10. [Threat Monitoring ]()
 11. [Security Concepts and Terminology]()
 
@@ -452,6 +452,64 @@ OpenSSL is an open-source toolkit that implements SSL and TLS protocols for secu
 ## Conclusion
 
 OpenSSL is a powerful tool for enhancing security in software applications by providing robust encryption and decryption capabilities. Understanding and implementing OpenSSL can significantly enhance the security of data transmissions in any application, ensuring both confidentiality and integrity are maintained. This tutorial has equipped you with the knowledge to start using OpenSSL in your development projects, harnessing the power of cryptography to protect sensitive information effectively.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="vul_scan_threat_model"></a>
+# Vulnerability Scanning and Threat Modeling
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+# Introduction to Vulnerability Scanning and Threat Modeling
+
+Welcome to "Vulnerability Scanning and Threat Modeling!" This video tutorial will provide you with a foundational understanding of vulnerability scanning and threat modeling within software development, highlighting their importance in securing applications.
+
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Define Vulnerability Scanning**: Understand what vulnerability scanning entails and its role in identifying security risks.
+- **Describe Threat Modeling**: Learn how threat modeling works to predict and mitigate potential security threats in software development.
+
+## What is Vulnerability Scanning?
+
+Vulnerability scanning is a crucial security practice that involves identifying security vulnerabilities in the software code and the application environment. It is conducted using various tools and techniques that assess code in languages like C, C++, Java, Python, and PHP for common vulnerabilities such as SQL injection, cross-site scripting, and path traversal.
+
+### Guidelines for Effective Vulnerability Scanning
+
+- **Platform-Specific Scans**: Tailor scans based on platform configurations, patch levels, and application components.
+- **User Interaction**: Incorporate user credentials to simulate real-world interactions for thorough application flow scanning.
+- **Comprehensive Coverage**: Ensure scans cover the entire application stack and supporting platforms to detect vulnerabilities effectively.
+
+### Popular Vulnerability Scanning Tools
+
+1. **Coverity**: Performs incremental analysis for languages like C, C++, Java, and Python.
+2. **CodeSonar**: Abstracts code models to identify weaknesses in paths and program variables.
+3. **Snyk Code**: Integrates with development environments to perform semantic analysis during the development phase.
+4. **Static Reviewer**: Part of the Security Reviewer suite, complies with OWASP, CVEs, and NIST frameworks.
+
+## What is Threat Modeling?
+
+Threat modeling is a systematic approach used to identify, categorize, and manage security threats in software applications. It is an essential part of the secure software development lifecycle (SDLC), ideally implemented during the design phase to prevent vulnerabilities.
+
+### Process of Threat Modeling
+
+- **Diagram Representation**: Uses data flow diagrams to visualize and analyze how data moves through software applications.
+- **Early Integration**: Best conducted early in the design phase of SDLC to reduce potential vulnerabilities and strengthen application security.
+
+### Popular Threat Modeling Techniques
+
+1. **PASTA (Process for Attack Simulation and Threat Analysis)**: A risk-centered methodology that ties technical requirements to business objectives.
+2. **VAST (Visual, Agile, and Simple Threat)**: Combines agile methodologies with operational threat modeling, using process-flow diagrams for architecture analysis.
+3. **STRIDE**: Developed by Microsoft, this model assesses applications and systems for threats like spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privileges.
+
+## Conclusion
+
+Vulnerability scanning and threat modeling are essential practices that help secure applications by identifying and mitigating potential security risks before they can be exploited. Implementing these processes early and thoroughly in the SDLC is crucial for developing robust, secure software. This tutorial has equipped you with the knowledge to understand and apply these critical security measures in your development projects.
 
 <!-- /MarkdownTOC -->
 </details>
