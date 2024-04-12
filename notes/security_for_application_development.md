@@ -464,8 +464,6 @@ OpenSSL is a powerful tool for enhancing security in software applications by pr
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
-# Introduction to Vulnerability Scanning and Threat Modeling
-
 Welcome to "Vulnerability Scanning and Threat Modeling!" This video tutorial will provide you with a foundational understanding of vulnerability scanning and threat modeling within software development, highlighting their importance in securing applications.
 
 ## Learning Objectives
