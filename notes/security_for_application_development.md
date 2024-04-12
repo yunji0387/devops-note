@@ -7,7 +7,7 @@
 4. [The OSI Model](#osi_model)
 5. [Securing Layers for Application Development](#security_layers)
 6. [Security Patterns](#security_patterns)
-7. [TLS/SSL]()
+7. [TLS/SSL](#tls_ssl)
 8. [What is OpenSSL?]()
 9. [Vulnerability Scanning and Threat Modeling ]()
 10. [Threat Monitoring ]()
@@ -333,6 +333,75 @@ To facilitate ease of use and implementation, security patterns should be organi
 ## Conclusion
 
 Security patterns provide a critical framework for addressing security challenges in software development. By using a structured approach to document and categorize these patterns, developers can effectively enhance the security of their applications. This video has outlined the importance of understanding and utilizing security patterns to safeguard sensitive information and ensure the integrity of organizational ecosystems. Learning and applying these patterns is essential for developing secure software in an increasingly complex technological landscape.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="tls_ssl"></a>
+# TLS/SSL
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to the "TLS/SSL" video tutorial. This session will cover the fundamentals of Transport Layer Security (TLS) and Secure Sockets Layer (SSL), detailing their operation and explaining how to ensure their security within the Software Development Lifecycle (SDLC).
+
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Define TLS and SSL**: Understand what these protocols are and their role in network security.
+- **Describe the Working of Modern TLS**: Learn how TLS operates to secure communications.
+- **Identify How to Keep TLS Secure in the SDLC**: Recognize practices to maintain TLS security throughout application development.
+
+## What are TLS and SSL?
+
+TLS and SSL are protocols designed to secure communications between networked computers. Here’s what you need to know:
+
+- **SSL (Secure Sockets Layer)**: The original protocol used to encrypt data between a web browser and a server.
+- **TLS (Transport Layer Security)**: The successor to SSL, introduced in 1999 to improve on and replace SSL. Today, "SSL" often refers to TLS, particularly in common parlance.
+
+## How Does Modern TLS Work?
+
+Modern TLS ensures secure internet communications through several key steps:
+
+1. **Protocol Agreement**: The client and server agree on the highest supported TLS version.
+2. **Cipher Selection**: They select a cipher, which dictates how data will be encrypted during the session.
+3. **Server Verification**: The client verifies the server's identity using the server’s public key and TLS certificate.
+4. **Session Key Generation**: Both parties generate session keys based on their public and private keys, allowing for secure communication.
+
+## Ensuring TLS Security in the SDLC
+
+To keep TLS secure within your applications, consider the following practices:
+
+- **Continuous Integration/Delivery (CI/CD)**: Use CI/CD pipelines to regularly renew TLS certificates before they expire.
+- **Version and Cipher Management**: Always support the latest TLS versions and robust ciphers while avoiding outdated or vulnerable ones. This often includes discontinuing support for older TLS versions like 1.0 and 1.1.
+
+## Importance of TLS and SSL
+
+Implementing TLS and SSL protocols is crucial for:
+
+- **Data Confidentiality**: Ensures that data exchanged between a client and server remains confidential.
+- **Data Integrity**: Guarantees that data cannot be altered undetected during transmission.
+- **Authentication**: Verifies the identity of parties communicating over the internet.
+
+## Conclusion
+
+TLS and SSL are foundational for secure, reliable communication on the internet. By integrating these protocols effectively and following best practices within the SDLC, developers can protect user data and enhance the security of their applications. In this tutorial, you have learned how TLS and SSL function to secure connections and the steps to ensure their effectiveness throughout the software development process.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id=""></a>
+# 
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+
 
 <!-- /MarkdownTOC -->
 </details>
