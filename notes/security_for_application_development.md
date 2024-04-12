@@ -8,7 +8,7 @@
 5. [Securing Layers for Application Development](#security_layers)
 6. [Security Patterns](#security_patterns)
 7. [TLS/SSL](#tls_ssl)
-8. [What is OpenSSL?]()
+8. [What is OpenSSL?](#openssl)
 9. [Vulnerability Scanning and Threat Modeling ]()
 10. [Threat Monitoring ]()
 11. [Security Concepts and Terminology]()
@@ -389,6 +389,69 @@ Implementing TLS and SSL protocols is crucial for:
 ## Conclusion
 
 TLS and SSL are foundational for secure, reliable communication on the internet. By integrating these protocols effectively and following best practices within the SDLC, developers can protect user data and enhance the security of their applications. In this tutorial, you have learned how TLS and SSL function to secure connections and the steps to ensure their effectiveness throughout the software development process.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
+<a id="openssl"></a>
+# What is OpenSSL
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+Welcome to "What is OpenSSL?" This video tutorial will guide you through the basics of OpenSSL, explaining its importance in maintaining data confidentiality and integrity, and its role in implementing public key cryptography.
+
+## Learning Objectives
+
+By the end of this video, you will be able to:
+
+- **Describe Confidentiality and Integrity**: Understand these crucial aspects of data security.
+- **Explore OpenSSL and Its Purpose**: Learn about the OpenSSL toolkit and how it supports secure communications.
+- **Explain Public Key Cryptography**: Understand the principles behind and the applications of public key cryptography.
+
+## Understanding Confidentiality and Integrity
+
+### Confidentiality
+- **Definition**: Confidentiality involves keeping data private and secure from unauthorized access, especially during transmission over nonsecure networks.
+- **Tools**: Utilizes cryptographic keys, particularly private keys, to encrypt data, ensuring it remains confidential during e-commerce and other sensitive transactions.
+
+### Integrity
+- **Definition**: Integrity ensures that data has not been altered or tampered with during transmission or after receipt.
+- **Tools**: Techniques like file checksums verify the authenticity of downloaded files, confirming they have not been modified.
+
+## Overview of OpenSSL
+
+OpenSSL is an open-source toolkit that implements SSL and TLS protocols for secure communication over computer networks. Here are its key components:
+
+- **Cryptographic Library**: Includes tools for symmetric and public key cryptography, message digests, hash algorithms, and more.
+- **Command Line Tool**: Allows direct execution of OpenSSL commands for encryption, decryption, and more, adaptable through a configuration file for tailored security settings.
+
+### Key Features of OpenSSL
+
+- **Secure Communication**: Ensures encrypted communications across various platforms, from personal to commercial use.
+- **Cryptographic Tools**: Offers a comprehensive set of cryptographic functions including encryption, decryption, and key management.
+
+## Public Key Cryptography
+
+### Concept
+- **Public Key Cryptography**: Involves a pair of keys, a public key, which is shared openly, and a private key, which remains confidential. This method is crucial for secure data exchange and digital signatures.
+
+### Implementation
+- **RSA (Rivest-Shamir-Adleman)**: The most widely used form of public key cryptography, RSA facilitates secure data encryption, authentication, and digital signatures.
+
+### Application
+- **Key Generation**: Utilizes complex algorithms for generating prime numbers essential for creating robust private keys.
+
+## Practical Application of OpenSSL
+
+- **Command Line Usage**: Learn how to use OpenSSL from the command line to perform cryptographic operations like generating keys, encrypting files, and creating digital signatures.
+- **Message Digests**: Use OpenSSL to compute and verify checksums, enhancing data integrity through cryptographic hash functions.
+
+## Conclusion
+
+OpenSSL is a powerful tool for enhancing security in software applications by providing robust encryption and decryption capabilities. Understanding and implementing OpenSSL can significantly enhance the security of data transmissions in any application, ensuring both confidentiality and integrity are maintained. This tutorial has equipped you with the knowledge to start using OpenSSL in your development projects, harnessing the power of cryptography to protect sensitive information effectively.
 
 <!-- /MarkdownTOC -->
 </details>
