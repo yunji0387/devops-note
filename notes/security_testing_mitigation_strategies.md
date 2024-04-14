@@ -145,6 +145,31 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Code Review in Security Testing
+- Code review is a crucial component of security testing within the DevOps community.
+- It integrates automated static analysis security testing (SAST) and manual inspection to identify security flaws and vulnerabilities.
+- Effective early in the development cycle, code review can be implemented at any stage of the SDLC to address security concerns promptly.
+
+## Types of Code Review
+### Automated Review
+- **Suitability:** Best for large codebases with many files, allowing for rapid and efficient evaluation.
+- **Integration:** Often used during coding and continuous integration to perform validation checks before merging pull requests.
+- **Tools:** Utilizes free or paid automated tools to detect vulnerabilities in real-time. Advanced teams might use SAST tools for additional insights.
+
+### Manual Review
+- **Detection:** Capable of identifying issues that automated tests may miss, including subtle logic errors.
+- **Requirements:** Requires a senior or experienced developer to thoroughly examine the code's complex control and logic flows.
+- **Process:** Time-consuming and needs careful examination of the code, ideally during every pull request to manage smaller, manageable chunks of code efficiently.
+
+## Best Practices for Code Review
+- **Frequent Reviews:** It is more effective to review smaller sections of code (50 to 100 lines) in each pull request than to tackle large swaths of code later in the development process.
+- **Security Focus:** Reviews should particularly look for threats in exposed or security-critical components of the source code.
+- **Policy Guidelines:** Establish and follow clear policies during manual reviews to ensure consistency and coverage.
+
+## Summary
+- Code review is essential for identifying and mitigating security risks in software development.
+- There are two main types of code review: automated and manual, each with specific advantages and contexts for use.
+- Secure code review not only speeds up the identification of security issues but also enhances the overall quality and security of the application.
 
 <!-- /MarkdownTOC -->
 </details>
