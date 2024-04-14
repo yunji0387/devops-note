@@ -157,6 +157,51 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## 1. Identification and Authentication Failures
+### Description
+- **What it is**: Vulnerabilities that occur when authentication mechanisms are subverted through methods like credential stuffing and brute force attacks.
+- **Consequences**: May lead to unauthorized access and impersonation, significantly compromising user data and system integrity.
+
+### Prevention Strategies
+- **Multifactor Authentication**: Use it to add an additional layer of security beyond just passwords.
+- **Secure Session Management**: Implement server-side session management with secure, randomly generated session IDs that aren't exposed in URLs.
+- **Software Supply Chain Security**: Utilize tools to scan and secure application components throughout the development lifecycle.
+
+## 2. Software and Data Integrity Failures
+### Description
+- **What it is**: Failures that occur when software updates or data are tampered with due to inadequate verification processes.
+- **Consequences**: Can lead to malicious code execution, data breaches, and compromised systems.
+
+### Prevention Strategies
+- **Segregated CI/CD Pipelines**: Ensure that the build and deployment environments are secure and access-controlled.
+- **Digital Signatures and Integrity Checks**: Use these to verify the legitimacy and integrity of data and updates.
+- **Regular Vulnerability Scanning**: Employ tools to scan for vulnerabilities in application components.
+
+## 3. Security Logging and Monitoring Failures
+### Description
+- **What it is**: Inadequate logging of important system events and insufficient monitoring of these logs.
+- **Consequences**: Delays in detecting and responding to security incidents, potentially allowing attackers to persist within systems undetected.
+
+### Prevention Strategies
+- **Comprehensive Logging**: Ensure all critical events are logged with sufficient detail.
+- **Centralized Log Management**: Use tools like Logstash and Elasticsearch for log aggregation and analysis.
+- **Effective Monitoring Systems**: Implement systems with real-time alerts to detect and respond to suspicious activities.
+
+## 4. Server-Side Request Forgeries (SSRF)
+### Description
+- **What it is**: Attacks that exploit server functionality to induce a server to make requests that benefit the attacker.
+- **Consequences**: Can lead to internal network enumeration, remote code execution, and data breaches.
+
+### Prevention Strategies
+- **Input Sanitization**: Validate all user-supplied input to ensure it does not contain malicious links or commands.
+- **Use of Whitelists**: Enforce strict rules on permissible URLs, ports, and protocols.
+- **Restrict HTTP Redirects and Response Handling**: Limit the server's ability to follow redirects or interact with unauthorized services.
+
+## Key Takeaways
+- **Identification and Authentication**: Strengthen authentication mechanisms and manage sessions securely.
+- **Software and Data Integrity**: Guard against tampering and unauthorized changes in the software supply chain.
+- **Logging and Monitoring**: Maintain robust logs and monitoring systems to quickly detect and mitigate threats.
+- **SSRF Prevention**: Control how servers interact with external systems and data to prevent exploitation.
 
 <!-- /MarkdownTOC -->
 </details>
