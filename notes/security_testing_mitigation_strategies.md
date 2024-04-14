@@ -182,6 +182,38 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is Vulnerability Analysis?
+- **Vulnerability Analysis** involves identifying potential flaws in applications that could compromise security.
+- Vulnerabilities can emerge daily, even if previous scans showed no issues, due to new threats or updates in used libraries.
+
+## Common Vulnerability Scanning Tools
+### Burp Suite
+- A comprehensive vulnerability scanner for web applications.
+- Features automated and manual scanning options.
+- Conducts audits in three phases: passive, active, and JavaScript analysis.
+
+### Nessus
+- A well-known scanner compatible with Mac, Linux, and Windows.
+- Operates as a local web application with a scripting language for creating custom tests and plugins.
+
+### Zed Attack Proxy (ZAP)
+- An OWASP tool for scanning web applications.
+- Utilizes spiders to crawl and scan HTML files and AJAX applications.
+
+## Best Practices in Vulnerability Analysis
+1. **Security Training for Developers:**
+   - Educating your development team on security is crucial. Engaging in specialized courses can significantly enhance software security.
+   
+2. **Policy Analysis and Updates:**
+   - Regularly review and update security policies to ensure they remain effective and relevant to current threats.
+   
+3. **Automating Vulnerability Analysis:**
+   - Implement automation in vulnerability scanning to ensure consistent checks and timely detection of new threats, even if manually overlooked.
+
+## Summary
+- Vulnerability analysis is key to identifying and mitigating potential security flaws in applications.
+- Tools like Burp Suite, Nessus, and ZAP can aid in comprehensive vulnerability scanning.
+- Emphasizing developer training, policy management, and automated processes are best practices to enhance the security posture of your software.
 
 <!-- /MarkdownTOC -->
 </details>
