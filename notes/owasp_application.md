@@ -375,6 +375,58 @@ Understanding and mitigating different types of SQL injection attacks, such as c
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Overview
+
+SQL injection is a prevalent attack method targeting relational databases through vulnerabilities such as unpatched software or misconfigurations. Attackers manipulate SQL statements using specially crafted inputs to alter database commands.
+
+## Key Concepts
+
+1. **SQL Injection Mechanism:**
+   - SQL injections occur by inserting or altering SQL commands to manipulate database operations.
+   - Commonly abused characters include single quotes, double quotes, semicolons, and dash characters (for inline comments).
+
+2. **Vulnerabilities and Risks:**
+   - Vulnerable SQL statements often involve string concatenation of untrusted input that is directly used in SQL commands.
+   - This method allows attackers to bypass authentication or extract data from the database.
+
+## Example of Vulnerable SQL Statement
+
+- **Original Scenario:**
+  - Code concatenates user inputs directly into an SQL query:
+    ```python
+    username = request.args.get("username")
+    password = request.args.get("password")
+    sql = "SELECT name FROM user WHERE username = " + username + " AND password = " + password
+    ```
+  - This approach is vulnerable because it does not differentiate between code and data.
+
+## Demonstration of SQL Injection Attack
+
+- **Attack Process:**
+  - An attacker enters `admin` as the username and `unknown' OR '1'='1` as the password.
+  - The SQL statement constructed becomes:
+    ```sql
+    SELECT name FROM user WHERE username = 'admin' AND password = 'unknown' OR '1'='1'
+    ```
+  - Since `'1'='1'` is always true, the SQL condition is met, allowing unauthorized access.
+
+## Preventive Measures
+
+1. **Using Placeholders:**
+   - Replace string concatenation with parameterized queries using placeholders (`?`):
+     ```python
+     sql = "SELECT name FROM user WHERE username = ? AND password = ?"
+     db.execute(sql, (username, password))
+     ```
+   - This method ensures that inputs are treated as data, not executable code.
+
+2. **Benefits of Placeholders:**
+   - Prevents the execution of unintended SQL commands.
+   - Safeguards against SQL injection by separating code from data.
+
+## Conclusion
+
+Understanding SQL injection and its prevention is crucial for securing databases against unauthorized access and manipulation. Employing placeholders and parameterized queries provides robust protection against SQL injection attacks.
 
 <!-- /MarkdownTOC -->
 </details>
