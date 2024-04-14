@@ -326,6 +326,43 @@ You learned the dangers of SQL injections and how they are executed using simple
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Key Points
+
+### Types of SQL Injection Attacks
+
+1. **Code Injection:**
+   - Attackers insert new SQL statements into an existing SQL command.
+   - Example: Adding `DELETE FROM users WHERE username = 'admin';` after a procedural command.
+   - Risks: Can delete tables or entire databases.
+
+2. **Function Call Injection:**
+   - Custom functions are inserted into vulnerable SQL statements.
+   - Example: Using `myappadmin.adduser('admin', 'newpass')` in a `TRANSLATE` function.
+   - Purpose: Attackers execute unauthorized changes or transactions.
+
+3. **Buffer Overflow:**
+   - Occurs when data exceeds storage capacity of buffers in SQL functions.
+   - Example: Exploiting functions like `tz_offset` and `to_timestamp_tz`.
+   - Effect: Can cause system crashes or execute malicious code.
+
+### Prevention Strategies
+
+- **Use Query Parameters:**
+  - Implement placeholders in SQL statements to prevent execution of injected code.
+  - Example: `SELECT * FROM Users WHERE userid = ?;`
+
+- **Server-Side Validation:**
+  - Identify and sanitize untrusted data inputs.
+
+- **Restrict User Privileges:**
+  - Limit user permissions to minimize potential damage from attacks.
+
+- **Regular Security Testing:**
+  - Employ dynamic application security testing (DAST) to detect vulnerabilities.
+
+## Key Takeaways
+
+Understanding and mitigating different types of SQL injection attacks, such as code injection, function call injection, and buffer overflow, are crucial for protecting databases. Implementing preventative measures like using query parameters and conducting regular security tests are effective ways to secure applications against these attacks.
 
 <!-- /MarkdownTOC -->
 </details>
@@ -350,6 +387,52 @@ You learned the dangers of SQL injections and how they are executed using simple
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Overview
+
+Cross-site scripting (XSS) is a security vulnerability in which attackers execute malicious scripts in a user's browser through an application that sends untrusted data without proper validation or escaping. XSS is often abbreviated as "XSS" and can have various harmful effects on users and web applications.
+
+## Types of Cross-Site Scripting Attacks
+
+1. **Stored (Persistent) XSS:**
+   - Malicious scripts are stored on a server or database.
+   - Scripts execute whenever a user accesses the stored data.
+
+2. **Blind XSS:**
+   - Scripts execute in the background, unknown to users or administrators.
+   - Often targets backend systems to compromise the application or server.
+
+3. **Reflected XSS:**
+   - Non-persistent and occurs when a script is reflected off a web server.
+   - Typically delivered through phishing emails with malicious links.
+
+## Preventative Measures
+
+1. **Monitor HTTP Requests:**
+   - Detect and block suspicious requests that may contain XSS code.
+   - Example: Filtering out banned HTML tags and escape sequences.
+
+2. **Data Sanitization:**
+   - Escape special characters and block potentially harmful inputs.
+   - Refactor code to eliminate unsafe functions and variables, like `innerHTML`.
+
+3. **Disable HTTP TRACE:**
+   - Turn off HTTP TRACE support on servers to prevent attackers from hijacking session cookies.
+
+4. **Avoid Unsafe Sinks:**
+   - Use safer alternatives like `textContent` for DOM manipulation.
+
+## Example of an XSS Attack
+
+- **Scenario:**
+  - An attacker injects JavaScript into a web page using an input field meant for a credit card number.
+  - Code Example: `page += "<input name='credit card' type='text' value='" + request.getParameter("CC") + "'>";`
+  - The attacker modifies the "CC" parameter to include a script tag, redirecting the session ID to a malicious site.
+
+## Key Takeaways
+
+- XSS allows attackers to hijack sessions, deface websites, or redirect users to malicious sites.
+- Understanding and defending against stored, blind, and reflected XSS is crucial for web application security.
+- Implementing stringent input validation, proper escaping, and disabling unsafe features are effective strategies against XSS.
 
 <!-- /MarkdownTOC -->
 </details>
