@@ -148,6 +148,54 @@ print(original_data['name'])
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is CodeQL?
+
+CodeQL is a tool used for security analysis on GitHub, helping to ensure the ongoing security of code during its development. It is particularly crucial as it updates continuously to protect against new vulnerabilities.
+
+## How CodeQL Works
+
+CodeQL analyzes the code by treating it as data within a database. This allows for:
+
+- Addition of code to the database via commits.
+- Running queries on this database to identify security issues.
+- Displaying results as code scanning alerts.
+
+Users can run default queries or customize them to suit specific project needs.
+
+## Supported Languages by CodeQL
+
+CodeQL is versatile and supports multiple programming languages, both compiled and interpreted:
+
+- C
+- C++
+- C#
+- Java and Kotlin
+- Go
+- Ruby
+- Python
+- JavaScript (JS) / TypeScript (TS)
+- Swift
+
+## How to Use CodeQL on GitHub
+
+### Setup Process
+
+1. **Access Code Scanning:**
+   - Navigate to the 'Security' tab in your GitHub repository.
+   - Setup code scanning under 'Security Overview'.
+
+2. **Configuration Options:**
+   - **Default Configuration:** Automatically configures based on the repository's language.
+   - **Advanced Configuration:** Manually create a YAML file to add more specific security checks.
+
+### Running CodeQL
+
+- CodeQL runs automatically on push or pull requests and during routine weekly checks.
+- It incorporates new vulnerability checks regularly to stay current.
+
+## Conclusion
+
+CodeQL is an essential tool for maintaining the security of software projects on GitHub, offering broad language support and flexible configuration options for thorough security analyses.
 
 <!-- /MarkdownTOC -->
 </details>
