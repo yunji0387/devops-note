@@ -60,6 +60,44 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## 1. Broken Access Control
+### Description
+- **What it is**: A failure where attackers gain unauthorized access to perform actions outside of an application's intended permissions.
+- **Implications**: Can lead to data modification, deletion, and unauthorized actions, potentially resulting in security breaches and financial losses.
+
+### Prevention Strategies
+- **Assign Limited Privileges**: Restrict users to necessary permissions to prevent unauthorized actions.
+- **Regular Access Control Audits**: Conduct frequent checks to ensure appropriate access levels are maintained.
+- **Minimize Public Information**: Limit the exposure of application details to prevent exploitation.
+- **Disable Directory Listings**: Prevent exposure of file paths in URLs to secure web server directories.
+- **Monitor and Respond to Access Control Failures**: Ensure system administrators are alerted to and address any access control failures in server logs.
+
+## 2. Cryptographic Failures
+### Description
+- **What it is**: Inadequate encryption that leads to the exposure of sensitive data.
+- **Implications**: Attackers can decrypt or access sensitive information, leading to data breaches.
+
+### Prevention Strategies
+- **Use Authenticated Encryption**: Encrypt all sensitive data in the database and during transmission using robust methods.
+- **Implement HTTPS**: Secure data in transit by using HTTPS over HTTP to prevent interceptions.
+- **Avoid Outdated Protocols**: Replace protocols like SMTP and FTP with more secure alternatives to mitigate man-in-the-middle attacks.
+- **Secure Encryption Keys**: Manage keys carefully, avoid hardcoding them, ensure they are backed up, and store them securely.
+
+## 3. Injection
+### Description
+- **What it is**: Execution of unintended commands due to untrusted data being sent to an interpreter.
+- **Implications**: Allows hackers unauthorized access to data, potentially leading to data theft and system compromise.
+
+### Prevention Strategies
+- **Use Secure APIs**: Opt for APIs that either avoid using the interpreter or provide a parameterized interface.
+- **Sanitize Inputs**: Block special characters and keywords using an escape list and regularly update this list.
+- **Regularly Update Keyword Filters**: Ensure filters are current to prevent newly discovered vulnerabilities from being exploited.
+- **Sanitize SQL Statements**: Verify and clean data used in SQL statements to prevent SQL injection.
+
+## Key Takeaways
+- **Common Vulnerabilities**: The top threats include broken access control, cryptographic failures, and injection attacks.
+- **Strategic Prevention**: Implementing rigorous access control, using robust encryption, and sanitizing inputs are crucial.
+- **Impact of Vulnerabilities**: These vulnerabilities can severely affect an application's security, potentially leading to significant financial and reputational damage.
 
 <!-- /MarkdownTOC -->
 </details>
