@@ -110,6 +110,41 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## 1. Insecure Design
+### Description
+- **What it is**: Flaws in the design phase of application development that fail to include necessary security controls.
+- **Consequences**: Makes applications susceptible to various cyber threats, such as brute force and OTP bypass attacks.
+
+### Prevention Strategies
+- **Security from the Start**: Integrate firewalls and other security measures during the design phase to combat specific threats.
+- **Risk-Based Security**: Address potential architectural flaws early and ensure robust security by design to mitigate risks effectively.
+
+## 2. Security Misconfiguration
+### Description
+- **What it is**: Incorrect or incomplete configurations that leave applications vulnerable to attacks.
+- **Consequences**: Can lead to unauthorized access and data breaches, affecting application integrity and organizational reputation.
+
+### Prevention Strategies
+- **Principle of Least Privilege (PoLP)**: Ensure users have only the minimum necessary permissions.
+- **Disable Unsafe Features**: Remove developer features like debug mode before deployment and ensure no unnecessary features are active.
+- **Regular Configuration Audits**: Check for default usernames and passwords, clear text configuration files, and other vulnerabilities during the design phase and ongoing operations.
+- **Involve System Administrators**: Combine the expertise of developers and system administrators to maintain secure configurations across all application layers.
+
+## 3. Vulnerable and Outdated Components
+### Description
+- **What it is**: Use of outdated or unpatched software components that compromise security.
+- **Consequences**: Leaves the application open to exploits, potentially delaying necessary patches and exposing the system to attack.
+
+### Prevention Strategies
+- **Regular Updates and Patch Management**: Stay informed about the latest patches and updates for all components.
+- **Inventory Management**: Maintain a detailed list of all installed components, including versions and dependencies.
+- **Eliminate Unused Dependencies**: Remove unnecessary features and dependencies to minimize attack surfaces.
+- **Stay Informed**: Keep abreast of new security risks and vulnerabilities as reported by organizations like OWASP and CISA.
+
+## Key Takeaways
+- **Insecure Design**: Emphasize security controls during the initial design phase to avoid vulnerabilities that cannot be remedied later.
+- **Security Misconfiguration**: Actively manage configurations and disable unnecessary features to prevent unauthorized access.
+- **Vulnerable and Outdated Components**: Regularly update and patch all components to protect against known vulnerabilities and ensure functionality with evolving technologies.
 
 <!-- /MarkdownTOC -->
 </details>
