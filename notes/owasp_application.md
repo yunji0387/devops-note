@@ -1,4 +1,4 @@
-# OWASP Application SSecurity Risks
+# OWASP Application Security Risks
 
 ## Table of Content
 1. [Intro to OWASP (Top 10) Sec Vulnerabilities](#intro)
