@@ -264,6 +264,35 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is Runtime Protection?
+- **Runtime Protection** is a security mechanism that protects applications from threats during their operation.
+
+## Tools for Runtime Protection
+### Interactive Application Security Testing (IAST)
+- **Functionality:** Scans for vulnerabilities during the application's testing phase, providing real-time detection of security flaws.
+- **Integration:** Easily integrates into continuous integration/continuous delivery (CI/CD) pipelines with minimal configuration.
+- **Advantages:** 
+  - Produces low false positives.
+  - Allows for early and cost-effective vulnerability fixes.
+  - Scalable across various enterprise domains and supports multiple deployment methods, including Docker.
+
+### Runtime Application Self-Protection (RASP)
+- **Functionality:** Offers protection at the runtime level in the production environment by monitoring and analyzing application behavior and context.
+- **Security Features:** 
+  - Detects and prevents attacks such as SQL injections and exploits in real-time, without human intervention.
+  - Capable of terminating sessions and alerting security teams upon detecting threats.
+- **Deployment:** Simple to deploy within applications; inherently designed to monitor and self-protect.
+- **Compatibility:** Highly suitable for cloud environments, addressing the security challenges of cloud computing.
+
+## Benefits of IAST and RASP
+- **Early Detection:** Both tools provide early detection of vulnerabilities, allowing for quicker and less expensive remediation.
+- **Precision:** RASP distinguishes between malicious and legitimate requests with high accuracy, minimizing false positives.
+- **Seamless Integration:** Both IAST and RASP integrate smoothly into existing development and deployment workflows, enhancing security without disrupting operations.
+
+## Summary
+- Runtime protection is essential for safeguarding applications against vulnerabilities while they are active.
+- IAST and RASP are critical tools for examining and protecting running applications, each playing a distinct role in different stages of the application lifecycle.
+- The utilization of these tools leads to enhanced security, early problem resolution, and efficient compliance with security standards in dynamic and diverse environments.
 
 <!-- /MarkdownTOC -->
 </details>
