@@ -6,9 +6,10 @@
 3. [Dynamic Analysis](#dynamic_analysis)
 4. [Code Review](#code_review)
 5. [Vulnerability Analysis](#vulnerability_analysis)
-6. [Runtime Protection](#runtime_protection)
-7. [Software Component Analysis](#software_component_analysis)
-8. [Continuous Security Analysis](#continuous_security_analysis)
+6. [Evaluating Vulnerability Analysis](#evaluate_vulnerability_analysis)
+7. [Runtime Protection](#runtime_protection)
+8. [Software Component Analysis](#software_component_analysis)
+9. [Continuous Security Analysis](#continuous_security_analysis)
 
 ---
 
@@ -220,6 +221,43 @@ After completing this module, you will be able to:
 
 ---
 
+<a id="evaluate_vulnerability_analysis"></a>
+# Evaluating Vulnerability Analysis
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
+## Software Vulnerability and Component Analysis
+- Application developers utilize tools to evaluate potential vulnerabilities in applications, including their code, packages, and third-party libraries.
+- **Software Composition Analysis (SCA):** Helps identify vulnerabilities in both open-source and proprietary components by scanning the codebase and resources like containers.
+- SCA tools leverage databases like the National Vulnerability Database (NVD) to identify issues in software libraries.
+
+## Defect Tracking Tools
+- **Examples:** Jira and Bugzilla are popular tools for tracking the progress of addressing vulnerabilities.
+- These tools help developers categorize the severity of vulnerabilities and centralize the tracking of these issues across the organization.
+- Prioritization is crucial, with mission-critical vulnerabilities taking precedence, followed by high, medium, and low severity issues.
+
+## Demonstration: Using OWASP ZAP for Vulnerability Scanning
+- **Procedure:**
+  1. Launch OWASP ZAP and select 'Automated Scan'.
+  2. Enter a vulnerable website, such as `http://testphp.vulnweb.com`, and initiate the scan.
+  3. ZAP conducts an active scan, identifying vulnerabilities like Cross-Site Scripting, missing security headers, and more.
+  4. Review the results in the 'History' and 'Alerts' tabs to assess identified vulnerabilities.
+
+## Addressing Overwhelming Vulnerabilities
+- If an organization faces an overwhelming number of vulnerabilities, implementing a bug bounty program can be effective.
+- Bug bounties can be internal or public, incentivizing the discovery and resolution of vulnerabilities with rewards.
+
+## Conclusion
+- Proper tools like SCA and defect-tracking tools are essential for identifying and managing software vulnerabilities effectively.
+- Demonstrated with OWASP ZAP, scanning tools provide critical insights into application security status.
+- Organizations should establish vulnerability management policies and consider innovative solutions like bug bounties to handle extensive security issues.
+
+<!-- /MarkdownTOC -->
+</details>
+
+---
+
 <a id="runtime_protection"></a>
 # Runtime Protection
 <details close>
@@ -231,7 +269,6 @@ After completing this module, you will be able to:
 </details>
 
 ---
-
 
 <a id="software_component_analysis"></a>
 # Software Component Analysis
