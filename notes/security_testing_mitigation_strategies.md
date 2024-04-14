@@ -305,6 +305,36 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is Software Component Analysis?
+- **Software Component Analysis (SCA)** is a process that identifies open-source components and dependencies used in your application.
+- SCA tools are essential in the software development workflow to manage security risks and ensure legal compliance for the use of third-party libraries and dependencies.
+
+## Key Features of SCA
+- **Dependency Visibility:** SCA provides a comprehensive view of all dependencies, including hidden or indirect ones that could introduce vulnerabilities.
+- **License Management:** Helps ensure that the use of libraries does not infringe on licenses that could obligate you to disclose your proprietary source code, such as GPL licenses.
+
+## Goals of Software Component Analysis
+1. **Component Discovery:** Track and catalog every open-source component used within the application.
+2. **License Compliance:** Monitor open-source licenses to mitigate legal risks.
+3. **Vulnerability Identification:** Pinpoint security vulnerabilities within the open-source components.
+4. **Flexible Scanning:** Perform varied scans tailored to specific situations and requirements to ensure comprehensive coverage.
+
+## Industry Efforts and Standards
+- **NIST CPE Dictionary:** Provides a centralized database for enumerating software products.
+- **Software Identification Tags (SWID Tags):** Standardize the description of commercial software.
+- **Package URL Specification:** Formats identification strings for software components.
+- **OWASP Software Component Verification Standard:** A community effort to build a framework for reducing risks in software supply chains.
+- **Supply-chain Levels for Software Artifacts (Salsa):** Offers a security framework aimed at enhancing integrity and preventing tampering.
+
+## Popular SCA Tools
+1. **GitHub SCA:** Integrates directly with GitHub to monitor dependency packages and vulnerabilities.
+2. **OWASP Dependency-Check and Dependency-Track:** Tools designed to detect vulnerabilities and manage risks within the software supply chain.
+3. **Snyk:** Analyzes codebases for security issues, code quality, and licensing compliance.
+
+## Summary
+- SCA is critical for managing the security and compliance of open-source components in software development.
+- The process ensures that dependencies are fully visible, compliant with licenses, and free from vulnerabilities.
+- Utilizing established SCA tools and adhering to industry standards helps maintain the integrity and security of your software products.
 
 <!-- /MarkdownTOC -->
 </details>
