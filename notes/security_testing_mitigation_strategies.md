@@ -69,6 +69,32 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is Static Analysis?
+- **Static Analysis** is the examination of all code or runtime binaries without execution to detect common vulnerabilities.
+- **Static Application Security Testing (SAST):** Specifically examines source code to identify security flaws, making it a crucial aspect of securing your organization's applications.
+- SAST tools may integrate with DevOps processes through APIs and do not necessarily require complete code to function.
+- Static analysis is comprehensive and may take significant time due to its thorough nature.
+
+## Role in the Software Development Lifecycle (SDLC)
+- Static analysis is typically conducted early in the SDLC, before software testing begins.
+- In DevOps environments, static analysis occurs during the Develop stage and establishes an automatic feedback loop, alerting developers to issues from the start.
+
+## Benefits of Using Static Analysis
+1. **Depth:** 
+   - Covers most conceivable avenues of code execution, providing a robust analysis during the build phase.
+   - Offers detailed feedback on potential problems based on predefined criteria.
+2. **Speed:** 
+   - Automated tools significantly expedite the analysis process compared to manual methods.
+   - Early detection of issues reduces the cost and time needed for fixes.
+3. **Accuracy:** 
+   - High accuracy in identifying potential errors through automated scanning.
+   - Leverages up-to-date knowledge of vulnerabilities, surpassing manual reviews in both scope and detail.
+
+## Summary
+- Static analysis serves as an effective debugging method that inspects source code before execution.
+- It is integral to the early stages of the SDLC, particularly within DevOps frameworks.
+- The primary tools for static analysis operate on the file system, analyzing code statically without execution.
+- Key advantages of static analysis include depth, speed, and accuracy in maintaining coding standards and ensuring software quality.
 
 <!-- /MarkdownTOC -->
 </details>
