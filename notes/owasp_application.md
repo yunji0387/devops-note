@@ -275,6 +275,45 @@ Snyk plays a crucial role in modern software development by integrating security
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Objectives
+After watching this video, you will be able to:
+- Describe SQL injections and how they exploit databases.
+- Identify four main types of SQL injection attacks.
+- Explain the common SQL clauses and operators used in SQL injection attacks.
+
+## What is an SQL Injection?
+SQL injection is a type of security attack that allows attackers to interfere with the queries that an application makes to its database. It is typically done by inserting or "injecting" a malicious SQL query via input data from the client to the application.
+
+## Types of SQL Injection Attacks
+1. **SQL Manipulation**: This involves altering SQL commands to change their intended function. Examples include:
+   - Modifying a `WHERE` clause to always return `TRUE`.
+   - Using a `UNION` statement to retrieve data from other tables.
+   
+2. **Code Injection**: Injecting raw SQL code into a vulnerable SQL query to execute unintended commands.
+
+3. **Function Call Injection**: Injecting SQL functions into queries to execute functions for data manipulation or other purposes.
+
+4. **Buffer Overflow**: Overloading a database buffer with more data than it can handle, often leading to unexpected behavior or system crashes.
+
+## How SQL Injections Work
+- **Example of SQL Manipulation**:
+  - Original SQL command: `SELECT * FROM users WHERE username = 'alice' AND password = 'mypassword';`
+  - After manipulation: `SELECT * FROM users WHERE username = 'alice' AND password = 'mypassword' OR 'a' = 'a';`
+  - This change forces the query to always return true, bypassing authentication.
+
+- **Code Snippet Explanation**:
+  - Code uses string concatenation to construct SQL queries based on user input.
+  - Vulnerable input example: Username - `" OR 1=1` and Password - `" OR 1=1`.
+  - Resulting malicious query: `SELECT * FROM Users WHERE Name = "" OR 1=1 AND Password = "" OR 1=1;`
+  - This query will return all users because `1=1` is always true, bypassing all user authentication.
+
+## Key SQL Clauses and Operators Used in Attacks
+- **WHERE Clause**: Often manipulated to alter the logic of SQL queries.
+- **UNION Operator**: Used to combine results from multiple SELECT statements into a single result.
+- **Logical Operators** (`AND`, `OR`): Used to add conditions that always evaluate to true, compromising query integrity.
+
+## Conclusion
+You learned the dangers of SQL injections and how they are executed using simple modifications to SQL queries. You also saw the importance of sanitizing and validating all user inputs to prevent such attacks. SQL injections remain a critical threat to database security, and understanding them is key to safeguarding your applications.
 
 <!-- /MarkdownTOC -->
 </details>
