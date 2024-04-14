@@ -107,6 +107,32 @@ After completing this module, you will be able to:
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is Dynamic Analysis?
+- Dynamic analysis involves testing and evaluating an application during its execution, often used on fully built applications.
+- Unlike static analysis which occurs during development, dynamic analysis is typically performed in staging, pre-production, or post-deployment stages.
+- This method allows for testing in real-time scenarios without the need for creating artificial test cases.
+
+## Dynamic Application Security Testing (DAST)
+- DAST evaluates applications from the outside in, simulating attacks to identify potential threats, behaving similarly to how an attacker would.
+- It performs black-box testing by analyzing the behaviors of inputs and outputs, without access to the source code.
+
+## Benefits of Using Dynamic Analysis
+1. **Crawling Application Interfaces:**
+   - Dynamic analysis tools start from the root URL and assess the application’s security by attempting to exploit vulnerabilities.
+   - This approach helps in identifying and patching security weaknesses effectively.
+
+2. **Performing Insightful Tests:**
+   - Tests various inputs through user actions like URLs or forms, ideally using a dummy database to avoid real data corruption.
+   - Provides detailed insights on how the application reacts to these inputs, identifying if the application performs as expected or if it encounters errors.
+
+3. **Flushing Out Faults in Dynamic Code Paths:**
+   - Detects errors that might be missed during static analysis by testing code paths dynamically as the code runs.
+   - Offers real and accurate results, aiding in pinpointing necessary code adjustments.
+
+## Summary
+- Dynamic analysis tests and evaluates an application as it runs, crucial for identifying real-time vulnerabilities and behavioral issues.
+- Benefits include the ability to simulate attacks (as DAST does), gain insights from dynamic testing of inputs, and detect faults in dynamic code paths that might be overlooked by other testing methods.
+- The process helps ensure that applications are robust against potential threats and perform correctly under varied conditions.
 
 <!-- /MarkdownTOC -->
 </details>
