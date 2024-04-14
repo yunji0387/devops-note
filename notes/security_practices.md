@@ -5,8 +5,6 @@
 2. [Dependencies](#dependencies)
 3. [CodeQL Analysis](#codeql_analysis)
 4. [Secure Development Environment](#secure_dev_env)
-5. [Security Best Practices](#security_best_practices)
-
 
 ---
 
@@ -252,18 +250,6 @@ A secure development environment encompasses practices and protocols that ensure
 ## Conclusion
 
 Creating and maintaining a secure development environment is essential for preventing cyber attacks and protecting organizational assets. By implementing best practices such as early security integration, stringent access controls, regular monitoring, and using isolated development environments, organizations can significantly mitigate risks associated with software development.
-
-<!-- /MarkdownTOC -->
-</details>
-
----
-
-<a id="security_best_practices"></a>
-# Security Best Practices
-<details close>
-<summary><b>(click to expand/hide)</b></summary>
-<!-- MarkdownTOC -->
-
 
 <!-- /MarkdownTOC -->
 </details>
