@@ -20,6 +20,34 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## What is OWASP?
+- **OWASP**: Open Web Application Security Project, formed in 2003, focuses on improving software security.
+- **Purpose**: Provides the security industry with the OWASP Top 10, a consensus-based report on current software security vulnerabilities.
+- **Usage**: Globally recognized as a standard for checking web application security.
+
+## Current OWASP Top 10 (2021)
+1. **Broken Access Control**: Risks information disclosure and data integrity.
+2. **Cryptographic Failures**: Concerns data exposure.
+3. **Injection**: Involves hostile data use and unsafe queries.
+4. **Insecure Design**: Relates to flaws in control designs.
+5. **Security Misconfiguration**: Involves incorrectly enabled features or configuration issues.
+6. **Vulnerable and Outdated Components**: Issues with version control and compatibility.
+7. **Identification and Authentication Failures**: Covers password issues and automated attacks like credential stuffing.
+8. **Software and Data Integrity Failures**: Concerns integrity violations from untrusted sources.
+9. **Security Logging and Monitoring Failures**: Involves the detection and response to breaches.
+10. **Server-Side Request Forgery**: Leads to URL validation failures.
+
+## Developing the OWASP Top 10
+- **Step 1**: Plan a schedule and publish a call for data.
+- **Step 2**: Determine survey content and request industry participation.
+- **Step 3**: Collect, normalize, and analyze the data.
+- **Step 4**: Determine categories from data and survey, and release a draft for public review.
+- **Step 5**: Reach a consensus and release the updated list.
+
+## Key Takeaways
+- **Understanding OWASP**: It's essential for software security and is supported by a broad consensus within the security community.
+- **Using the OWASP Top 10**: It helps identify risks, improve processes, and secure code in any organization.
+- **Development Process**: Involves extensive data collection and community involvement to ensure the list remains relevant and accurate.
 
 <!-- /MarkdownTOC -->
 </details>
