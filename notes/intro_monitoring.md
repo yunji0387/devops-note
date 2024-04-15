@@ -255,6 +255,56 @@ Understanding the components of metrics, observability, and alerting is crucial 
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Important Metrics to Track
+
+### 1. Host-Based Metrics
+- **Components**: CPU, memory, disk space, and processes.
+- **Purpose**: Measures the usage and performance of the operating system or hardware, indicating the health and performance of an individual machine.
+
+### 2. Application Metrics
+- **Focus**: Units of processing or work reliant on services or applications.
+- **Indicators**: Error rates, success rates, service failures, restarts, performance, latency, and resource usage.
+- **Utility**: Helps assess the health, performance, and efficiency of applications.
+
+### 3. Network and Connectivity Metrics
+- **Importance**: Essential for evaluating the availability and functionality of services, especially in systems that span multiple machines.
+- **Metrics**: Connectivity, error rates, packet loss, latency, and bandwidth utilization.
+- **Benefits**: Enhances the availability and responsiveness of internal and external services.
+
+### 4. Server Pool Metrics
+- **Scope**: Applies to horizontally scaled infrastructure.
+- **Approach**: Aggregates metrics from individual servers to gauge the collective performance and response capability of server pools.
+- **Relevance**: Crucial for understanding system capacity to manage load and adapt to changes.
+
+### 5. External Dependency Metrics
+- **Objective**: Tracks interactions with external systems crucial for your application’s operations.
+- **Metrics**: Service status, availability, success and error rates, operational costs, and resource exhaustion.
+- **Advantage**: Identifies issues with external providers that could impact your operations.
+
+## Factors Determining Which Metrics to Monitor
+
+### Resource Availability
+- **Constraint**: Monitoring scope may be limited by human resources, infrastructure, and budget.
+- **Consideration**: Prioritize metrics based on what is feasible to manage and implement.
+
+### Application Complexity and Purpose
+- **Impact**: The complexity and mission-critical elements of your application influence the choice of metrics.
+- **Strategy**: Tailor metric selection to reflect the application's operational needs and goals.
+
+### Deployment Environment
+- **Variation**: Monitoring needs can differ between production, staging, and testing environments.
+- **Adaptation**: Adjust the severity, granularity, and type of metrics based on the environment.
+
+### Metric Usefulness
+- **Criteria**: Metrics should be potentially useful for future troubleshooting and decision-making.
+- **Management**: Regularly evaluate the necessity of data to optimize resource use and system complexity.
+
+### Stability and Uptime Importance
+- **Project Stage**: For early-stage or personal projects, stability might not be as critical.
+- **Flexibility**: Adjust monitoring intensity based on the project’s maturity and required service level.
+
+## Conclusion
+Understanding which metrics to monitor is crucial for effectively managing application and system performance. Decisions on metric selection should be guided by technical needs, resource availability, and strategic goals to ensure optimal monitoring and operational efficiency.
 
 <!-- /MarkdownTOC -->
 </details>
