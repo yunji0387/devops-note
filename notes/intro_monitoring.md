@@ -116,6 +116,39 @@ Understanding the different types of monitoring is crucial for selecting the rig
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## The Four Golden Signals
+
+### 1. Latency
+- **Definition**: The time it takes from when a request is sent to when it is completed.
+- **Importance**: High latency can lead users to abandon the application, hence monitoring both successful and failed request latencies is vital.
+- **Action**: Set latency targets and monitor them to identify and address intermittent or consistent high latency issues.
+
+### 2. Traffic
+- **Definition**: Measures how in-demand your service is, reflecting user engagement.
+- **Variants**: Can be measured as transactions per second, page or resource requests, and more.
+- **Utility**: Helps in understanding user patterns and optimizing their experience by identifying highly trafficked or underperforming areas.
+
+### 3. Errors
+- **Definition**: Includes failed requests or those completed with incorrect information.
+- **Monitoring Focus**: Track all errors, distinguishing between critical and less severe ones, to understand the health of the system from the user's perspective.
+- **Types of Errors**: Visible server or client errors (e.g., HTTP 500 or 404) and less obvious errors like incorrect content delivery despite a 200 OK status.
+
+### 4. Saturation
+- **Definition**: The degree to which a system's resources are used, such as CPU or memory.
+- **Impact**: High saturation can lead to performance degradation, while low saturation might indicate over-provisioning.
+- **Management**: Setting utilization targets helps optimize resource use and maintain service performance.
+
+## Importance of Golden Signals
+- **Proactive Monitoring**: By focusing on these four signals, you can monitor the health of your application effectively and identify issues before they escalate.
+- **Operational Efficiency**: They aid in troubleshooting, alerting, and capacity planning, which enhances the overall management of the application.
+- **Strategic Response**: Enables targeted interventions, reducing the time and effort needed to diagnose and resolve issues.
+
+## Practical Application
+- **Scenario Example**: If an application shows high latency, using the Golden Signals can help quickly pinpoint whether the issue is due to traffic, errors, or saturation, allowing for faster resolution.
+- **Impact on Business**: Ensures that the application performs optimally, enhancing user satisfaction and business performance.
+
+## Conclusion
+The Golden Signals of monitoring provide a foundational framework for effectively managing and improving the performance of web applications, ensuring they meet user needs and business objectives.
 
 <!-- /MarkdownTOC -->
 </details>
