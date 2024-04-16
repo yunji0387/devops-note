@@ -73,6 +73,34 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Distributed Logging
+- **Definition**: Distributed logging involves collecting and storing log data from multiple sources across different nodes or servers, facilitating centralized monitoring and analysis.
+- **Purpose**: Enhances system performance analysis, eases debugging and troubleshooting, and helps identify and fix root causes of issues.
+- **Implementation**:
+  - **Central Log Server**: Logs are sent to a central server that aggregates and indexes the data for easy search and analysis.
+  - **Key Benefits**: Enables identification of system-wide issues and errors, even when spread across multiple nodes.
+
+## Distributed Tracing
+- **Definition**: A method used to profile and monitor applications, particularly those composed of multiple micro-services.
+- **Functionality**: Allows tracking of requests as they move through various services, helping to pinpoint performance bottlenecks and errors.
+- **Components**:
+  - **Trace**: A collection of spans (timed events) representing a logical request or workflow.
+  - **Span**: Represents a single operation within a trace, including metadata like service name, operation ID, and contextual tags.
+  - **Trace ID**: A unique identifier for the entire trace, shared among all spans in that trace.
+- **Parent-Child Relationship**: Defines the hierarchy within a trace where one span (parent) calls another (child).
+- **Context Propagation**: Ensures trace information is shared across different services and systems.
+- **Instrumentation**: The process of adding code to generate traces and spans, which can be either manual or automatic.
+
+## Steps to Implement Distributed Logging
+1. **Choose a Logging Framework**: Select from frameworks like Apache Log4j2, Logback, or Fluentd based on your needs.
+2. **Configure Log Transmission**: Adjust application code to send logs to a centralized server using TCP or UDP protocols.
+3. **Set Up a Central Logging Server**: Use tools like Elasticsearch, Graylog, or Kafka for log collection and storage.
+4. **Define Log Retention Policies**: Establish policies for how long to keep logs and when to archive or purge them.
+5. **Monitor Logs**: Regularly check logs to detect and address any issues or anomalies.
+
+## Key Takeaways
+- **Distributed Logging vs. Tracing**: While both are crucial, logging helps identify system-wide issues, and tracing tracks individual requests through the system.
+- **Importance of Implementation**: Proper implementation of these techniques is key to managing and troubleshooting complex, multi-node systems effectively.
 
 <!-- /MarkdownTOC -->
 </details>
