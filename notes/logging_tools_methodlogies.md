@@ -157,6 +157,51 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Types of Application Logs
+- **Event Logs**: Record application events and user actions for troubleshooting and security.
+- **Error Logs**: Contain error messages, exceptions, stack traces, and error codes.
+- **Access Logs**: Track user access details, useful for auditing and monitoring.
+- **Performance Logs**: Monitor performance metrics like response times and resource usage.
+- **Debugging Logs**: Provide detailed debugging information such as variables and method calls.
+
+## Implementing Logging
+### Setting Up Logging
+- **Frameworks**: Utilize logging frameworks suitable for the application's programming language.
+- **Logging Levels**: Include levels like DEBUG, INFO, and ERROR to categorize log severity.
+- **Destinations**: Define where logs should be sent, such as console outputs or files.
+
+### Examples of Implementation
+- **Python**: Use the `logging` module to configure logs to be written to a file with DEBUG level.
+- **Java**: Use `java.util.logging` to log messages to different destinations with configurable levels.
+
+## Formatting and Structuring Logs
+- **Select a Library**: Choose a logging library that fits your language and needs (e.g., log4j, Logrus).
+- **Define Log Levels**: Specify levels like INFO and ERROR to filter log importance.
+- **Log Message Format**: Consistently format messages to include timestamp, level, and relevant data.
+- **Output Configuration**: Decide on the log output destination and configure accordingly.
+- **Testing**: Ensure the logging setup captures all necessary information and adjust as needed.
+
+## Structured Logging
+- **Benefits**: Facilitates easier querying, efficient storage, and improved system behavior visibility.
+- **Common Formats**: JSON, key-value pairs, XML.
+- **Implementation Steps**:
+  - Identify relevant data to log.
+  - Define a consistent logging format.
+  - Integrate structured logging throughout the codebase.
+  - Utilize logging tools for data collection and analysis.
+
+## Parsing Logs
+- **Purpose**: Converts log files into a readable format for log management systems.
+- **Steps**:
+  - Identify the log file format (e.g., CSV, JSON).
+  - Determine relevant fields for analysis.
+  - Select tools for parsing (e.g., Python CSV module for CSV files).
+  - Write code to extract necessary data.
+  - Store extracted data in a structured format for further analysis.
+
+## Conclusion
+- **Recap**: Covered the types of logs, how to implement and format logs, the benefits of structured logging, and the process of parsing logs.
+- **Utility**: Logging is crucial for effective application management, providing insights into operations and aiding in troubleshooting.
 
 <!-- /MarkdownTOC -->
 </details>
