@@ -261,6 +261,41 @@
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Key Features of Mezmo
+- **Centralized Logging**: Aggregate logs from various sources with minimal setup using Mezmo agents, libraries, or APIs.
+- **Automatic and Custom Parsing**: Simplifies data extraction from logs, making data easily accessible and actionable.
+- **Alerts**: Set up customizable alerts with integrations like PagerDuty and Slack to monitor system activities.
+- **Visualization**: Visualize log data over time to analyze system activities and identify trends.
+- **Compliance**: Adheres to PCI, SOC 2, HIPAA, and GDPR regulations.
+- **Spike Protection**: Implement dynamic thresholds to manage data volume limits.
+
+## Mezmo Platform Demonstration
+### Initial Setup
+- **Sign Up**: Access via mezmo.com for a 14-day trial.
+- **Account Configuration**: Set up an account, create an organization, and receive an auto-generated ingestion key.
+- **Dashboard**: Overview of data ingestion, retention statistics, and usage trends.
+
+### Ingesting Log Data
+- **Methods**:
+  - **Mezmo Agents**: Deploy on various OS like Linux, Windows, MacOS, Kubernetes, and OpenShift.
+  - **Client-Side Logger**: Integrate with client-side JavaScript applications.
+  - **Integrations**: Utilize built-in integrations with popular logging platforms and Syslog.
+  - **Code Libraries**: Available for Go, Python, Ruby, Rust, Android, and iOS.
+  - **API**: Programmatically send logs and manage ingestion.
+
+### Searching and Managing Logs
+- **Search Capability**: Use simple or advanced queries to search through logs.
+- **Views**: Create and save custom views for frequent log queries, enhancing ease of access.
+- **Alerts**: Attach alerts to views to notify when specific conditions are met, customizable for various notification platforms.
+
+## Practical Application
+- **Real-Time Log Analysis**: Collect, monitor, parse, and analyze logs with clear visualizations and alerting.
+- **User Interface**: Demonstrated ease of use and quick setup on the Mezmo platform.
+- **Community Version**: Available post-trial for continued learning and application at a lower or no cost.
+
+## Conclusion
+- **Capabilities**: Mezmo provides comprehensive tools for log analysis, real-time alerting, and data visualization, all within a compliant and user-friendly platform.
+- **Benefits**: Enhances collaborative efforts across DevOps teams by speeding up the process of data delivery and issue resolution.
 
 <!-- /MarkdownTOC -->
 </details>
