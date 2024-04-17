@@ -7,7 +7,7 @@
 3. [Cloud Native Observability](#cloud_observability)
 4. [Cloud Native Observability Tools](#cloud_observability_tools)
 5. [Introduction to Sampling](#sampling_intro)
-6. [IBM Instana Overview and Demo Video](#ibm_instana)
+6. [IBM Instana Overview and Demo](#ibm_instana)
 7. [Introduction to Telemetry](#telemetry_intro)
 8. [Telemetry and Tracing Tools](#telemetry_tracing_tools)
 9. [Tracing for Container-Based Applications](#tracing_container)
@@ -250,11 +250,51 @@ Sampling and logging are essential practices for efficient observability in clou
 ---
 
 <a id="ibm_instana"></a>
-# IBM Instana Overview and Demo Video
+# IBM Instana Overview and Demo
 <details close>
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Introduction
+IBM Instana Observability, or simply Instana, is an automated application performance management (APM) solution designed to manage microservices and cloud-native applications effectively.
+
+## What is Instana?
+- **Functionality**: Automates the visibility of applications and services, providing contextual insights and enabling intelligent actions based on the observed data.
+- **Coverage**: Monitors applications, services, infrastructure, web browsers, mobile applications, and more, across over 200 domain-specific technologies.
+- **Automation**: Includes automated dependency mapping and smart alerts for comprehensive and easy-to-use data analytics.
+
+## Key Features of Instana
+1. **Real-Time Metrics**: Offers granular observability metrics with data refreshed every second, tracing every transaction from end to end.
+2. **Automated Root-Cause Analysis**: Utilizes event correlation, performance thresholds, and SLA violation analysis to pinpoint issues.
+3. **Infrastructure Monitoring**: Constantly monitors and adapts to changes in infrastructure, providing a detailed map of system health.
+4. **Curated Dashboards**: Delivers curated dashboards tailored to common use cases, reducing the need for custom dashboards.
+
+## Installation and Configuration
+- **Host Agent**: Instana agents can be installed on various platforms like VMs, physical hosts, Kubernetes, and more.
+- **Sensors**: After installing the host agent, Instana sensors automatically monitor specific technologies, though some may require additional configuration.
+
+## Monitoring Capabilities
+1. **Website Monitoring (EUM/RUM)**: Analyzes browser request times and load times to provide insights into the web browsing experience.
+2. **Mobile App Monitoring**: Offers analysis of URL request times in mobile apps, enhancing understanding of the app experience.
+3. **Unbounded Analytics**: Allows infinite flexibility to derive insights from all data using tag-based filtering, grouping, and visualization without needing to learn a new query language.
+4. **Analyze Infrastructure**: An ad hoc exploration feature that enables multivariate comparisons of infrastructure entities to quickly identify issues.
+
+## Advanced Features
+- **Built-in Events**: Predefined health signatures help monitor the system's health, with options to disable irrelevant events.
+- **Custom Events**: Users can create and manage custom events to tailor monitoring to specific needs.
+
+## Benefits of Instana
+- **Efficient Problem Resolution**: Instana's automated solutions quickly identify and address performance and stability issues.
+- **Enhanced User Experience**: Through comprehensive monitoring of web and mobile applications, ensuring optimal end-user interactions.
+- **Scalability and Flexibility**: Adapts to changes in infrastructure and scales monitoring capabilities as needed.
+
+## Conclusion
+Instana is a state-of-the-art APM tool that simplifies the management of microservices and cloud-native applications by providing automated, comprehensive, and real-time observability. It is ideal for organizations aiming to enhance application performance and reliability through advanced monitoring and analytics.
+
+## Key Takeaways
+- Instana automates the visibility of applications and provides intelligent analysis to manage microservices and cloud-native environments efficiently.
+- The platform offers a range of monitoring and analytic tools, including real-time metrics, automated root-cause analysis, and infrastructure monitoring.
+- Instana supports both automated and customizable approaches to ensure thorough and adaptive application performance management.
 
 <!-- /MarkdownTOC -->
 </details>
