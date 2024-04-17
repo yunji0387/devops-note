@@ -413,6 +413,41 @@ Telemetry is an invaluable tool for developers, providing insights that drive be
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Overview
+In the complex, interconnected digital ecosystems of today, telemetry and distributed tracing tools are essential for efficient system monitoring and analysis. This video will explain the distinction between telemetry and distributed tracing and introduce some popular tools for each.
+
+## Understanding Telemetry vs. Distributed Tracing
+- **Distributed Tracing**: Observes requests as they travel through distributed cloud environments, using unique identifiers (correlation IDs) to trace the paths of these requests across various services in real time.
+- **Telemetry**: The automated collection and transmission of data from remote sources, encompassing a broad spectrum of information like system performance metrics and user interactions.
+
+## Benefits of Each
+- **Distributed Tracing**:
+  - Allows developers to follow the journey of a request across multiple nodes and services.
+  - Facilitates real-time identification of bottlenecks and performance issues.
+- **Telemetry**:
+  - Enhances application performance by identifying and addressing potential issues early.
+  - Provides insights into how users interact with the system, aiding in user experience improvements.
+
+## Popular Telemetry Tools
+1. **Datadog**: Offers a comprehensive suite of observability tools, including application performance monitoring, real user data collection, and incident resolution.
+2. **Dynatrace**: Known for its end-to-end observability, from log management to application performance.
+3. **New Relic**: Features an extensive toolkit for application monitoring, infrastructure monitoring, and security.
+4. **Sumo Logic**: Provides analytics for cloud architectures, application observability, and security monitoring.
+5. **Instana**: A cloud-based APM solution that delivers real-time visibility and health monitoring of microservices-based applications.
+
+## Popular Distributed Tracing Tools
+1. **Atatus**: Offers detailed insights into request flows within distributed systems, helping identify and resolve performance issues.
+2. **Jaeger**: Developed by Uber, this tool provides visibility into microservice interactions, aiding in performance analysis.
+3. **Zipkin**: Tracks how requests traverse through services, focusing on latency and response times.
+4. **Dynatrace**: Also featured as a tracing tool, it provides a holistic view of application environments through automated detection and observability.
+
+## Key Takeaways
+- **Distributed tracing and telemetry** are critical for monitoring modern, distributed applications and systems.
+- **Telemetry tools** gather wide-ranging data to improve performance and security, while **distributed tracing tools** focus on the flow and performance of requests across services.
+- Both sets of tools are vital for developers to ensure optimal performance and swift issue resolution in complex digital environments.
+
+## Conclusion
+By understanding the functions and benefits of telemetry and distributed tracing tools, developers can better manage application performance and user experience in today's interconnected digital ecosystems.
 
 <!-- /MarkdownTOC -->
 </details>
