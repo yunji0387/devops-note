@@ -107,6 +107,40 @@ The combination of logs, metrics, and traces forms a robust framework for observ
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Overview
+Cloud native observability refers to the practice of monitoring and understanding the behavior of cloud-native applications, which are typically dynamic and distributed across various environments. It is essential for maintaining performance and reliability in modern e-commerce platforms and other online applications.
+
+## Concept of Cloud Native Observability
+- **Definition**: Monitoring and analyzing cloud-native applications through extensive data collection from application and infrastructure components.
+- **Techniques**: Utilizes metrics, logs, traces, events, and alerts to create a comprehensive view of the system.
+
+## Goals
+- **Rapid Detection and Troubleshooting**: Allows DevOps teams to quickly identify and resolve issues, enhancing the application delivery process.
+- **Continuous Improvement**: Enables ongoing enhancements in application performance and user experience.
+
+## Advantages of Cloud Native Observability
+1. **Efficient Problem Resolution**: Quickly detect and resolve issues, minimizing disruption to services.
+2. **Reduced Mean Time to Repair (MTTR)**: Accelerates troubleshooting, shifting from hours or days to minutes.
+3. **Proactive Issue Detection**: 'Shift left' approach allows earlier detection and resolution of issues in the development lifecycle.
+4. **Healthier Systems**: Leads to more robust and error-free applications, increasing customer satisfaction and retention.
+
+## Challenges with Traditional Monitoring Tools
+- **Complex Environments**: Traditional tools struggle with the dynamic and distributed nature of modern microservices and container-based environments.
+- **Container Monitoring**: Containers, with their diverse technologies and configurations, complicate the setup of effective monitoring thresholds.
+- **Limited Container Platform Monitoring**: Basic monitoring functions in container platforms often necessitate advanced monitoring solutions to capture application layer data and distributed tracing.
+
+## Key Features of Enterprise Observability
+- **Automation**: Automatically detects system changes and provides immediate feedback.
+- **Context**: Reveals connections between application components and services to optimize performance.
+- **Intelligent Actions**: Offers proactive analysis and recommendations for system improvements during changes.
+
+## Conclusion
+Cloud native observability is vital for managing the complexities of modern IT environments, particularly those utilizing microservices and container technologies. Traditional monitoring tools are often inadequate, highlighting the need for advanced observability solutions that integrate automation, context, and intelligent actions to ensure system health and optimal performance.
+
+## Key Takeaways
+- Cloud native observability provides crucial insights into the performance and health of distributed applications.
+- The combination of logs, metrics, traces, and other data sources enables effective management and troubleshooting of cloud-native applications.
+- Modern challenges in application management require observability solutions that go beyond traditional monitoring, embracing the complexities of container and microservices architectures.
 
 <!-- /MarkdownTOC -->
 </details>
