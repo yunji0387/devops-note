@@ -460,6 +460,41 @@ By understanding the functions and benefits of telemetry and distributed tracing
 <summary><b>(click to expand/hide)</b></summary>
 <!-- MarkdownTOC -->
 
+## Introduction
+Tracing is a crucial tool for optimizing the performance of container-based applications, particularly within microservices architectures. This video will explain the necessity of tracing, outline the steps to implement it for container applications, and discuss best practices.
+
+## Why is Tracing Required?
+- **Complex Interactions**: Container-based applications involve sophisticated interactions that can be challenging to understand and optimize.
+- **Identifying Bottlenecks**: Tracing enables developers to follow a request's progress through various containers and services, helping pinpoint performance bottlenecks and latency issues.
+
+## Key Components of Tracing
+- **Distributed Nature**: In a containerized environment, the distributed nature of microservices makes tracing essential for capturing the flow of requests between components.
+- **Tools for Tracing**: Utilize tools such as OpenTracing, Zipkin, or Jaeger to instrument code and capture trace data effectively.
+
+## Steps to Implement Tracing
+1. **Choose a Tracing Tool**: Select a tool compatible with your application stack and container orchestrator, such as Kubernetes.
+2. **Instrument Your Code**: Modify your application code to generate traces, which can vary based on the programming language and framework used.
+3. **Configure the Tracing Agent**: Set up the tracing agent to collect trace data, involving environment variables or configuration files adjustments.
+4. **Deploy the Tracer**: Ensure the tracer is operational within your containerized environment and is receiving traces.
+5. **Verify Functionality**: Confirm that traces are being correctly captured and sent to the tracing system by checking logs or using tool-specific dashboards.
+
+## Understanding Distributed Tracing
+- **Trace Structure**: Traces are visualized as a tree-like structure with a root span that branches into child spans, each representing a step in the request's journey.
+- **Span Relationships**: Operations within the system are tagged with an initial trace ID and parent span IDs, which help track the request's flow and related operations.
+
+## Best Practices for Implementing Tracing
+- **End-to-End Instrumentation**: Instrument all inbound and outbound service calls to capture crucial metrics like latency, traffic, and errors.
+- **Unique IDs for Services**: Use unique request IDs for external requests to trace them across all services involved.
+- **Monitor SRE Golden Signals**: Focus on latency, traffic, errors, and saturation to maintain system reliability.
+- **Standardization**: Adhere to standards like OpenTelemetry, OpenTracing, and OpenCensus to ensure tool compatibility and facilitate future troubleshooting.
+
+## Conclusion
+Implementing tracing in container-based applications allows developers to gain a comprehensive view of their system's operations, enhancing the ability to diagnose and resolve issues efficiently. By following the outlined steps and best practices, developers can ensure robust performance and reliability in their containerized environments.
+
+## Key Takeaways
+- Tracing is essential for diagnosing and optimizing performance in container-based applications.
+- A systematic approach to implementing tracing involves selecting the right tools, instrumenting code, configuring agents, deploying tracers, and verifying their functionality.
+- Adhering to best practices and standards ensures effective tracing implementation, crucial for maintaining optimal application performance and system health.
 
 <!-- /MarkdownTOC -->
 </details>
