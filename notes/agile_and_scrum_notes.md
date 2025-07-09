@@ -687,6 +687,22 @@ Adopting Agile is not merely a change in terminology but a fundamental shift in 
 - **Usage**: Employed when ideas or tasks are too vast for a single sprint, requiring breakdown into more digestible, executable chunks.
 - **Backlog Management**: Epics often start as large, undefined ideas and get broken down into smaller user stories during backlog refinement.
 
+## User Story Template
+```markdown
+**As a** [role]  
+**I need** [function]  
+**So that** [benefit]  
+      
+### Details and Assumptions
+    * [document what you know]      
+
+### Acceptance Criteria     
+    gherkin 
+    Given [some context]
+    When [certain action is taken]
+    Then [the outcome of action is observed]
+```
+
 ## Conclusion
 
 - User stories represent actionable, value-driven requirements that are comprehensible by both technical teams and stakeholders.
