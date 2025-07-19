@@ -1,4 +1,4 @@
-# Devops Note
+# Notes
 
 ## Table of Contents
 1. [Computer Science](./notes/cs/cs_note.md)
