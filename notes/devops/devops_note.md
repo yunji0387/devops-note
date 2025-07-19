@@ -2,6 +2,18 @@
 
 DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the systems development life cycle and provide continuous delivery of high-quality software.
 
+## Table of Contents
+1. [Cloud Computing](./notes/cloud_computing_notes.md)
+2. [Agile Development and Scrum](./notes/agile_and_scrum_notes.md)
+3. [Introduction to Containers w/ Docker, Kubernetes & OpenShift](./notes/container_overview.md)
+4. [Application Development using Microservices and Serverless](./notes/microservices_and_serverless.md)
+5. [Introduction to Test and Behavior Driven Development](./notes/test_and_behavior_driven_development.md)
+6. [Continuous Integration and Continuous Delivery(CI/CD)](./notes/ci_cd_notes.md)
+7. [Application Security for Developers and DevOps Professionals](./notes/application_security.md)
+8. [Monitoring and Observability for Development and DevOps](./notes/monitoring_and_observability.md)
+
+---
+
 ## Definition
 
 DevOps is:
